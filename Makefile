@@ -18,10 +18,13 @@ show:
 	@ echo npm_version: $(npm_version)
 
 up:
-	@ docker-compose --env-file .env -f docker-compose.dev.yml up -d
+	@ docker-compose --env-file .env -f docker-compose.dev.yml up -d --build
 
 down:
 	@ docker-compose -f docker-compose.dev.yml down
+
+i:
+	@ npm install && ng serve --host 0.0.0.0 --port 6003
 
 clean:
 	echo "cleaning the dist directory"
