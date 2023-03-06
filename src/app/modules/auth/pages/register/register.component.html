@@ -1,10 +1,10 @@
 <div class="container ">
   <div class="row py-5 px-2 ">
     <div class="col-12">
-      <button class="btn btn-outline-secondary">Accès anticipé</button>
+      <!-- <button class="btn btn-outline-secondary">Accès anticipé</button> -->
 
         <div class="mb-3 mt-3 me-3">
-          <div class="d-inline-block position-relative fw-bolder h4" style="height: 1.5rem; " > <span >Créer votre compte</span>
+          <div class="d-inline-block position-relative fw-bolder h4" style="height: 1.2rem; " > <span >Créer votre compte</span>
             <span class="d-inline-block  position-absolute w-100 h-50 top-100 start-50 translate-middle bg-primary "style=" z-index: -100; " ></span>
           </div>
         </div>
@@ -18,7 +18,7 @@
               </div>
               <div class=" text-center text-dark bloc-menu pt-2" #medicalHistoryTab id="medical-history-tab" data-bs-toggle="tab" data-bs-target="#medical-history" role="tab" aria-controls="medical-history" aria-selected="false" (click)="underscore(false)">
                 <span class="text-dark toggle-form" [ngClass]="{'underscore':underscoremedicalhistory }">
-                  Antécédents médicaux
+                  Description
                 </span>
               </div>
              </div>
@@ -27,14 +27,14 @@
                 <img src="assets/Vector.png" class="d-block w-100" alt="" srcset="">
               </div>
               <div class="ps-1">
-                <p >Lors de la création du compte nous avons besoin que vous renseigniez l’identité de la personne adulte titulaire du compte.</p>
+                <p >Lors de la création du compte nous avons besoin que vous renseigniez votre parcour professionnel dans la description.</p>
               </div>
             </div>
               <form>
                 <div class="border-grey   tab-content">
                   <div class="tab-pane   active" id="personal-information" role="tabpanel" aria-labelledby="personal-information-tab">
 
-                    <div class="mb-3 d-flex">
+                    <!-- <div class="mb-3 d-flex">
                       <div class="pe-4"><label for="sex" class="form-label fw-bold">Sexe  </label></div>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="sex" id="sex" value="option1">
@@ -44,7 +44,7 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                         <label class="form-check-label fw-bold" for="inlineRadio2">Masculin</label>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="mb-3 ">
                       <input type="text"  class="form-control" name="nom" id="nom" placeholder="Nom">
                     </div>
@@ -52,16 +52,20 @@
                       <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom">
                     </div>
                     <div class="mb-3 ">
-                      <input type="date" class="form-control" name="date" id="date" >
+                      <input type="date" class="form-control" name="date" id="date" placeholder="Date de naissance" >
                     </div>
                     <div class="mb-3 position-relative">
                       <!-- <label for="email" class="form-label">Email</label> -->
-                      <input type="number" class="form-control" id="phone-number" placeholder="Numéro de téléphone">
-                      <span class=" pe-5  position-absolute  top-50 start-100 translate-middle " style="font-size:0.5rem; color: #1952F6;">Vérifier</span>
+                      <input type="text" class="form-control" id="phone-number" placeholder="Lieu de naissance">
+                      <!-- <span class=" pe-5  position-absolute  top-50 start-100 translate-middle " style="font-size:0.5rem; color: #1952F6;">Vérifier</span> -->
                     </div>
                     <div class="mb-3 ">
                       <!-- <label for="email" class="form-label">Email</label> -->
-                      <input type="email" class="form-control" id="email" placeholder="Email">
+                      <input type="email" class="form-control" id="email" placeholder="Adresse email">
+                    </div>
+                    <div class="mb-3 ">
+                      <!-- <label for="email" class="form-label">Email</label> -->
+                      <input type="number" class="form-control" id="phone-number" placeholder="Téléphone">
                     </div>
                     <div class="mb-3 position-relative">
                       <!-- <label for="password" class="form-label">Password</label> -->
@@ -93,51 +97,7 @@
                       </div>
                     </div> -->
                     <div class="mb-3">
-                      <label for="disabledSelect" class="form-label fw-700">Groupe sanguin</label>
-                      <select id="disabledSelect" class="form-select">
-                        <option>AB</option>
-                        <option>A+</option>
-                        <option>o+</option>
-                      </select>
-                    </div>
-                    <div class="mb-3 border-bottom pb-2">
-                      <div class="d-flex justify-content-between">
-                        <label for="allergies" class="form-label d-block fw-700">Allergies?</label>
-                        <div class="form-check form-switch " >
-                          <input  class="form-check-input"  type="checkbox" value="" (click)="showInput(allergiesCheck.checked)" #allergiesCheck  id="flexSwitchCheckDefault" >
-                        </div>
-                      </div>
-                      <input type="text" id="allergies" class="form-control" placeholder="Decrivez"  *ngIf="allergiesCheck.checked">
-                    </div>
-
-                    <div class="mb-3 border-bottom pb-2">
-                      <div class="d-flex justify-content-between">
-                        <label for="family-history" class="form-label d-block fw-700">Antécédents familiaux ?</label>
-                        <div class="form-check form-switch">
-                          <input  class="form-check-input" type="checkbox" #familyHistoryCheck (click)="showInput(familyHistoryCheck)" id="flexSwitchCheckDefault" value="1">
-                        </div>
-                      </div>
-                      <input type="text" id="allergies" class="form-control" placeholder="Decrivez......."  *ngIf="familyHistoryCheck.checked">
-                    </div>
-
-                    <div class="mb-3 border-bottom pb-2">
-                      <div class="d-flex justify-content-between">
-                        <label for="surgical-history" class="form-label d-block fw-700">Antécédents Chirurgicaux ?</label>
-                        <div class="form-check form-switch " >
-                          <input  class="form-check-input" type="checkbox" (click)="showInput(surgicalhistoryCheck.checked)" #surgicalhistoryCheck  id="flexSwitchCheckDefault" >
-                        </div>
-                      </div>
-                      <input type="text" id="surgical-history" class="form-control" placeholder="Decrivez......."  *ngIf="surgicalhistoryCheck.checked">
-                    </div>
-
-                    <div class="mb-3 border-bottom pb-2">
-                      <div class="d-flex justify-content-between">
-                        <label for="chronic-diseases" class="form-label d-block fw-700">Maladies chroniques?</label>
-                        <div class="form-check form-switch " >
-                          <input  class="form-check-input"  type="checkbox" value="" (click)="showInput(chronicdiseasesCheck.checked)"    #chronicdiseasesCheck  id="flexSwitchCheckDefault" >
-                        </div>
-                      </div>
-                      <input type="text" id="chronic-diseases" class="form-control" placeholder="Decrivez......."  *ngIf="chronicdiseasesCheck.checked">
+                      <textarea name="description" id="description" class="form-control" placeholder="decrivez votre parcour" cols="30" rows="10"></textarea>
                     </div>
 
                     <div class="mt-3 w-100">
