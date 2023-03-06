@@ -1,0 +1,315 @@
+<div class="container my-5">
+  <div class="mt-3">
+    <!-- <span class="back">
+      <i class="mdi mdi-chevron-left"></i>
+    </span> -->
+    <h1 class="h3 fw-bold">Prenez votre rendez-vous en ligne</h1>
+    <p>
+      Renseignez les informations suivantes
+    </p>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="img-profile">
+            <img src="assets/user.png" class="img-fluid" alt="">
+          </div>
+          <div class="d-flex flex-column">
+            <span class="fw-bold">Dr Dan BOUDANA</span>
+            <span>Médecin Généraliste</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h6>Présentation</h6>
+          <p>
+            Le médecin généraliste accueille les enfants et les adultes pour tous types de soins médicaux généraux
+            (consultation, contrôle annuel, vaccination, bilan de santé).
+            Il assure également un suivi des patients dans le temps et les oriente vers des médecins spécialistes en cas de besoin.
+            Je ne pratique pas la visioconférence dans mes consultations.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="">
+            <button class="btn btn-sm btn-primary rounded-5 mx-1">Lieu 1</button>
+            <button class="btn btn-sm btn-outline-dark rounded-5 mx-1">Lieu 2</button>
+          </div>
+          <hr>
+          <div class="d-flex flex-column">
+            <span>Cabinet Puteaux</span>
+            <span>11 Rue Rouget de Lisle, 92800 Puteaux</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h6>Expertises et actes</h6>
+          <div class="chips">
+            <span class="chip">Médecine de l'enfant et de l'adolescent</span>
+            <span class="chip">Radiographie</span>
+            <span class="chip">Suivi en gynécologie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h6>
+            <i class="mdi mdi-av-timer"></i>
+            Horaires et contacts
+          </h6>
+          <div class="row">
+            <div class="col">
+              <div class="d-flex flex-column">
+                <span class="fw-bold">Horaires d'ouverture</span>
+                <span>Lundi :08h30 - 19h30</span>
+                <span>Mardi :08h30 - 19h30</span>
+                <span>Mercredi :08h30 - 19h30</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column">
+                <span class="fw-bold">Contact d'urgence</span>
+                <span>En cas d'urgence, contactez le 15 (Samu)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="multiple-step">
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="bottom-bar">Choisissez la date de consultation</h6>
+
+              <div class="choose-date">
+                <span class="slide-left">
+                  <i class="mdi mdi-chevron-left"></i>
+                </span>
+                <span class="slide-right">
+                  <i class="mdi mdi-chevron-right"></i>
+                </span>
+
+                <div class="content-scroll-x">
+                  <div class="item" *ngFor="let i of [1,2,3,4,5]">
+                    <div class="item-head">
+                      <span class="fw-bold">Samedi</span>
+                      <span>{{ i }} Mars</span>
+                    </div>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                    <span class="item-time" (click)="next()">
+                      12:00
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <button class="btn btn-light previous mb-3" (click)="prev()">
+                <i class="mdi mdi-chevron-left"></i>
+              </button>
+
+              <h6>Avez-vous déjà consulté ce praticien ?</h6>
+              <p>
+                Si vous prenez rendez-vous pour quelqu'un d'autre, cette question le concerne
+              </p>
+              <div class="mt-4">
+                <div class="list-group">
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">Oui</button>
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">Non</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <button class="btn btn-light previous mb-3" (click)="prev()">
+                <i class="mdi mdi-chevron-left"></i>
+              </button>
+
+              <h6>Choisissez votre mode de consultation</h6>
+              <div class="mt-4">
+                <div class="list-group">
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">
+                    <i class="mdi mdi-hospital-box-outline me-2" style="font-size: 20px;"></i>
+                    Au cabinet
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">
+                    <i class="mdi mdi-video me-2" style="font-size: 20px;"></i>
+                    En vidéo
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <button class="btn btn-light previous mb-3" (click)="prev()">
+                <i class="mdi mdi-chevron-left"></i>
+              </button>
+
+              <h6>Choisissez votre motif de consultation</h6>
+              <div class="mt-4">
+                <div class="list-group">
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">
+                    Première consultation de médecine générale
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">
+                    Consultation de suivi de médecine générale
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action" (click)="next()">
+                    Laboratoire
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <button class="btn btn-light previous mb-3" (click)="prev()">
+                <i class="mdi mdi-chevron-left"></i>
+              </button>
+
+              <h6>Sélectionnez un créneau</h6>
+              <div class="mt-4">
+                <div class="accordion accordion-flush-" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Mardi 28 février
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="chips">
+                          <span class="chip" (click)="confirm()" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+                            12:00
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Mercredi 29 février
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="chips">
+                          <span class="chip" (click)="confirm()" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+                            12:00
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Jeudi 01 Mars
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="chips">
+                          <span class="chip" (click)="confirm()" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+                            12:00
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <button class="btn w-100 btn-outline-primary">AFFICHER PLUS DE DISPONIBILITÉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="card">
+            <div class="card-body">
+              <button class="btn btn-light previous mb-3" (click)="prev()">
+                <i class="mdi mdi-chevron-left"></i>
+              </button>
+
+              <h6>Pour qui prenez-vous ce rendez-vous ?</h6>
+              <div class="mt-4">
+                <div class="alert alert-primary">
+                  En confirmant ce rendez-vous, vous vous engagez à l’honorer.
+                </div>
+
+                <div class="mt-4">
+                  <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <input type="radio" name="person" class="me-2">
+                      <i class="mdi mdi-account-circle text-secondary" style="font-size: 30px;"></i>
+                      <span>Mohamed</span>
+                      <span class="text-dark ms-2">Moi</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action text-secondary">
+                      <i class="mdi mdi-account-plus"></i>
+                      Pour quelqu’un d’autre
+                    </button>
+                  </div>
+
+                  <button class="btn btn-secondary mt-4" routerLink="/account/rendez-vous">Confirmez le rendez-vous</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

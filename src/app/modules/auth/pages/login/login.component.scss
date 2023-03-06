@@ -1,0 +1,11 @@
+@import "/src/scss/bootstrap/config";
+
+.link {
+  color:  #838080;
+  font-weight: 700;
+  transition: .1s;
+
+  &:hover {
+    color: $primary;
+  }
+}

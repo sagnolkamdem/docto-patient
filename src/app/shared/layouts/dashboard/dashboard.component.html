@@ -1,0 +1,52 @@
+<main class="main">
+  <app-header></app-header>
+
+  <section class="page-content">
+    <div class="sidebar">
+      <div class="side-item" [routerLink]="'/account/rendez-vous'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-calendar"></i>
+        </span>
+        <span class="text">Rendez-vous</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/documents'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-text-box-multiple"></i>
+        </span>
+        <span class="text">Documents</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/profile'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-account-circle"></i>
+        </span>
+        <span class="text">Profil</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/proches'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-human-male-female-child"></i>
+        </span>
+        <span class="text">Proches</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/historiques'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-history"></i>
+        </span>
+        <span class="text">Historique</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/connexion'" routerLinkActive="active">
+        <span class="icon">
+          <i class="mdi mdi-security"></i>
+        </span>
+        <span class="text">Connexion & Sécurité</span>
+      </div>
+    </div>
+
+    <div class="content-wrap">
+      <div class="next-page">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </section>
+
+  <app-tabs></app-tabs>
+</main>

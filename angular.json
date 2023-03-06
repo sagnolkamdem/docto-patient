@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

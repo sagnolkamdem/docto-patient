@@ -1,0 +1,39 @@
+<h2 mat-dialog-title class="text-end">
+  <!-- Titre -->
+
+  <button mat-dialog-close class="btn btn-sm btn-light rounded-circle">
+    <i class="mdi mdi-close"></i>
+  </button>
+</h2>
+
+<mat-dialog-content class="mat-typography- mt-2-">
+  <!-- <hr> -->
+  <h4 class="fw-bold bottom-bar">Plus de filtres</h4>
+
+  <div class="">
+    <form action="">
+      <div class="mb-3">
+        <label for="specialty">Spécialité recherchée</label>
+        <select id="specialty" class="form-select">
+          <option value="">Médecine Générale</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="localization">Localisation</label>
+        <input type="text" class="form-control" id="localization" placeholder="">
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <!-- <button mat-stroked-button mat-dialog-close color="warn" cdkFocusInitial>Annuler</button> -->
+  <div class="d-flex justify-content-end">
+    <div class="me-2">
+      <button class="btn w-100 btn-outline-tertiary">Tout effacer</button>
+    </div>
+    <div class="flex-fill">
+      <button class="btn w-100 btn-secondary">AFFICHER LES RÉSULTATS</button>
+    </div>
+  </div>
+</mat-dialog-actions>

@@ -1,0 +1,44 @@
+
+.bottom-bar {
+  position: relative;
+  // border-bottom: 1px solid $primary;
+  display: inline-block;
+
+  &::after {
+    position: absolute;
+    height: 6px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    background-color: rgba($primary, .7);
+    content: "";
+    // z-index: -1;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mat-dialog-container {
+  border-radius: 20px !important;
+}
+.no-bg {
+  .mat-dialog-container {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+h1 {
+  &.page-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 18px;
+}
+
