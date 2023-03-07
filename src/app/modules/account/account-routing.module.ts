@@ -45,7 +45,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/agenda',
+    redirectTo: 'agenda',
     pathMatch: 'full'
   }
 ];
