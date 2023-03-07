@@ -5,8 +5,16 @@ import { TeamComponent } from './pages/team/team.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NoteComponent } from './note/note.component';
 
 const routes: Routes = [
+  {
+    path: 'notes',
+    component: NoteComponent,
+    data: {
+      title: 'Mes notes'
+    }
+  },
   {
     path: 'agenda',
     component: AgendaComponent,
@@ -45,7 +53,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/agenda',
+    redirectTo: 'agenda',
     pathMatch: 'full'
   }
 ];
