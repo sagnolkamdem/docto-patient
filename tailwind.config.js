@@ -17,6 +17,7 @@ module.exports = {
         secondary: "#F7931E",
         button: "#F42186",
         tertiary: "#333333",
+        background: "#f9f9f9",
       }
     },
   },
