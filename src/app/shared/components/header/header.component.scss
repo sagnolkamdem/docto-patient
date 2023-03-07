@@ -42,6 +42,37 @@
         &:last-child {
           margin-right: 0;
         }
+
+        .user-nav {
+          display: flex;
+          align-items: center;
+
+          .username {
+            display: flex;
+            flex-direction: column;
+            line-height: 1rem;
+            margin-right: .5rem;
+
+            .name {
+              font-size: 18px;
+              font-weight: 700;
+            }
+            .role {
+              font-size: 13px;
+              font-weight: 300;
+            }
+          }
+
+          .user-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              font-size: 44px;
+            }
+          }
+        }
       }
     }
   }
