@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NoteComponent } from './note/note.component';
 
 
 @NgModule({
   declarations: [
+    NoteComponent
   ],
   imports: [
     CommonModule,
