@@ -1,5 +1,3 @@
-import { ProfileDoctorComponent } from './pages/rendez-vous/profile-doctor/profile-doctor.component';
-import { RendezVousComponent } from './pages/rendez-vous/rendez-vous.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,20 +9,6 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Bienvenue sur Tabiblib'
-    },
-  },
-  {
-    path: 'prendre-rendez-vous',
-    component: RendezVousComponent,
-    data: {
-      title: 'Prendre rendez-vous'
-    },
-  },
-  {
-    path: 'prendre-rendez-vous/profil-docteur',
-    component: ProfileDoctorComponent,
-    data: {
-      title: 'Profil du docteur'
     },
   },
   {

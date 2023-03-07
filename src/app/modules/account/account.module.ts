@@ -5,11 +5,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NoteComponent } from './note/note.component';
+import { TeamComponent } from './pages/team/team.component';
+import { PatientManagementComponent } from './pages/patient-management/patient-management.component';
+import { MailComponent } from './pages/mail/mail.component';
+import { ActivitiesComponent } from './pages/activities/activities.component';
 
 
 @NgModule({
   declarations: [
-    NoteComponent
+    NoteComponent,
+    TeamComponent,
+    PatientManagementComponent,
+    MailComponent,
+    ActivitiesComponent
   ],
   imports: [
     CommonModule,
