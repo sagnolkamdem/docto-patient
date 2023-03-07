@@ -15,6 +15,7 @@ $sidebar-width: 250px;
     background-color: #E8F4F0;
     display: flex;
     flex-direction: column;
+    padding: 1rem 2rem;
 
     .side-item {
       padding: .5rem 1rem;
@@ -22,6 +23,11 @@ $sidebar-width: 250px;
       cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      margin-bottom: .5rem;
+      border: .125rem solid $primary;
+      background-color: #FFF;
 
       .icon {
         margin-right: .25rem;
@@ -33,22 +39,12 @@ $sidebar-width: 250px;
 
       .text {
         font-weight: 600;
+        text-align: center;
       }
 
       &.active {
         background-color: $primary;
         color: #FFF;
-        position: relative;
-
-        &::before {
-          position: absolute;
-          right: .5rem;
-          top: .5rem;
-          // top: 50%;
-          // font-family: 'Material Design Icons';
-          content: '>';
-          font-weight: 700 !important;
-        }
       }
     }
   }

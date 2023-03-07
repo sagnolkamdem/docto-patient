@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoreFilterComponent } from './more-filter.component';
+import { TeamComponent } from './team.component';
 
-describe('MoreFilterComponent', () => {
-  let component: MoreFilterComponent;
-  let fixture: ComponentFixture<MoreFilterComponent>;
+describe('TeamComponent', () => {
+  let component: TeamComponent;
+  let fixture: ComponentFixture<TeamComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MoreFilterComponent ]
+      declarations: [ TeamComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MoreFilterComponent);
+    fixture = TestBed.createComponent(TeamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
