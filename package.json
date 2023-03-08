@@ -30,6 +30,7 @@
     "angular-animations": "^0.11.0",
     "bootstrap": "^5.2.0",
     "makefile-for-js": "^0.0.6",
+    "ng2-charts": "^0.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
