@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ChartConfiguration } from 'chart.js';
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesComponent implements OnInit {
 
+  title = 'ng2-charts-demo';
+  // Doughnut
+  public doughnutChartLabels: string[]  = [ 'En ligne', 'Hors ligne' ];
+  public doughnutChartDatasets: ChartConfiguration<'doughnut'>['data']['datasets'] = [
+      { data: [ 350, 450 ], label: 'Series A' },
+    ];
+
+  public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
+    responsive: false
+  };
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
