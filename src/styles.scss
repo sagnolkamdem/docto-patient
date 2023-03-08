@@ -5,6 +5,8 @@
 @import "scss/mdi/css/materialdesignicons.min.css";
 /* You can add global styles to this file, and also import other style files */
 
+@import "~@bryntum/calendar/calendar.material.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +21,14 @@ body {
   font-family: Montserrat, sans-serif;
   // font-family: Roboto, sans-serif;
   font-size: 14px;
+  margin         : 0;
+  display        : flex;
+  flex-direction : column;
+  height         : 100vh;
+}
+
+app-root {
+  flex : 1 1 100%;
 }
 
 .pointer {
