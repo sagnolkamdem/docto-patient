@@ -11,6 +11,7 @@ import { TeamComponent } from './pages/team/team.component';
 import { PatientManagementComponent } from './pages/patient-management/patient-management.component';
 import { MailComponent } from './pages/mail/mail.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -25,10 +26,12 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
   imports: [
     CommonModule,
     FormsModule,
+    NgChartsModule,
     ReactiveFormsModule,
     SharedModule,
     BryntumCalendarModule,
     AccountRoutingModule
+
   ]
 })
 export class AccountModule { }
