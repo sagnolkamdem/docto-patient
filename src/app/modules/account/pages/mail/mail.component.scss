@@ -1,0 +1,503 @@
+@import "/src/scss/bootstrap/config";
+
+.content {
+  display: flex;
+  height: 100%;
+  box-shadow: $box-shadow;
+
+  .side {
+    flex: 1.2;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $box-shadow;
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      // background-color: #FFF;
+      color: $primary;
+
+      .text-icon {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        height: 100%;
+        padding: .5rem;
+        padding-left: 25px;
+
+        .bx {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0 35px 0;
+      overflow-y: auto;
+
+      .link {
+        display: flex;
+        justify-content: space-between;
+        border-left: 5px solid transparent;
+        padding-right: 1rem;
+
+        &.active {
+          background-color: #FFF;
+          border-left-color: $primary;
+
+          .bx-icon {
+            color: $primary;
+          }
+
+          .text {
+            font-weight: 600;
+          }
+        }
+
+        .link-item {
+          display: flex;
+          padding: .75rem 1rem;
+          cursor: pointer;
+
+          .bx-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+
+            .bx {
+              font-size: 1.3rem;
+            }
+          }
+
+          .text {
+            font-weight: 500;
+          }
+        }
+
+        .link-badge {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .badge {
+            background-color: $tertiary;
+            border-radius: 10px;
+            color: #FFF;
+            font-weight: 500;
+            padding: .25rem 1rem;
+          }
+        }
+      }
+
+      .link-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .25rem 1.5rem;
+        margin-top: 1rem;
+
+        .title {
+          font-size: 21px;
+          font-weight: 700;
+        }
+
+        .add-btn {
+          .btn {
+            border-radius: 15px;
+            padding: .25rem .75rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $primary;
+      color: #FFF;
+      text-align: center;
+      cursor: pointer;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .inbox {
+    flex: 1.5;
+
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $box-shadow;
+    background-color: #FFF;
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 75px;
+      background-color: #FFF;
+      color: $primary;
+      padding: 0 1rem;
+
+      .form-group {
+        flex: 1;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      padding: 75px .75rem 1rem .75rem;
+      overflow-y: auto;
+
+      .message {
+        display: flex;
+        justify-content: space-between;
+        border-left: 5px solid transparent;
+        padding: 1rem .5rem;
+        box-shadow: $box-shadow;
+        margin: .25rem 0;
+        cursor: pointer;
+
+        &.active {
+          background-color: #FFF;
+          border-left-color: $primary;
+        }
+
+        .user-avatar {
+          margin-right: .75rem;
+        }
+
+        .message-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          .head {
+            display: flex;
+            justify-content: space-between;
+            padding-top: .25rem;
+
+            .left {
+              display: flex;
+              flex-direction: column;
+              font-size: 12px;
+              margin-right: .5rem;
+
+              .username {
+                font-weight: 700;
+                margin-bottom: .25rem;
+              }
+
+              .subject {
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+
+            .right {
+              display: flex;
+              flex-direction: column;
+              font-size: 10px;
+
+              .date {
+                font-weight: 500;
+              }
+
+              .file {
+                text-align: end;
+                color: $primary;
+              }
+            }
+          }
+
+          .user-message {
+            margin-top: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .message-preview {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .text {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .opened-message {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // padding: 1rem;
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 1rem;
+
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .bx-icon {
+            cursor: pointer;
+            margin: 0 .5rem;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            .bx {
+              font-size: 1.75rem;
+            }
+          }
+        }
+
+        .right {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .total {
+            font-size: 18px;
+            font-weight: 700;
+            margin-right: .5rem;
+          }
+
+          .bx-icon {
+            cursor: pointer;
+
+            .bx {
+              font-size: 1.75rem;
+            }
+          }
+        }
+
+      }
+
+      .body {
+        padding: 80px 1rem;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 1rem;
+
+        .message {
+          display: flex;
+          justify-content: space-between;
+
+          .user-avatar {
+            margin-right: .75rem;
+          }
+
+          .message-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .head {
+              display: flex;
+              justify-content: space-between;
+              padding-top: .25rem;
+
+              .left {
+                display: flex;
+                flex-direction: column;
+                // font-size: 12px;
+                margin-right: .5rem;
+                line-height: 1.1rem;
+
+                .username {
+                  font-weight: 700;
+                  margin-bottom: .25rem;
+                }
+
+                .subject {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+
+                .email {
+                  font-size: 12px;
+                  font-weight: 600;
+                }
+              }
+
+              .right {
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+
+                .date {
+                  font-weight: 500;
+                }
+              }
+            }
+
+            .user-message {
+              margin-top: 1rem;
+
+              .gallery {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item {
+                  height: 120px;
+                  flex-grow: 1;
+                  list-style: none;
+                  padding: .5rem;
+                  overflow: hidden;
+                  padding-left: 0;
+
+                  img {
+                    max-height: 100%;
+                    min-width: 100%;
+                    object-fit: cover;
+                    vertical-align: bottom;
+                    transition: all 0.5s;
+                    border-radius: 0px;
+                    cursor: pointer;
+
+                    &:hover {
+                      filter: blur(0px);
+                      opacity: 1;
+                      transform: scale(1.02);
+                      transition: all 0.5s;
+                    }
+                  }
+                }
+              }
+
+              .download {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+
+                .btn {
+                  margin-right: 1rem;
+                }
+              }
+            }
+
+            .reply {
+              margin-top: 1rem;
+
+              .form-group {
+                flex: 1;
+                position: relative;
+
+                .form-control {
+                  background-color: transparent;
+                }
+
+                .icons {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 1rem;
+
+                  display: flex;
+
+                  .bx {
+                    font-size: 1.3rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .new-message {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1rem;
+      right: 0;
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 50px;
+      }
+
+      .body {
+        padding: 50px 1rem 50px 0;
+        overflow: auto;
+        height: 100%;
+
+        .files {
+          display: flex;
+          flex-direction: column;
+
+          .file {
+            margin: .075rem 0;
+            padding: .5rem;
+            border: 1px solid #DDD;
+            background-color: #FFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 50px;
+      }
+    }
+  }
+}

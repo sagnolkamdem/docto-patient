@@ -12,6 +12,7 @@ import { PatientManagementComponent } from './pages/patient-management/patient-m
 import { MailComponent } from './pages/mail/mail.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { NgChartsModule } from 'ng2-charts';
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -30,8 +31,8 @@ import { NgChartsModule } from 'ng2-charts';
     ReactiveFormsModule,
     SharedModule,
     BryntumCalendarModule,
-    AccountRoutingModule
-
+    AccountRoutingModule,
+    QuillModule, // Add Quill Angular WYSIWYG Editor
   ]
 })
 export class AccountModule { }
