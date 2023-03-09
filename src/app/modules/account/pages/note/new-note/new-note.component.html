@@ -1,0 +1,39 @@
+<h2 mat-dialog-title class="text-end">
+  <!-- Titre -->
+
+  <button mat-dialog-close class="btn btn-sm btn-light rounded-circle">
+    <i class="mdi mdi-close"></i>
+  </button>
+</h2>
+
+<mat-dialog-content class="mat-typography- mt-2-">
+  <h4 class="fw-bold bottom-bar">Ajouter une note</h4>
+  <div class="">
+    <form action="">
+      <div class="mb-3">
+        <label for="titre">Titre</label>
+        <input type="text" class="form-control" id="titre" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="localization">Description</label>
+        <textarea class="form-control"  id="floatingTextarea2" style="height: 100px"></textarea>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <!-- <button mat-stroked-button mat-dialog-close color="warn" cdkFocusInitial>Annuler</button> -->
+  <div class="d-flex justify-content-end">
+    <div class="me-2">
+      <button class="btn w-100 btn-outline-primary"  (click)="store()" >Ajouter</button>
+    </div>
+    <div class="flex-fill">
+      <button mat-dialog-close class="btn w-100 btn-danger">Annuler</button>
+    </div>
+  </div>
+</mat-dialog-actions>

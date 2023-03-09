@@ -11,7 +11,13 @@ export class ActivitiesComponent implements OnInit {
   // Doughnut
   public doughnutChartLabels: string[]  = [ 'En ligne', 'Hors ligne' ];
   public doughnutChartDatasets: ChartConfiguration<'doughnut'>['data']['datasets'] = [
-      { data: [ 350, 450 ], label: 'Series A' },
+      { data: [ 350, 450 ],
+         label: 'Tabiblib',
+         backgroundColor: [
+          '#50D6B6',
+          '#F7931E',
+        ],
+    },
     ];
 
   public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
