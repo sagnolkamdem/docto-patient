@@ -20,10 +20,23 @@
     align-items: center;
 
     .nav-brand {
+      display: flex;
+      align-items: flex-end;
 
       .logo {
         height: 40px;
         cursor: pointer;
+      }
+
+      .target {
+        background-color: $secondary;
+        padding: .1rem .25rem;
+        border-radius: 8px;
+        color: #FFF;
+        font-size: 7px;
+        font-weight: 600;
+        margin-left: .2rem;
+        margin-bottom: .25rem;
       }
     }
 

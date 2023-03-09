@@ -1,6 +1,8 @@
+import { AgendaComponent } from './pages/agenda/agenda.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BryntumCalendarModule } from '@bryntum/calendar-angular';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -10,15 +12,18 @@ import { PatientManagementComponent } from './pages/patient-management/patient-m
 import { MailComponent } from './pages/mail/mail.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { NgChartsModule } from 'ng2-charts';
+import { NewNoteComponent } from './pages/note/new-note/new-note.component';
 
 
 @NgModule({
   declarations: [
+    AgendaComponent,
     NoteComponent,
     TeamComponent,
     PatientManagementComponent,
     MailComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    NewNoteComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +31,7 @@ import { NgChartsModule } from 'ng2-charts';
     NgChartsModule,
     ReactiveFormsModule,
     SharedModule,
+    BryntumCalendarModule,
     AccountRoutingModule
 
   ]
