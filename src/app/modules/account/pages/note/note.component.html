@@ -4,21 +4,24 @@
       <h5 class="fw-bolder" >Mes notes</h5>
     </div>
     <div class="d-flex gx-5 justify-content-end align-items-center col-6 position-relative " >
-      <button class="btn btn-primary  d-flex justify-content-between align-items-center me-5" (click)="addNote()" >
-        Nouvelle note
-        <i class="mdi mdi-plus-circle text-end"></i>
-      </button>
-      <button class="btn btn-outline-primary  d-flex justify-content-between align-items-center">
-        Historique
-        <i class="mdi mdi-chevron-right text-end"></i>
-      </button>
-      <!-- <ul class="list-group  position-absolute top-100 start-100 translate-middle ">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul> -->
+          <button class="btn btn-primary  d-flex justify-content-between align-items-center me-5" (click)="addNote()" >
+            Nouvelle note
+            <i class="mdi mdi-plus-circle text-end"></i>
+          </button>
+          <div class="dropdown">
+            <button class="btn btn-outline-primary  d-flex justify-content-between align-items-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Historique
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-bolder" href="#"> Aujourd'hui </a></li>
+              <li><a class="dropdown-item fw-bolder " href="#"> Il y'a une semaine </a></li>
+              <li><a class="dropdown-item fw-bolder " href="#"> Il y'a un mois </a></li>
+              <li>
+              <input type="date" class="form-control" id="date" placeholder="">
+              </li>
+            </ul>
+          </div>
+
     </div>
   </div>
   <div class="row row-cols-md-3   g-4">
