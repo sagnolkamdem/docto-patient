@@ -16,6 +16,8 @@ import { ToggleComponent } from './components/toggle/toggle.component';
 import { AuthComponent } from './layouts/auth/auth.component';
 import { AlertErrorComponent } from './components/alert-error/alert-error.component';
 import { AlertConfirmComponent } from './components/alert-confirm/alert-confirm.component';
+import { SettingComponent } from './layouts/setting/setting.component';
+import { SettingHeaderComponent } from './components/header/setting-header/setting-header.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { AlertConfirmComponent } from './components/alert-confirm/alert-confirm.
     ToggleComponent,
     AuthComponent,
     AlertErrorComponent,
-    AlertConfirmComponent
+    AlertConfirmComponent,
+    SettingComponent,
+    SettingHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +51,10 @@ import { AlertConfirmComponent } from './components/alert-confirm/alert-confirm.
     ModalComponent,
     MaterialModule,
     ComplexDashboardTabsComponent,
-    ToggleComponent
+    HeaderComponent,
+    TabsComponent,
+    ToggleComponent,
+    SettingComponent
   ]
 })
 export class SharedModule { }
