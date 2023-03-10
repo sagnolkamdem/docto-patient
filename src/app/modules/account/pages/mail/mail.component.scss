@@ -1,5 +1,14 @@
 @import "/src/scss/bootstrap/config";
 
+.bx-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 24px;
+  }
+}
 
 .app-home {
   height: 100vh;
