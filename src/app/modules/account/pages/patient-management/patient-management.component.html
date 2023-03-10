@@ -1,82 +1,282 @@
-<div class="tw-p-5 tw-space-y-6">
+<div class="tw-pt-6 tw-pl-10">
 
-    <!-- Search -->
-    <div class="tw-border-2 tw-flex tw-border-primary-500 tw-rounded-full tw-bg-white tw-max-w-fit">
-        <div class="tw-mt-1 tw-flex tw-items-center tw-px-6 tw-py-1 tw-m-0">
-            <div class="tw-flex tw-py-1.5 tw-pr-1.5">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="tw-w-8 tw-h-8 tw-fill-gray-400"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path></svg>
-            </div>
-            <select name="search" id="search" class="tw-p-0 tw-h-full tw-min-w-[300px] tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-base placeholder:tw-text-gray-400 tw-text-base tw-rounded-md tw-border-transparent focus:tw-border-white focus:tw-ring-white">
-                <option value="Mohammed Henny">Mohammed Henny</option>
-                <option value="Mohammed Henny">Mohammed Henny</option>
-                <option value="Mohammed Henny">Mohammed Henny</option>
-                <option value="Mohammed Henny">Mohammed Henny</option>
-                <option value="Mohammed Henny">Mohammed Henny</option>
-                <option selected>Choisir</option>
-            </select>
-        </div>
-    </div>
+    <!-- Title -->
+    <h1 class="tw-text-lg tw-font-bold !tw-m-0 !tw-mb-5">Gestion des patients</h1>
 
-    <!-- Table of patients -->
-    <div class="tw-flow-root">
-        <div class="tw-overflow-x-auto tw-p-5 tw-bg-white tw-rounded-md tw-space-y-5">
+    <div class="tw-bg-white tw-p-2.5 tw-space-y-5">
 
-            <button class="btn btn-secondary tw-uppercase !tw-inline-flex tw-gap-1">
+        <!-- Tabs -->
+        <app-complex-dashboard-tabs>
+
+            <div class="tw-flex tw-justify-between tw-gap-y-6 tw-flex-col sm:tw-flex-row">
+                <div class="tw-flex tw-justify-between lg:tw-w-full">
+                    <div class="tw-border-b tw-border-gray-200 max-sm:tw-w-full">
+                        <nav class="-tw-mb-px sm:tw-flex tw-grid tw-grid-cols-2 tw-space-x-8 tw-cursor-pointer" aria-label="Tabs">
+                        <p (click)="changePage(tab)" *ngFor="let tab of tabs" [ngClass]="{'!tw-border-[#50D6B6]': currentPage === tab}" class="tw-text-center tw-mt-3 tw-border-transparent tw-m-0 tw-no-underline tw-text-tertiary hover:tw-border-gray-300 tw-whitespace-nowrap tw-px-1 tw-border-b-2 tw-font-semibold tw-text-lg tw-capitalize">{{tab}}</p>
+                        </nav>
+                    </div>
+                </div>
+            </div> 
+            
+        </app-complex-dashboard-tabs>
+
+        <!-- Actions -->
+        <div [ngClass]="{'!tw-justify-end': currentPage !== 'patients'}" class="tw-flex tw-justify-between">
+
+            <button (click)="toggleCreatePatientForm()" *ngIf="currentPage === 'patients'" type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center tw-gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tw-w-5 tw-h-5 tw-stroke-secondary tw-fill-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>                  
                 AJOUTER UN PATIENT
             </button>
 
-            <div class="tw-inline-block tw-min-w-full tw-pb-2 tw-align-middle">
-                <table class="tw-min-w-full">
-                    <thead>
-                    <tr class="tw-bg-primary-500">
-                        <th scope="col" class="tw-py-3.5 tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-max-w-fit tw-text-white">Noms</th>
-                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Consultation</th>
-                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Date de naissance</th>
-                        <th scope="col" class="tw-relative tw-py-3.5 tw-pl-3 tw-pr-4 sm:tw-pr-0">
+            <!-- Search -->
+            <div class="tw-rounded-full tw-bg-primary-100 tw-max-w-fit tw-float-right">
+                <div class="tw-flex tw-items-center tw-px-4 tw-py-1 tw-m-0">
+                    <div class="tw-flex tw-py-1.5 tw-pr-1.5">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="tw-w-6 tw-h-6 tw-fill-gray-400"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path></svg>
+                    </div>
+                    <input type="text" name="search" id="search" placeholder="Rechercher un patient" class="tw-p-0 tw-h-full tw-min-w-[364px] tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-sm tw-text-sm tw-bg-primary-100 placeholder:tw-text-gray-400  tw-rounded-md tw-border-transparent focus:tw-border-primary-100 focus:tw-ring-primary-100">
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Patients table -->
+        <div *ngIf="currentPage === 'patients'" class="tw-inline-block tw-min-w-full tw-pb-2 tw-align-middle">
+            <table class="tw-min-w-full">
+                <thead>
+                <tr class="tw-bg-primary-500">
+                    <th scope="col" class="!tw-py-3.5 !tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-max-w-fit tw-text-white">Noms</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Date de naissance</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Consultation</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Dernière consultation</th>
+                </tr>
+                </thead>
+                <tbody class="tw-pt-3 tw-divide-y-2 tw-divide-gray-300">
+                <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" routerLink="/consultation/infos" class="tw-cursor-pointer tw-border-gray-400">
+                    <td class="tw-whitespace-nowrap !tw-py-3 tw-pl-4 tw-pr-3 tw-max-w-fit tw-text-tertiary sm:tw-pl-0 tw-capitalize">Mohamed</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">26/02/1983</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">04/05/2023</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">16/09/1983</td>
+                </tr>
+                </tbody>
+            </table>
+            <nav class="tw-flex tw-items-center tw-justify-between tw-border-t tw-border-gray-200 tw-bg-white tw-py-3 tw-pt-8" aria-label="Pagination">
+                <div class="tw-hidden sm:tw-block">
+                  <p class="tw-text-sm tw-text-gray-700 !tw-m-0">
+                    Affichage de
+                    <span class="tw-font-medium">1</span>
+                    à
+                    <span class="tw-font-medium">20</span>
+                    sur
+                    <span class="tw-font-medium">200</span>
+                    résultats
+                  </p>
+                </div>
+                <div class="tw-flex tw-flex-1 tw-justify-between sm:tw-justify-end tw-gap-3">
+                  <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Précédent</button>
+                  <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Suivant</button>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Waiting list table -->
+        <div *ngIf="currentPage === 'liste d\'attente'" class="tw-inline-block tw-min-w-full tw-pb-2 tw-align-middle">
+            <table class="tw-min-w-full">
+                <thead>
+                <tr class="tw-bg-primary-500">
+                    <th scope="col" class="!tw-py-3.5 !tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-max-w-fit tw-text-white">Noms</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Temps d'attente</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Consultation</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Motif</th>
+                    <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Agenda</th>
+                    <th scope="col" class="tw-relative tw-py-3.5 tw-pl-3 tw-pr-4 sm:tw-pr-0">
                         <span class="tw-sr-only">Actions</span>
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody class="tw-pt-3 tw-divide-y-2 tw-divide-gray-300">
-                    <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" class=" tw-border-gray-400">
-                        <td class="tw-whitespace-nowrap tw-py-4  tw-pt-1.5 tw-pb-1 tw-pl-4 tw-pr-3 tw-max-w-fit tw-text-tertiary sm:tw-pl-0 tw-capitalize">Compte rendu d'analyses médicales</td>
-                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">04/05/2023 à 12h30</td>
-                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">26/02/1983</td>
-                        <td class="tw-relative tw-whitespace-nowrap tw-py-4 tw-pl-3 tw-pr-4 tw-text-right tw-text-sm tw-font-medium sm:tw-pr-0">
-                            <button class="tw-mr-3">
-                                <span class="tw-sr-only">Modifier</span>
-                                <span class="">
-                                    <svg aria-hidden="true" class="tw-w-5 tw-h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.71 7.04006C21.1 6.65006 21.1 6.00006 20.71 5.63006L18.37 3.29006C18 2.90006 17.35 2.90006 16.96 3.29006L15.12 5.12006L18.87 8.87006M3 17.2501V21.0001H6.75L17.81 9.93006L14.06 6.18006L3 17.2501Z" fill="#111111"/>
-                                    </svg>                                        
-                                </span>
-                            </button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <nav class="tw-flex tw-items-center tw-justify-between tw-border-t tw-border-gray-200 tw-bg-white tw-py-3 tw-pt-8" aria-label="Pagination">
-                    <div class="tw-hidden sm:tw-block">
-                      <p class="tw-text-sm tw-text-gray-700 !tw-m-0">
-                        Affichage de
-                        <span class="tw-font-medium">1</span>
-                        à
-                        <span class="tw-font-medium">20</span>
-                        sur
-                        <span class="tw-font-medium">200</span>
-                        résultats
-                      </p>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="tw-pt-3 tw-divide-y-2 tw-divide-gray-300">
+                <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" class=" tw-border-gray-400">
+                    <td class="tw-whitespace-nowrap !tw-py-3 tw-pl-4 tw-pr-3 tw-max-w-fit tw-text-tertiary sm:tw-pl-0 tw-capitalize">Mohamed</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">0jr</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">04/05/2023 à 12h30</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Consultation générale</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Mohamed</td>
+                    <td class="tw-relative tw-whitespace-nowrap tw-py-4 tw-pl-3 tw-pr-4 tw-text-right tw-text-sm tw-font-medium sm:tw-pr-0">
+                        <button class="tw-mr-3">
+                            <span class="tw-sr-only">Modifier</span>
+                            <span class="">
+                                <svg aria-hidden="true" class="tw-w-5 tw-h-5" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5344 5.84289L17.5344 2.84289C17.3922 2.70205 17.2001 2.62305 17 2.62305C16.7999 2.62305 16.6078 2.70205 16.4656 2.84289L7.46563 11.8429C7.32633 11.9858 7.24888 12.1777 7.25 12.3773V15.3773C7.25 15.5762 7.32902 15.7669 7.46967 15.9076C7.61032 16.0482 7.80109 16.1273 8 16.1273H11C11.1995 16.1284 11.3915 16.0509 11.5344 15.9116L20.5344 6.91164C20.6752 6.76945 20.7542 6.5774 20.7542 6.37727C20.7542 6.17713 20.6752 5.98509 20.5344 5.84289ZM10.6906 14.6273H8.75V12.6866L14.75 6.68664L16.6906 8.62727L10.6906 14.6273ZM17.75 7.56789L15.8094 5.62727L17 4.43664L18.9406 6.37727L17.75 7.56789ZM20 11.6273V19.8773C20 20.2751 19.842 20.6566 19.5607 20.9379C19.2794 21.2192 18.8978 21.3773 18.5 21.3773H3.5C3.10218 21.3773 2.72064 21.2192 2.43934 20.9379C2.15804 20.6566 2 20.2751 2 19.8773V4.87727C2 4.47944 2.15804 4.09791 2.43934 3.81661C2.72064 3.5353 3.10218 3.37727 3.5 3.37727H11.75C11.9489 3.37727 12.1397 3.45628 12.2803 3.59694C12.421 3.73759 12.5 3.92835 12.5 4.12727C12.5 4.32618 12.421 4.51694 12.2803 4.6576C12.1397 4.79825 11.9489 4.87727 11.75 4.87727H3.5V19.8773H18.5V11.6273C18.5 11.4284 18.579 11.2376 18.7197 11.0969C18.8603 10.9563 19.0511 10.8773 19.25 10.8773C19.4489 10.8773 19.6397 10.9563 19.7803 11.0969C19.921 11.2376 20 11.4284 20 11.6273Z" fill="#333333"/>
+                                </svg>                                                                         
+                            </span>
+                        </button>
+                        <button type="button" (click)="toggleDeletePatientForm()" class="">
+                            <span class="tw-sr-only">Suprimer</span>
+                            <svg class="tw-h-5 tw-w-5 tw-mr-1 tw-stroke-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                            </svg>                                            
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <nav class="tw-flex tw-items-center tw-justify-between tw-border-t tw-border-gray-200 tw-bg-white tw-py-3 tw-pt-8" aria-label="Pagination">
+                <div class="tw-hidden sm:tw-block">
+                  <p class="tw-text-sm tw-text-gray-700 !tw-m-0">
+                    Affichage de
+                    <span class="tw-font-medium">1</span>
+                    à
+                    <span class="tw-font-medium">20</span>
+                    sur
+                    <span class="tw-font-medium">200</span>
+                    résultats
+                  </p>
+                </div>
+                <div class="tw-flex tw-flex-1 tw-justify-between sm:tw-justify-end tw-gap-3">
+                  <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Précédent</button>
+                  <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Suivant</button>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+
+    <!-- Create patient form -->
+    <app-modal [visible]="createPatientForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-max-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreatePatientForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#111111"/>
+                    </svg>   
+                </button>                 
+            </div>
+    
+            <h2 class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Ajouter un patient
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-top-0 tw-h-0 tw-w-full tw-bg-primary-500">Ajouter un patient</span>
+                </span>
+            </h2>
+    
+            <div class="tw-flex tw-mb-3 tw-bg-[#fde9d2] tw-gap-2.5 tw-text-tertiary tw-p-2.5">
+                <span class="tw-min-w-[20px] tw-min-h-[20px]">
+                    <svg class="tw-w-5 tw-h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.16667 14.1667H10.8333V9.16675H9.16667V14.1667ZM10 7.50008C10.2361 7.50008 10.4342 7.42008 10.5942 7.26008C10.7542 7.10008 10.8339 6.9023 10.8333 6.66675C10.8333 6.43064 10.7533 6.23258 10.5933 6.07258C10.4333 5.91258 10.2356 5.83286 10 5.83341C9.76389 5.83341 9.56583 5.91341 9.40583 6.07341C9.24583 6.23341 9.16611 6.43119 9.16667 6.66675C9.16667 6.90286 9.24667 7.10091 9.40667 7.26091C9.56667 7.42091 9.76444 7.50064 10 7.50008ZM10 18.3334C8.84722 18.3334 7.76389 18.1145 6.75 17.6767C5.73611 17.239 4.85417 16.6454 4.10417 15.8959C3.35417 15.1459 2.76056 14.264 2.32333 13.2501C1.88611 12.2362 1.66722 11.1529 1.66667 10.0001C1.66667 8.8473 1.88555 7.76397 2.32333 6.75008C2.76111 5.73619 3.35472 4.85425 4.10417 4.10425C4.85417 3.35425 5.73611 2.76064 6.75 2.32341C7.76389 1.88619 8.84722 1.6673 10 1.66675C11.1528 1.66675 12.2361 1.88564 13.25 2.32341C14.2639 2.76119 15.1458 3.3548 15.8958 4.10425C16.6458 4.85425 17.2397 5.73619 17.6775 6.75008C18.1153 7.76397 18.3339 8.8473 18.3333 10.0001C18.3333 11.1529 18.1144 12.2362 17.6767 13.2501C17.2389 14.264 16.6453 15.1459 15.8958 15.8959C15.1458 16.6459 14.2639 17.2398 13.25 17.6776C12.2361 18.1154 11.1528 18.334 10 18.3334ZM10 16.6667C11.8611 16.6667 13.4375 16.0209 14.7292 14.7292C16.0208 13.4376 16.6667 11.8612 16.6667 10.0001C16.6667 8.13897 16.0208 6.56258 14.7292 5.27091C13.4375 3.97925 11.8611 3.33341 10 3.33341C8.13889 3.33341 6.5625 3.97925 5.27083 5.27091C3.97917 6.56258 3.33333 8.13897 3.33333 10.0001C3.33333 11.8612 3.97917 13.4376 5.27083 14.7292C6.5625 16.0209 8.13889 16.6667 10 16.6667Z" fill="#111111"/>
+                    </svg>
+                </span>
+                <p class="tw-text-sm tw-text-left tw-mb-0">Les informations d'identité doivent être exactes et à jour. Elles seront partagées avec votre patient.</p>
+            </div>
+    
+            <form action="" class="">
+
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+                    <div class="tw-py-1 tw-text-left tw-space-y-4 tw-px-1">
+                        <label for="beneficiary">Type de patient</label>
+                        <select id="beneficiary" name="beneficiary" [(ngModel)]="patientType" class="tw-block tw-border-primary-100 tw-w-full tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                            <option value="enfant">Enfant</option>
+                            <option value="adulte">Adulte</option>
+                        </select>
                     </div>
-                    <div class="tw-flex tw-flex-1 tw-justify-between sm:tw-justify-end tw-gap-3">
-                      <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Précédent</button>
-                      <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Suivant</button>
+    
+                    <div class="tw-flex tw-py-3">
+                        <label for="sexe" class="tw-text-tertiary">Sexe</label>
+                        <div class="tw-flex tw-items-center tw-ml-10">
+                            <input id="Sexe" name="sexe" type="radio" checked class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
+                            <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Féminin</label>
+                        </div>
+                        <div class="tw-flex tw-items-center tw-ml-10">
+                            <input id="Sexe" name="sexe" type="radio" class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
+                            <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Masculin</label>
+                        </div>
                     </div>
-                </nav>
+        
+                    <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                        <label for="name" class="tw-sr-only">Nom</label>
+                        <input type="text" name="name" id="name" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Nom">
+                    </div>
+        
+                    <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                        <label for="surname" class="tw-sr-only">Prénom</label>
+                        <input type="text" name="surname" id="surname" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Prénom">
+                    </div>
+        
+                    <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                        <label for="birthDate" class="tw-sr-only">jj/mm/aaaa</label>
+                        <input type="date" name="birthDate" id="birthDate" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm">
+                    </div>
+        
+                    <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                        <label for="email" class="tw-sr-only">Email</label>
+                        <input type="text" name="email" id="email" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Email">
+                    </div>
+        
+                    <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                        <label for="address" class="tw-sr-only">Adresse</label>
+                        <input type="text" name="address" id="address" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Adresse">
+                    </div>
+        
+                    <!-- Child form -->
+                    <div *ngIf="patientType === 'enfant'" class="tw-space-y-4">
+                        <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                            <label for="poids" class="tw-sr-only">Poids</label>
+                            <input type="number" name="poids" id="poids" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Poids (kg)">
+                        </div>
+            
+                        <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                            <label for="taille" class="tw-sr-only">Taille</label>
+                            <input type="number" name="taille" id="taille" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Taille (cm)">
+                        </div>
+                    </div>
+
+                    <!-- Parent form -->
+                    <div *ngIf="patientType !== 'enfant'" class="tw-space-y-4">
+                        <div class="tw-py-1 tw-px-1 tw-bg-primary-100 tw-rounded-lg">
+                            <label for="lieuNaiss" class="tw-sr-only">Lieu de naissance</label>
+                            <input type="text" name="lieuNaiss" id="lieuNaiss" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-transparent sm:tw-text-sm" placeholder="Lieu de naissance">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tw-bg-white tw-mt-3">
+
+                    <button type="submit" class="hover:tw-bg-[#89dfc9] tw-w-full tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Ajouter
+                    </button>
+
+                </div>
+            </form>
+    
+        </div>
+    </app-modal>
+
+    <!-- Delete patient form -->
+    <app-modal [visible]="deletePatientForm" position="fixed" class="tw-my-auto">
+        <div class="tw-relative tw-transform tw-overflow-hidden tw-rounded-lg tw-bg-white tw-px-4 tw-pt-5 tw-pb-4 tw-text-left tw-shadow-xl tw-transition-all sm:tw-w-full sm:tw-max-w-lg sm:tw-p-6">
+            <div class="sm:tw-flex sm:tw-items-start">
+                <div class="tw-mx-auto tw-flex tw-h-12 tw-w-12 tw-flex-shrink-0 tw-items-center tw-justify-center tw-rounded-full tw-bg-red-100 sm:tw-mx-0 sm:tw-h-10 sm:tw-w-10">
+                    <svg class="tw-h-6 tw-w-6 tw-text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                    </svg>    
+                </div>
+                <div class="tw-mt-3 tw-text-center sm:tw-mt-0 sm:tw-ml-4 sm:tw-text-left">
+                    <h3 class="tw-text-base tw-font-semibold tw-leading-6 tw-text-gray-900" id="modal-title">Supprimer ce patient de la liste d'attente</h3>
+                    <div class="tw-mt-2">
+                        <p class="tw-text-sm tw-text-gray-500">Êtes-vous sûre de vouloir supprimer ce patient de la liste d'attente? Cet action est irréversible.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tw-mt-5 sm:tw-mt-4 tw-flex tw-justify-end tw-gap-4">
+                <button (click)="toggleDeletePatientForm()" type="button" class="tw-max-w-fit tw-inline-flex tw-w-full tw-justify-center tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-px-4 tw-py-2 tw-text-base tw-font-medium tw-text-gray-700 tw-shadow-sm hover:tw-bg-primary-100 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2 sm:tw-mt-0 sm:tw-w-auto sm:tw-text-sm">Annuler</button>
+                <button type="button" class="tw-inline-flex tw-w-full tw-max-w-fit justify-center tw-rounded-md tw-border tw-border-transparent tw-bg-red-600 tw-px-4 tw-py-2 tw-text-base tw-font-medium tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-600 focus:tw-ring-offset-2 sm:tw-ml-3 sm:tw-w-auto sm:tw-text-sm">Supprimer</button>
             </div>
         </div>
-    </div>
+    </app-modal>
 
 </div>

@@ -1,0 +1,37 @@
+<main class="main">
+    <app-header></app-header>
+  
+    <section class="page-content">
+        <div class="sidebar !tw-w-[300px]">
+            <div class="tw-flex tw-pt-3.5 tw-pr-5 tw-pl-2.5 tw-gap-1.5 tw-mb-6">
+
+                <svg class="tw-w-5 tw-h-5 tw-stroke-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M7 16L3 12L7 16ZM3 12L7 8L3 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            
+                <a href="#" class="tw-uppercase tw-font-medium tw-text-base tw-text-primary-500 tw-whitespace-nowrap">Retour à l'agenda</a>
+            
+            </div>
+
+            <p class="!tw-m-0 tw-text-center tw-font-bold tw-text-xl !tw-mb-4">Mohamed <br> Belaiouer</p>
+
+            <div class="side-item" [routerLink]="'/consultation/infos'" routerLinkActive="active">
+                <span class="text">Infos</span>
+            </div>
+            <div class="side-item" [routerLink]="'/consultation/historique'" routerLinkActive="active">
+                <span class="text">Historique</span>
+            </div>
+            <div class="side-item" [routerLink]="'/consultation/documents'" routerLinkActive="active">
+                <span class="text">Documents</span>
+            </div>
+        </div>
+  
+      <div class="content-wrap !tw-pl-[300px]">
+        <div class="next-page">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </section>
+  
+    <app-tabs></app-tabs>
+  </main>

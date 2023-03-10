@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agenda.component.scss']
 })
 export class AgendaComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
