@@ -22,7 +22,7 @@
                 <button *ngFor="let conversation of conversations" (click)="setConversation(conversation)" class="tw-p-4 tw-flex tw-justify-between first-of-type:tw-rounded-tl-3xl tw-bg-background tw-items-center">
                     <div class="tw-flex tw-gap-x-1 tw-items-center">
                         <!--  -->
-                        <svg xmlns="http://www.w3.org/2000/svg"[ngClass]="{'tw-fill-secondary': currentConversation && conversation.id === currentConversation.id}" class="tw-w-7 tw-h-7 tw-fill-gray-600" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" [ngClass]="{'tw-fill-secondary': currentConversation && conversation.id === currentConversation.id}" class="tw-w-7 tw-h-7 tw-fill-gray-600" viewBox="0 0 24 24">
                             <path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path>
                         </svg>
                         <!--  -->
@@ -74,20 +74,17 @@
                     <textarea rows="4" name="message" id="message" class="tw-block tw-w-full tw-resize-y tw-border-0 tw-bg-transparent tw-text-gray-900 placeholder:tw-text-gray-400 focus:tw-ring-0 tw-text-sm sm:tw-leading-6"></textarea>
                 </div>
 
-                
-
                 <div class="tw-p-4 tw-border-l-2 tw-flex tw-flex-col tw-gap-y-2 tw-border-background">
 
                     <button class="tw-w-6 tw-h-6 tw-rounded-full tw-flex tw-justify-center tw-items-center tw-bg-primary-500">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="tw-w-6 tw-h-6 tw-fill-white">
                             <path fill-rule="evenodd" d="M10 15a.75.75 0 01-.75-.75V7.612L7.29 9.77a.75.75 0 01-1.08-1.04l3.25-3.5a.75.75 0 011.08 0l3.25 3.5a.75.75 0 11-1.08 1.04l-1.96-2.158v6.638A.75.75 0 0110 15z" clip-rule="evenodd" />
-                        </svg>                                                  
+                        </svg>
                     </button>
 
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" class="tw-w-4 tw-h-4 tw-fill-gray-400 tw-mx-auto" viewBox="0 0 24 24"><path d="M12 9c-1.626 0-3 1.374-3 3s1.374 3 3 3 3-1.374 3-3-1.374-3-3-3z"></path><path d="M20 5h-2.586l-2.707-2.707A.996.996 0 0 0 14 2h-4a.996.996 0 0 0-.707.293L6.586 5H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-8 12c-2.71 0-5-2.29-5-5s2.29-5 5-5 5 2.29 5 5-2.29 5-5 5z"></path></svg>
                     </button>
-                    
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" class="tw-w-4 tw-h-4 tw-fill-gray-400 tw-mx-auto" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12zM13 4l5 5h-5V4zM7 8h3v2H7V8zm0 4h10v2H7v-2zm0 4h10v2H7v-2z"></path></svg>
                     </button>

@@ -11,6 +11,9 @@ import { TeamComponent } from './pages/team/team.component';
 import { PatientManagementComponent } from './pages/patient-management/patient-management.component';
 import { MailComponent } from './pages/mail/mail.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
+import { NgChartsModule } from 'ng2-charts';
+import { QuillModule } from 'ngx-quill';
+import { NewNoteComponent } from './pages/note/new-note/new-note.component';
 
 
 @NgModule({
@@ -20,15 +23,18 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
     TeamComponent,
     PatientManagementComponent,
     MailComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    NewNoteComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    NgChartsModule,
     ReactiveFormsModule,
     SharedModule,
     BryntumCalendarModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    QuillModule, // Add Quill Angular WYSIWYG Editor
   ]
 })
 export class AccountModule { }
