@@ -1,6 +1,6 @@
 @import "/src/scss/bootstrap/config";
 
-$sidebar-width: 350px;
+$sidebar-width: 250px;
 
 .page-content {
   margin-top: 70px;
@@ -11,7 +11,7 @@ $sidebar-width: 350px;
     top: 70px;
     left: 0;
     bottom: 0;
-    width: $sidebar-width !important;
+    width: $sidebar-width;
     background-color: #E8F4F0;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ $sidebar-width: 350px;
       align-items: center;
       justify-content: center;
       border-radius: 20px;
-      margin-bottom: .5rem;
+      margin-bottom: 1.5rem;
       border: .125rem solid $primary;
       background-color: #FFF;
 

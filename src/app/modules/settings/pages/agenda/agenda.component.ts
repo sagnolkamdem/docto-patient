@@ -12,8 +12,13 @@ import { Component } from '@angular/core';
 export class AgendaComponent {
 
   createAgendaForm: boolean = false;
+  updateAgendaForm: boolean = false;
   deleteAgendaForm: boolean = false;
 
+
+  toggleUpdateAgendaForm() {
+    this.updateAgendaForm = !this.updateAgendaForm;
+  }
 
   toggleCreateAgendaForm() {
     this.createAgendaForm = !this.createAgendaForm;

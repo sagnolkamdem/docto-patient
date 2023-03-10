@@ -44,7 +44,7 @@
                     <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Praticien</td>
                     <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">0 accès</td>
                     <td class="tw-relative tw-whitespace-nowrap tw-py-4 tw-pl-3 tw-pr-4 tw-text-right tw-text-sm tw-font-medium">
-                        <button class="tw-mr-5">
+                        <button type="button" class="tw-mr-5">
                             <span class="tw-sr-only">Modifier</span>
                             <span class="">
                                 <svg aria-hidden="true" class="tw-w-5 tw-h-5" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,6 +87,104 @@
     <form *ngIf="createAgendaForm" class="tw-p-10 tw-mb-28">
 
         <h2 class="!tw-m-0 tw-font-bold tw-text-lg !tw-mb-6">Création d'un agenda</h2>
+
+        <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
+
+            <div class="tw-flex tw-items-center">
+                <label for="name" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Nom de l'agenda</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="name" id="name" placeholder="Nom" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex tw-items-center">
+                <label for="speciality" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Spécialité</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="specialiality" id="specialiality" placeholder="Spécialité" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex tw-items-center">
+                <label for="consultationPlace" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Lieu de consultation</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <select name="consultationPlace" id="consultationPlace" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                        <option class="tw-text-[#E4E5E7]">Choisir...</option>
+                        <option value="Hopital Bis">Hopital BIS</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-items-center">
+                <label for="phone" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Numéro de téléphone</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="phone" id="phone" placeholder="Numéro de téléphone" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="!tw-m-0 tw-font-bold tw-text-lg !tw-my-6">Accès et droits</h2>
+
+        <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
+
+            <div class="tw-flex tw-justify-between tw-items-center tw-bg-[#BBFCE6] tw-p-2.5">
+                <label for="consultationPlace" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px] tw-sr-only">Lieu de consultation</label>
+                <input type="checkbox" class="tw-block tw-border-gray-300 tw-rounded-sm checked:tw-bg-primary-500 focus:tw-border-primary-500 focus:tw-ring-primary-500">
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-[300px] tw-rounded-lg">
+                    <select name="consultationPlace" id="consultationPlace" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                        <option class="tw-text-[#E4E5E7]">Gérer les droits d'accès</option>
+                        <option value="Hopital Bis">Hopital BIS</option>
+                    </select>
+                
+                </div>
+            </div>
+
+            <div class="tw-flex tw-items-center tw-p-2.5 tw-justify-between">
+                <div class="tw-flex tw-items-center">
+                    <input type="checkbox" class="tw-block tw-mr-10 tw-border-gray-300 tw-rounded-sm checked:tw-bg-primary-500 focus:tw-border-primary-500 focus:tw-ring-primary-500">
+                    <label for="consultationPlace" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Cabinet Médical Puteaux</label>
+                </div>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-[300px]  tw-rounded-lg">
+                    <select name="consultationPlace" id="consultationPlace" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                        <option class="tw-text-[#E4E5E7]">Gérer les droits d'accés</option>
+                        <option value="Hopital Bis">Hopital BIS</option>
+                    </select>
+                
+                </div>
+            </div>
+
+            <div class="tw-flex tw-items-center tw-p-2.5 tw-justify-between">
+                <div class="tw-flex tw-items-center">
+                    <input type="checkbox" class="tw-block tw-mr-10 tw-border-gray-300 tw-rounded-sm checked:tw-bg-primary-500 focus:tw-border-primary-500 focus:tw-ring-primary-500">
+                    <label for="consultationPlace" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Cabinet Médical Puteaux</label>
+                </div>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-[300px]  tw-rounded-lg">
+                    <select name="consultationPlace" id="consultationPlace" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                        <option class="tw-text-[#E4E5E7]">Gérer les droits d'accés</option>
+                        <option value="Hopital Bis">Hopital BIS</option>
+                    </select>
+                
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Validation of form -->
+        <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
+            <button (click)="toggleCreateAgendaForm()" type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
+                Annuler
+            </button>
+            <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">
+                Valider
+            </button>
+        </div>
+
+    </form>
+
+    <!-- Update form -->
+    <form *ngIf="updateAgendaForm" class="tw-p-10 tw-mb-28">
+
+        <h2 class="!tw-m-0 tw-font-bold tw-text-lg !tw-mb-6">Mise a jour d'un agenda</h2>
 
         <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
 
@@ -172,7 +270,7 @@
 
         <!-- Validation of form -->
         <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
-            <button (click)="toggleCreateAgendaForm()" type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
+            <button (click)="toggleUpdateAgendaForm()" type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
                 Annuler
             </button>
             <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">

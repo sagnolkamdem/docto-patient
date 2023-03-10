@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BryntumCalendarModule } from '@bryntum/calendar-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    BryntumCalendarModule
+    BryntumCalendarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

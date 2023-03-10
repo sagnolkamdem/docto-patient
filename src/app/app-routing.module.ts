@@ -29,6 +29,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'consultation',
+    loadChildren: () => import('./modules/consultation/consultation.module').then(m => m.ConsultationModule)
+  },
+
+  {
     path: '**',
     redirectTo: '/not-found',
     pathMatch: 'full'
