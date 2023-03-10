@@ -3,6 +3,9 @@
     <div class="header">
       <div class="nav-brand">
         <img class="logo" routerLink="/home" height="30" src="assets/logo.png" alt="logo">
+        <span class="">
+          <span class="target">PRO</span>
+        </span>
       </div>
       <div class="nav-content">
         <!-- <div class="link">
@@ -20,11 +23,58 @@
         <div class="link">
           <button class="btn btn-secondary" routerLink="/home">Vous êtes praticien ?</button>
         </div>
-        <div class="link">
-          <a class="text-secondary" routerLink="/account">
-            <i class="mdi mdi-account-circle"></i>
-            johndoe@mail.com
+        <div class="link dropdown">
+          <a class="text-secondary user-nav pointer" data-bs-toggle="dropdown">
+            <span class="username">
+              <span class="name">Dr Mohamed</span>
+              <span class="role">Médecin généraliste</span>
+            </span>
+            <span class="user-logo">
+              <i class="mdi mdi-account-circle"></i>
+            </span>
           </a>
+          <ul class="dropdown-menu profile-dropdown shadow">
+            <li>
+              <button class="dropdown-item" routerLink="/settings">
+                <i class="mdi mdi-link-variant"></i>
+                Paramètres
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" routerLink="/account/patient-management">
+                <i class="mdi mdi-link-variant"></i>
+                Gestion des patients
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item text-secondary" routerLink="/settings/">
+                <i class="mdi mdi-link-variant"></i>
+                Mon profil
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" routerLink="/settings/">
+                <i class="mdi mdi-link-variant"></i>
+                Historiques des actions
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" routerLink="/settings/">
+                <i class="mdi mdi-link-variant"></i>
+                Mes documents
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" routerLink="/settings/">
+                <i class="mdi mdi-link-variant"></i>
+                Satisfaction
+              </button>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <button class="dropdown-item text-underline" routerLink="/settings/">Déconnexion</button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

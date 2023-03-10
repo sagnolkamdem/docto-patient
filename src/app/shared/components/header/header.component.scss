@@ -20,10 +20,23 @@
     align-items: center;
 
     .nav-brand {
+      display: flex;
+      align-items: flex-end;
 
       .logo {
         height: 40px;
         cursor: pointer;
+      }
+
+      .target {
+        background-color: $secondary;
+        padding: .1rem .25rem;
+        border-radius: 8px;
+        color: #FFF;
+        font-size: 7px;
+        font-weight: 600;
+        margin-left: .2rem;
+        margin-bottom: .25rem;
       }
     }
 
@@ -41,6 +54,52 @@
         }
         &:last-child {
           margin-right: 0;
+        }
+
+        .user-nav {
+          display: flex;
+          align-items: center;
+
+          .username {
+            display: flex;
+            flex-direction: column;
+            line-height: 1rem;
+            margin-right: .5rem;
+
+            .name {
+              font-size: 18px;
+              font-weight: 700;
+            }
+            .role {
+              font-size: 13px;
+              font-weight: 300;
+            }
+          }
+
+          .user-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              font-size: 44px;
+            }
+          }
+        }
+      }
+
+      .profile-dropdown {
+        border: none;
+        width: 200px;
+
+        .dropdown-item {
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+          font-weight: 500;
+
+          i {
+            margin-right: .25rem;
+          }
         }
       }
     }

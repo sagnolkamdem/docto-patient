@@ -1,1 +1,100 @@
-<p>activities works!</p>
+<div class="container">
+  <div class="row m-4  " >
+    <div class="col-12 col-md-6 p-3 rounded " style="background-color:#f9f9f9 ;" >
+      <div class="h5 text-primary fw-bolder text-md-start text-center ">
+        Janvier 2023
+      </div>
+        <div class=" d-flex justify-content-between align-content-around h-75" >
+          <canvas baseChart
+          [labels]="doughnutChartLabels"
+          [datasets]="doughnutChartDatasets"
+          [options]="doughnutChartOptions"
+          [legend]="true"
+          [type]="'doughnut'">
+        </canvas>
+        <div class="hors-ligne d-flex flex-column justify-content-around ">
+          <div class="first" >
+            <span class=" pourcentage d-block  fw-bolder text-secondary">30%</span>
+            <div class="d-flex align-items-center ">
+              <span class="point bg-secondary d-block "></span>
+              <span class=" d-block ms-1 ">en ligne</span>
+            </div>
+            <div class="en-ligne"></div>
+          </div>
+
+          <div class="second" >
+            <span class=" pourcentage d-block  fw-bolder text-primary">70%</span>
+            <div class="d-flex align-items-center ">
+              <span class="point bg-primary d-block "></span>
+              <span class=" d-block ms-1 ">en ligne</span>
+            </div>
+            <div class="en-ligne"></div>
+          </div>
+        </div>
+
+        </div>
+
+    </div>
+    <div class="col-3 ms-3  p-3 rounded " style="background-color:#f9f9f9 ;">
+      <div class="h5 text-primary fw-bolder">
+        Décembre 2022
+      </div>
+      <div class="hors-ligne h-75 d-flex flex-column justify-content-around ">
+        <div class="first" >
+          <span class=" pourcentage d-block  fw-bolder text-secondary">119%</span>
+          <div class="d-flex align-items-center ">
+            <span class="point bg-secondary d-block  "></span>
+            <span class=" d-block ms-1 ">en ligne</span>
+          </div>
+          <div class="en-ligne"></div>
+        </div>
+
+        <div class="second" >
+          <span class=" pourcentage d-block  fw-bolder text-primary">431%</span>
+          <div class="d-flex align-items-center ">
+            <span class="point bg-primary d-block "></span>
+            <span class=" d-block ms-1 ">en ligne</span>
+          </div>
+          <div class="en-ligne"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-4">
+    <div class="col-6   p-3 rounded " style="background-color:#f9f9f9 ;" >
+      <div class="h5 text-primary fw-bolder ">
+        Consultation par motif
+      </div>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Janvier 2023</th>
+            <th scope="col">Décembre 2022</th>
+            <th scope="col">Novembre 2022</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="" >
+            <th scope="row" class=" light-bleu ">Motif1</th>
+            <td  class="text-center  light-bleu " >123</td>
+            <td class="text-center  light-bleu">97</td>
+            <td class="text-center  light-bleu">120</td>
+          </tr>
+          <tr>
+            <th scope="row" class="">Motif2</th>
+            <td class="text-center ">92</td>
+            <td class="text-center ">118</td>
+            <td class="text-center ">80</td>
+          </tr>
+          <tr>
+            <th scope="row" class=" light-bleu">Motif3</th>
+            <td class="text-center  light-bleu" >13</td>
+            <td class="text-center  light-bleu">73</td>
+            <td class="text-center  light-bleu">54</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>

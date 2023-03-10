@@ -42,3 +42,21 @@ h2 {
   font-size: 18px;
 }
 
+.text-line-1, .text-line-2, .text-line-3 {
+  overflow: hidden;
+  line-height: 1em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.text-line-1 {
+  height: 1em;
+  -webkit-line-clamp: 1;
+}
+.text-line-2 {
+  height: 2em;
+  -webkit-line-clamp: 2;
+}
+.text-line-3 {
+  height: 3em;
+  -webkit-line-clamp: 3;
+}
