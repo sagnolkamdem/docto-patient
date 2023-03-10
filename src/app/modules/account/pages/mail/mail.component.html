@@ -1,27 +1,12 @@
 
 <div class="content">
-  <div class="loader" *ngIf="isLoading">
-    <div class="head">
-      <span class="bx-icon">
-        <i class="bx bx-tada-hover bxs-comment-detail"></i>
-      </span>
-      <span>Messages</span>
-    </div>
-
-    <div class="text">
-      Chargement
-    </div>
-    <div class="spinner-border" role="status"></div>
-  </div>
-
-
   <div class="side">
     <div class="header">
       <div class="text-icon">
         <span class="bx-icon">
-          <i class="bx bx-tada-hover bxs-comment-detail"></i>
+          <i class="mdi mdi-email"></i>
         </span>
-        <span class="ms-2">Messages</span>
+        <span class="ms-2">Email</span>
       </div>
     </div>
 
@@ -29,7 +14,7 @@
       <div class="link active">
         <div class="link-item">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-envelope"></i>
+            <i class="mdi mdi-email-open"></i>
           </span>
           <span class="text">Boite</span>
         </div>
@@ -41,7 +26,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bx-star"></i>
+            <i class="mdi mdi-star"></i>
           </span>
           <span class="text">Épinglé</span>
         </div>
@@ -50,7 +35,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-send"></i>
+            <i class="mdi mdi-send"></i>
           </span>
           <span class="text">Envoyé</span>
         </div>
@@ -59,7 +44,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bx-trash"></i>
+            <i class="mdi mdi-trash-can"></i>
           </span>
           <span class="text">Corbeille</span>
         </div>
@@ -68,7 +53,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-grid-alt"></i>
+            <i class="mdi mdi-grid-large"></i>
           </span>
           <span class="text">Plus</span>
         </div>
@@ -86,7 +71,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon text-blue">
-            <i class="bx bx-tada-hover bxs-folder text-blue"></i>
+            <i class="mdi mdi-folder-open-outline text-blue"></i>
           </span>
           <span class="text">Bureau</span>
         </div>
@@ -95,7 +80,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon text-pink">
-            <i class="bx bx-tada-hover bxs-folder"></i>
+            <i class="mdi mdi-folder-open-outline"></i>
           </span>
           <span class="text">Personnel</span>
         </div>
@@ -104,7 +89,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon text-yellow">
-            <i class="bx bx-tada-hover bxs-folder"></i>
+            <i class="mdi mdi-folder-open-outline"></i>
           </span>
           <span class="text">Département</span>
         </div>
@@ -149,247 +134,7 @@
         </div>
       </div>
 
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
-        <div class="user-avatar sm circle">
-          <img src="/assets/img/user1.jpg">
-        </div>
-        <div class="message-content">
-          <div class="head">
-            <div class="left">
-              <span class="username text-line-1">John Doe</span>
-              <span class="subject text-line-1">Invitation</span>
-            </div>
-
-            <div class="right">
-              <span class="date">Hier 01:45</span>
-            </div>
-          </div>
-          <div class="user-message text-line-1">
-            It's always a pleasure to
-          </div>
-        </div>
-      </div>
-      <div class="message" (click)="openMessage()">
+      <div class="message" (click)="openMessage()" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
         <div class="user-avatar sm circle">
           <img src="/assets/img/user1.jpg">
         </div>

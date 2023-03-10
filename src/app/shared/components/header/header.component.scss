@@ -87,6 +87,21 @@
           }
         }
       }
+
+      .profile-dropdown {
+        border: none;
+        width: 200px;
+
+        .dropdown-item {
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+          font-weight: 500;
+
+          i {
+            margin-right: .25rem;
+          }
+        }
+      }
     }
   }
 }
