@@ -2,7 +2,6 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BryntumCalendarModule } from '@bryntum/calendar-angular';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -32,7 +31,6 @@ import { NewNoteComponent } from './pages/note/new-note/new-note.component';
     NgChartsModule,
     ReactiveFormsModule,
     SharedModule,
-    BryntumCalendarModule,
     AccountRoutingModule,
     QuillModule, // Add Quill Angular WYSIWYG Editor
   ]
