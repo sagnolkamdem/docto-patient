@@ -18,12 +18,11 @@ const routes: Routes = [
       title: 'Erreur 404'
     },
   },
-
   {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({
