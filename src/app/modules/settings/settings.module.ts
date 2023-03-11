@@ -6,6 +6,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { PlaceOfConsultationComponent } from './pages/place-of-consultation/place-of-consultation.component';
 import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
+import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
 
 
 
@@ -13,7 +14,8 @@ import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.compone
   declarations: [
     SettingsComponent,
     PlaceOfConsultationComponent,
-    UtilisateursComponent
+    UtilisateursComponent,
+    NewUtilisateurComponent
   ],
   imports: [
     CommonModule,
