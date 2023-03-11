@@ -1,0 +1,15 @@
+@import "/src/scss/bootstrap/config";
+
+.link.active {
+  background-color: $primary;
+  color: #FFF;
+
+  p{
+    color: white !important;
+  }
+
+  svg {
+    display: block !important;
+    fill: white;
+  }
+}
