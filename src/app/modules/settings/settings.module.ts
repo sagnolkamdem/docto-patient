@@ -9,13 +9,18 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AccountComponent } from './pages/account/account.component';
 import { SecurityLogComponent } from './pages/security-log/security-log.component';
 import { SignatureComponent } from './pages/signature/signature.component';
-
+import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
+import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
 
 
 @NgModule({
   declarations: [
     SettingsComponent,
     PlaceOfConsultationComponent,
+    AgendaComponent,
+    AccountComponent,
+    SecurityLogComponent,
+    SignatureComponent,
     UtilisateursComponent,
     NewUtilisateurComponent
   ],

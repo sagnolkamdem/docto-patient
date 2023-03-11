@@ -70,8 +70,8 @@
 
       <div class="link">
         <div class="link-item">
-          <span class="bx-icon text-blue">
-            <i class="mdi mdi-folder-open-outline text-blue"></i>
+          <span class="bx-icon">
+            <i class="mdi mdi-folder"></i>
           </span>
           <span class="text">Bureau</span>
         </div>
@@ -80,7 +80,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon text-pink">
-            <i class="mdi mdi-folder-open-outline"></i>
+            <i class="mdi mdi-folder"></i>
           </span>
           <span class="text">Personnel</span>
         </div>
@@ -89,7 +89,7 @@
       <div class="link">
         <div class="link-item">
           <span class="bx-icon text-yellow">
-            <i class="mdi mdi-folder-open-outline"></i>
+            <i class="mdi mdi-folder"></i>
           </span>
           <span class="text">Département</span>
         </div>
@@ -116,7 +116,7 @@
         <div class="message-content">
           <div class="head">
             <div class="left">
-              <span class="username text-line-1">John Doe</span>
+              <span class="username text-line-1">Dr Mohamed</span>
               <span class="subject text-line-1">Res. Génie Civile</span>
             </div>
 
@@ -141,7 +141,7 @@
         <div class="message-content">
           <div class="head">
             <div class="left">
-              <span class="username text-line-1">John Doe</span>
+              <span class="username text-line-1">Dr Mohamed</span>
               <span class="subject text-line-1">Invitation</span>
             </div>
 
@@ -159,23 +159,23 @@
 
   <div class="message-preview">
     <div class="text" *ngIf="!isOpened && !isCreated">
-      Sélectionnez un message s'il vous plaît
+      Sélectionnez un message s'il vous plait
     </div>
 
     <div class="opened-message" *ngIf="isOpened">
-      <div class="header">
+      <div class="header shadow-sm">
         <div class="left">
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-share"></i>
+            <i class="mdi mdi-share"></i>
           </span>
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bx-reply-all"></i>
+            <i class="mdi mdi-reply-all"></i>
           </span>
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-folder"></i>
+            <i class="mdi mdi-folder"></i>
           </span>
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-trash"></i>
+            <i class="mdi mdi-trash-can"></i>
           </span>
         </div>
 
@@ -184,10 +184,10 @@
             1/180
           </span>
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-chevron-left"></i>
+            <i class="mdi mdi-chevron-left"></i>
           </span>
           <span class="bx-icon">
-            <i class="bx bx-tada-hover bxs-chevron-right"></i>
+            <i class="mdi mdi-chevron-right"></i>
           </span>
         </div>
       </div>
@@ -195,14 +195,14 @@
       <div class="body">
         <div class="message">
           <div class="user-avatar xl circle">
-            <img src="/assets/img/user.jpg">
+            <img src="/assets/user.png">
           </div>
           <div class="message-content">
             <div class="head">
               <div class="left">
-                <span class="username">John Doe</span>
+                <span class="username">Dr Mohamed</span>
                 <span class="subject">Res. Génie Civile</span>
-                <span class="email text-muted">johndoe@gmail.com</span>
+                <span class="email text-muted">mohamed@gmail.com</span>
               </div>
 
               <div class="right">
@@ -211,7 +211,7 @@
             </div>
 
             <div class="user-message">
-              <h2>Hi John,</h2>
+              <h2>Hi Mohamed,</h2>
 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -220,7 +220,7 @@
               </p>
 
               <div class="text-primary">
-                <i class="bx bx-tada-hover bx-file"></i>
+                <i class="mdi mdi-file"></i>
                 4 fichiers joints
               </div>
 
@@ -244,7 +244,7 @@
 
               <div class="download">
                 <a href="#" class="btn btn-outline-secondary">
-                  <i class="bx bx-tada-hover bx-download"></i>
+                  <i class="mdi mdi-download"></i>
                   Télécharger
                 </a>
                 <span class="text text-muted">5.6 mb total</span>
@@ -253,13 +253,13 @@
 
             <div class="reply">
               <div class="form-group">
-                <textarea class="form-control" rows="2" placeholder="Type Message..."></textarea>
+                <textarea class="form-control" rows="2" placeholder="Message..."></textarea>
                 <div class="icons">
                   <span class="bx-icon">
-                    <i class="bx bx-tada-hover bx-file"></i>
+                    <i class="mdi mdi-file"></i>
                   </span>
                   <button class="btn text-primary">
-                    <i class="bx bx-tada-hover bxs-send"></i>
+                    <i class="mdi mdi-send"></i>
                   </button>
                 </div>
               </div>
@@ -270,9 +270,12 @@
     </div>
 
     <div class="new-message" *ngIf="isCreated">
-      <div class="header">
+      <div class="header shadow-sm">
+        <div class="left">
+          <h4 class="fw-bold mb-0">Nouveau message</h4>
+        </div>
         <div class="right">
-          <button class="btn btn-danger" (click)="createMessage()">
+          <button class="btn btn-outline-danger" (click)="createMessage()">
             Annuler
           </button>
         </div>
@@ -288,50 +291,20 @@
               <span class="chip" *ngFor="let item of people">
                 {{ item }}
                 <span class="remove" (click)="remove(item)">
-                  <i class="bx bx-tada-hover bx-x"></i>
+                  <i class="mdi mdi-window-close"></i>
                 </span>
               </span>
 
               <div class="dropdown add">
                 <span class="icon" data-bs-toggle="dropdown">
-                  <i class="bx bx-tada-hover bxs-plus-circle"></i>
+                  <i class="mdi mdi-plus-circle"></i>
                 </span>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                     <div class="dropdown-item" *ngFor="let item of allPeople">
                       <span>{{ item }}</span>
                       <span class="bx-icon pointer" (click)="add(item)">
-                        <i class="bx bx-tada-hover bx-plus"></i>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-container ps-2">
-            <span class="label">
-              Département
-            </span>
-            <div class="chips">
-              <span class="chip" *ngFor="let item of people">
-                {{ item }}
-                <span class="remove" (click)="remove(item)">
-                  <i class="bx bx-tada-hover bx-x"></i>
-                </span>
-              </span>
-
-              <div class="dropdown add">
-                <span class="icon" data-bs-toggle="dropdown">
-                  <i class="bx bx-tada-hover bxs-plus-circle"></i>
-                </span>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li>
-                    <div class="dropdown-item" *ngFor="let item of allPeople">
-                      <span>{{ item }}</span>
-                      <span class="bx-icon pointer" (click)="add(item)">
-                        <i class="bx bx-tada-hover bx-plus"></i>
+                        <i class="mdi mdi-plus"></i>
                       </span>
                     </div>
                   </li>
@@ -356,34 +329,10 @@
             </quill-editor>
           </div>
 
-          <div class="files">
-            <div class="file">
+          <div class="files mt-2">
+            <div class="file" *ngFor="let i of [1,2,3,4]">
               <span class="name">
-                Image du stade Japoma (256ko)
-              </span>
-              <div class="size">
-                <button class="btn-close"></button>
-              </div>
-            </div>
-            <div class="file">
-              <span class="name">
-                Image du stade Japoma (256ko)
-              </span>
-              <div class="size">
-                <button class="btn-close"></button>
-              </div>
-            </div>
-            <div class="file">
-              <span class="name">
-                Image du stade Japoma (256ko)
-              </span>
-              <div class="size">
-                <button class="btn-close"></button>
-              </div>
-            </div>
-            <div class="file">
-              <span class="name">
-                Image du stade Japoma (256ko)
+                Image {{ i }} (256ko)
               </span>
               <div class="size">
                 <button class="btn-close"></button>
@@ -393,10 +342,10 @@
         </div>
       </div>
 
-      <div class="footer">
+      <div class="footer shadow-sm">
         <div class="left">
           <button class="btn btn-light">
-            <i class="bx bx-tada-hover bx-file"></i>
+            <i class="mdi mdi-file"></i>
             4 pieces jointes
           </button>
         </div>
@@ -404,7 +353,7 @@
         <div class="right">
           <button class="btn btn-primary" (click)="createMessage()">
             Envoyer
-            <i class="bx bx-tada-hover bxs-send"></i>
+            <i class="mdi mdi-send"></i>
           </button>
         </div>
       </div>

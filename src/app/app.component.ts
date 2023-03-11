@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
@@ -7,7 +7,7 @@ import { filter } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Tabiblib';
   pageTitle = 'Tabiblib';
   currentYear: any = new Date().getFullYear();
@@ -28,6 +28,8 @@ export class AppComponent {
       let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       this.scrollingPositon = (winScroll / height) * 100;
     };
+
+    // console.log($('body').text());
   }
 
   ngOnInit(): void {

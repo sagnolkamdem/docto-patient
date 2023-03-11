@@ -4,36 +4,72 @@ import { AgendaComponent } from "../pages/agenda/agenda.component";
 import { PlaceOfConsultationComponent } from "../pages/place-of-consultation/place-of-consultation.component";
 import { SecurityLogComponent } from "../pages/security-log/security-log.component";
 import { SettingsComponent } from "../pages/settings/settings.component";
+import { SignatureComponent } from "../pages/signature/signature.component";
 import { NewUtilisateurComponent } from "../pages/utilisateurs/new-utilisateur/new-utilisateur.component";
 import { UtilisateursComponent } from "../pages/utilisateurs/utilisateurs.component";
 
 export const settingRoutes: Routes = [
-    {
-        path: '',
-        component: SettingsComponent,
-        data: {
-            title: "Paramétres",
-        }
-    },
-    {
-        path: 'place-of-consultation',
-        component: PlaceOfConsultationComponent,
-        data: {
-            title: "Lieux de consultation"
-        }
-    },
-    {
-      path: 'users',
-      component: UtilisateursComponent,
-      data: {
-          title: "Utilisateurs"
-      }
+  {
+    path: '',
+    component: SettingsComponent,
+    data: {
+        title: "Paramètres",
+    }
   },
+
+  {
+    path: 'place-of-consultation',
+    component: PlaceOfConsultationComponent,
+    data: {
+        title: "Lieux de consultation"
+    }
+  },
+
+  {
+    path: 'agenda',
+    component: AgendaComponent,
+    data: {
+        title: "Agenda"
+    }
+  },
+
+  {
+    path: 'account/me',
+    component: AccountComponent,
+    data: {
+        title: "Mon compte",
+    }
+  },
+
+  {
+    path: 'account/security-log',
+    component: SecurityLogComponent,
+    data: {
+      title: "Journal de sécurité",
+    }
+  },
+
+  {
+    path: 'account/signature',
+    component: SignatureComponent,
+    data: {
+      title: "Signature",
+    }
+  },
+
+  {
+  path: 'users',
+  component: UtilisateursComponent,
+    data: {
+      title: "Utilisateurs"
+    }
+  },
+
   {
     path: 'new-user',
     component: NewUtilisateurComponent,
     data: {
-        title: "nouveau utilisateur"
+      title: "Nouveau utilisateur"
     }
-}
+  }
 ]

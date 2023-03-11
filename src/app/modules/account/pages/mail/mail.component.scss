@@ -1,274 +1,12 @@
 @import "/src/scss/bootstrap/config";
 
 .bx-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   i {
-    font-size: 24px;
-  }
-}
-
-.app-home {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url('/assets/img/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .5;
-    z-index: -1;
-  }
-
-  .app-content {
-    max-width: 400px;
-    margin-bottom: 10%;
-    padding: .5rem;
-
-    .logo {
-      display: flex;
-      justify-content: center;
-
-    }
-
-    .form {
-
-      .form-input {
-        position: relative;
-
-        .form-control {
-          width: 85%;
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .submit-btn {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-        }
-      }
-    }
-  }
-}
-
-.app-dashboard {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  padding: 1rem 1.5rem;
-  padding-bottom: 1.7rem;
-  background-color: rgba($primary, .08);
-  overflow: auto;
-  display: flex;
-
-  .app-content {
-    // padding-top: $header-height;
-    // padding-left: $sidebar-width;
-    flex: 1;
-
-    .content {
-      position: relative;
-
-      .loader {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        color: $primary;
-        background-color: #FFF;
-        z-index: 10;
-
-        .head {
-          display: flex;
-          align-items: center;
-          font-size: 2.5rem;
-          font-weight: 700;
-          line-height: 2rem;
-
-          .bx-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 1rem;
-
-            .bx {
-              font-size: 4.5rem;
-              font-weight: 600;
-            }
-          }
-        }
-
-        .text {
-          margin-top: 1rem;
-          font-style: italic;
-          font-size: 18px;
-          font-weight: 500;
-        }
-
-        .spinner-border {
-          width: 3rem;
-          height: 3rem;
-          margin-top: 1rem;
-          border-width: .4rem;
-        }
-      }
-
-      .content-side {
-        width: 250px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #FFF;
-        position: relative;
-
-        .header {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 100px;
-          padding: 1rem;
-          overflow: hidden;
-          background-color: #FFF;
-          z-index: 1;
-
-          .top {
-            display: flex;
-            align-items: flex-end;
-            color: $primary;
-            font-size: 18px;
-
-            .bx-icon {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-right: 1rem;
-
-              .bx {
-                font-size: 1.5rem;
-              }
-            }
-          }
-
-          .bottom {
-            width: 100%;
-            margin-top: 1rem;
-          }
-        }
-
-        .body {
-          padding: 1rem;
-          padding-top: 100px;
-          height: 100%;
-          overflow-y: auto;
-
-          .items {
-            display: flex;
-            flex-direction: column;
-
-            .item-header {
-              color: #BBB;
-              font-weight: lighter;
-              border-top: .12rem solid #DDD;
-              padding-top: .5rem;
-              margin-top: .5rem;
-              margin-bottom: .5rem;
-            }
-
-            .item {
-              background-color: $light;
-              font-weight: 600;
-              font-size: 14px;
-              padding: .75rem .5rem;
-              border-radius: 1px;
-              margin: .12rem 0;
-              cursor: pointer;
-            }
-            .has-submenu {
-
-              .submenu {
-                // display: none;
-                height: 0;
-                overflow: hidden;
-                transition: height 0.3s ease-out;
-
-                &>.item {
-                  padding-left: 2rem;
-                }
-              }
-
-              &>.item:first-child {
-                position: relative;
-                padding-left: 2rem;
-                background-color: #EEE;
-
-                &::before {
-                  position: absolute;
-                  left: .5rem;
-                  // top: .6rem;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  font-family: boxicons;
-                  content: "\ea50";
-                  font-size: 22px;
-                }
-              }
-
-
-              &.open {
-                &>.item:first-child {
-                  &::before {
-                    content: "\ea4a";
-                  }
-                }
-
-                .submenu {
-                  // display: block;
-                  height: auto;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .empty {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 18px;
-    }
-  }
-}
-
-.btn {
-  border-radius: 0;
-
-  &.btn-tertiary {
-    color: #FFF;
+    font-size: 20px;
   }
 }
 
@@ -300,10 +38,6 @@
       margin-right: 0;
     }
   }
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 .user-avatar {
@@ -562,32 +296,32 @@
   }
 }
 
-.form-group, .form-floating {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: .5rem;
-  position: relative;
+// .form-group, .form-floating {
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: .5rem;
+//   position: relative;
 
-  label {
-    font-weight: 600;
-    padding-left: 0;
-    padding-right: 0;
-  }
+//   label {
+//     font-weight: 600;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
 
-  .form-control, .form-select {
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+//   .form-control, .form-select {
+//     border-top: 0;
+//     border-left: 0;
+//     border-right: 0;
 
-    padding-left: 0;
-    padding-right: 0;
+//     padding-left: 0;
+//     padding-right: 0;
 
-    &:focus {
-      border-color: $tertiary;
-      box-shadow: 0px 1px $tertiary;
-    }
-  }
-}
+//     &:focus {
+//       border-color: $tertiary;
+//       box-shadow: 0px 1px $tertiary;
+//     }
+//   }
+// }
 
 .bx-icon {
   display: flex;
@@ -655,6 +389,7 @@
   display: flex;
   height: 100%;
   box-shadow: $box-shadow;
+  margin: .25rem .5rem;
 
   .side {
     flex: 1.2;
@@ -685,7 +420,7 @@
         padding: .5rem;
         padding-left: 25px;
 
-        .bx {
+        i {
           font-size: 1.3rem;
         }
       }
@@ -718,7 +453,8 @@
 
         .link-item {
           display: flex;
-          padding: .75rem 1rem;
+          align-items: center;
+          padding: .5rem 1rem;
           cursor: pointer;
 
           .bx-icon {
@@ -727,8 +463,8 @@
             justify-content: center;
             margin-right: 1rem;
 
-            .bx {
-              font-size: 1.3rem;
+            i {
+              font-size: 1.2rem;
             }
           }
 
@@ -813,6 +549,7 @@
       background-color: #FFF;
       color: $primary;
       padding: 0 1rem;
+      z-index: 1;
 
       .form-group {
         flex: 1;
@@ -925,6 +662,8 @@
         align-items: center;
         height: 80px;
         padding: 0 1rem;
+        background-color: #FFF;
+        z-index: 1;
 
         .left {
           display: flex;
@@ -1113,9 +852,11 @@
         left: 0;
         right: 0;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
         height: 50px;
+        background-color: #FFF;
+        padding: .5rem;
       }
 
       .body {
@@ -1148,6 +889,8 @@
         justify-content: space-between;
         align-items: flex-end;
         height: 50px;
+        background-color: #FFF;
+        padding: .5rem;
       }
     }
   }

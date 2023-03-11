@@ -35,10 +35,12 @@ export class MailComponent implements OnInit {
   }
 
   openMessage() {
+    this.isCreated = false;
     this.isOpened = !this.isOpened;
   }
 
   createMessage() {
+    this.isOpened = false;
     this.isCreated = !this.isCreated;
   }
 
