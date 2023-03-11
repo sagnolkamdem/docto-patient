@@ -240,16 +240,6 @@
         <!-- Show Place Form -->
         <div *ngIf="createPlaceForm" class="tw-flex-1 tw-px-10 tw-space-y-8 tw-py-8 tw-mb-32 tw-bg-white tw-rounded-3xl">
 
-            <!-- Validation of form -->
-            <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
-                <button (click)="toggleCreatePlaceForm()" type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
-                    Annuler
-                </button>
-                <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">
-                    Valider
-                </button>
-            </div>
-
             <!-- Place form -->
             <div class="">
 
@@ -432,6 +422,16 @@
 
                 </div>
 
+            </div>
+
+            <!-- Validation of form -->
+            <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
+                <button (click)="toggleCreatePlaceForm()" type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
+                    Annuler
+                </button>
+                <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">
+                    Valider
+                </button>
             </div>
 
         </div>

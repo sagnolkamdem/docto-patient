@@ -6,6 +6,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { PlaceOfConsultationComponent } from './pages/place-of-consultation/place-of-consultation.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
+import { AccountComponent } from './pages/account/account.component';
+import { SecurityLogComponent } from './pages/security-log/security-log.component';
+import { SignatureComponent } from './pages/signature/signature.component';
 
 
 
@@ -13,7 +16,10 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
   declarations: [
     SettingsComponent,
     PlaceOfConsultationComponent,
-    AgendaComponent
+    AgendaComponent,
+    AccountComponent,
+    SecurityLogComponent,
+    SignatureComponent
   ],
   imports: [
     CommonModule,

@@ -19,6 +19,7 @@ import { AlertConfirmComponent } from './components/alert-confirm/alert-confirm.
 import { SettingComponent } from './layouts/setting/setting.component';
 import { SettingHeaderComponent } from './components/header/setting-header/setting-header.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { AccountComponent } from './layouts/account/account.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     AlertConfirmComponent,
     SettingComponent,
     SettingHeaderComponent,
-    BadgeComponent
+    BadgeComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule,
@@ -57,7 +59,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     TabsComponent,
     ToggleComponent,
     SettingComponent,
-    BadgeComponent
+    BadgeComponent,
+    AccountComponent
   ]
 })
 export class SharedModule { }
