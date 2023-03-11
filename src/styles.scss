@@ -71,6 +71,7 @@ app-root {
   background-color: #e8f7f2 !important;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  overflow: hidden;
 }
 
 .ql-container.ql-snow {
@@ -78,6 +79,7 @@ app-root {
   background-color: #e8f7f2 !important;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  overflow: hidden;
 }
 .user-avatar {
   height: 100px;
