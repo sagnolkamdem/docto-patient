@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="mt-5 ms-5" >
+    <div class="row">
+      <div class="col-6 d-flex justify-content-start">
+        <button class="btn btn-secondary w-50 d-flex justify-content-around align-items-center">
+          <i class="mdi mdi-tray-arrow-down "></i>
+          importer un document
+        </button>
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+        <div class="search text-muted fs-6 w-75 rounded-pill d-flex align-items-center ps-3 py-1 ">
+          <span class=" fs-4 mdi mdi-magnify"></span>
+          <input type="text" class="form-control border-0  " id="password" placeholder="Prénom, nom de famille ou email du remplaçant">
+        </div>
+      </div>
+    </div>
+    <div class="row my-3 ">
+      <table class="table ">
+        <thead class="bg-primary text-white " >
+          <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Motif</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of [1,2,3,4,5]" >
+            <!-- <th scope="row">1</th> -->
+            <td  >Ordonnnance</td>
+            <td>Bloc opératoire,  Consultation de chirurgie dermatologique</td>
+            <td class="d-flex justify-content-between fs-4"  >
+              <span class="mdi mdi-eye-outline " ></span>
+              <span class="mdi mdi-square-edit-outline " ></span>
+              <span class="mdi mdi-trash-can-outline text-danger " ></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row g-4  ">
+      <div class="elmt-paginate border rounded me-1 text-muted ">
+        <span class=" mdi mdi-chevron-left round me-1" ></span>
+      </div>
+      <div class="elmt-paginate border rounded me-1 bg-primary text-white ">
+        <span>1</span>
+      </div>
+      <div class="elmt-paginate  border rounded me-1">
+        <span>2</span>
+      </div>
+
+      <div class="elmt-paginate border rounded me-1">
+        <span class=" mdi mdi-chevron-right " ></span>
+      </div>
+    </div>        
+  </div>
+</div>
