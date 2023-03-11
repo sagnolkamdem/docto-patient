@@ -9,6 +9,7 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AccountComponent } from './pages/account/account.component';
 import { SecurityLogComponent } from './pages/security-log/security-log.component';
 import { SignatureComponent } from './pages/signature/signature.component';
+import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
 
 
 
@@ -19,7 +20,8 @@ import { SignatureComponent } from './pages/signature/signature.component';
     AgendaComponent,
     AccountComponent,
     SecurityLogComponent,
-    SignatureComponent
+    SignatureComponent,
+    UtilisateursComponent
   ],
   imports: [
     CommonModule,
