@@ -13,6 +13,7 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
 import { NgChartsModule } from 'ng2-charts';
 import { QuillModule } from 'ngx-quill';
 import { NewNoteComponent } from './pages/note/new-note/new-note.component';
+import { DocumentsComponent } from './pages/documents/documents.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NewNoteComponent } from './pages/note/new-note/new-note.component';
     PatientManagementComponent,
     MailComponent,
     ActivitiesComponent,
-    NewNoteComponent
+    NewNoteComponent,
+    DocumentsComponent
   ],
   imports: [
     CommonModule,
