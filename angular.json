@@ -31,7 +31,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/js/bootstrap.bundle.min.js"
+              "src/js/bootstrap.bundle.min.js",
+              "src/js/jquery.min.js",
+              "src/dropify/dist/js/dropify.min.js"
             ]
           },
           "configurations": {

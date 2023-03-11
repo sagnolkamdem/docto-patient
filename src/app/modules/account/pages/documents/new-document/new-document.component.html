@@ -1,0 +1,48 @@
+<h2 mat-dialog-title class="text-end border-bottom">
+  <!-- Titre -->
+
+  <button mat-dialog-close class="btn btn-sm btn-light rounded-circle">
+    <i class="mdi mdi-close"></i>
+  </button>
+</h2>
+
+
+<mat-dialog-content class="mat-typography- mt-2-">
+  <h4 class="fw-bold bottom-bar">Ajouter un document</h4>
+  <div class="">
+    <form action="">
+
+      <div class="mb-3">
+        <input type="file" class=" form-control dropify" data-height="150" />
+      </div>
+      <div class="mb-3">
+        <label for="titre">Titre du document</label>
+        <input type="text" class="form-control" id="titre" placeholder="Donnez un titre au document">
+      </div>
+      <div class="mb-3">
+        <label for="titre">Nom du patient</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Sélectionnez le type de patient concerné</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="titre">Consultation</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Sélectionnez le motif de consultation</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <!-- <button mat-stroked-button mat-dialog-close color="warn" cdkFocusInitial>Annuler</button> -->
+  <div class="d-flex justify-content-center w-100">
+    <div class="w-50  me-2">
+      <button class="btn w-100 btn-danger" mat-dialog-close  >Annuler</button>
+    </div>
+    <div class="flex-fill">
+      <button mat-dialog-close class="btn w-100 btn-outline-primary">AJOUTER UN DOCUMENT</button>
+    </div>
+  </div>
+</mat-dialog-actions>

@@ -14,6 +14,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { QuillModule } from 'ngx-quill';
 import { NewNoteComponent } from './pages/note/new-note/new-note.component';
 import { DocumentsComponent } from './pages/documents/documents.component';
+import { NewDocumentComponent } from './pages/documents/new-document/new-document.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DocumentsComponent } from './pages/documents/documents.component';
     MailComponent,
     ActivitiesComponent,
     NewNoteComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    NewDocumentComponent
   ],
   imports: [
     CommonModule,
