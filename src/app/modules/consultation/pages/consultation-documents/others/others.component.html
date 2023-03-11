@@ -1,0 +1,49 @@
+<!-- Historic table -->
+<div class="tw-inline-block tw-min-w-full tw-pb-2 tw-pt-6 tw-align-middle">
+    <table class="tw-min-w-full">
+        <thead>
+        <tr class="tw-bg-primary-500">
+            <th scope="col" class="!tw-py-3.5 !tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-max-w-fit tw-text-white">Titre</th>
+            <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Consultation</th>
+            <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Nom du praticien</th>
+            <th scope="col" class="tw-relative tw-py-3.5 tw-pl-3 tw-pr-4 sm:tw-pr-0">
+                <span class="tw-sr-only">Actions</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody class="tw-pt-3 tw-divide-y-2 tw-divide-gray-300 tw-bg-white">
+        <tr *ngFor="let i of [0, 1, 2]" class=" tw-border-gray-400">
+            <td class="tw-whitespace-nowrap !tw-py-3 tw-pl-4 tw-pr-3 tw-max-w-fit tw-text-tertiary tw-capitalize">Autres</td>
+            <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Bloc opératoire, Consultation de chirurgie dermatologique</td>
+            <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Dr Mohamed</td>
+            <td class="tw-relative tw-whitespace-nowrap tw-py-4 tw-pl-3 tw-pr-4 tw-text-right tw-text-sm tw-font-medium sm:tw-pr-0">
+                <button class="tw-mr-3">
+                    <span class="tw-sr-only">Modifier</span>
+                    <span class="">                           
+                        <svg aria-hidden="true" class="tw-w-5 tw-h-5" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4.5C3.4 4.5 0 9.3 0 10.1C0 10.9 3.4 15.7 10 15.7C16.6 15.7 20 10.9 20 10.1C20 9.3 16.6 4.5 10 4.5ZM10 14.5C7.5 14.5 5.6 12.5 5.6 10.1C5.6 7.7 7.6 5.8 10 5.8C12.5 5.8 14.4 7.8 14.4 10.1C14.4 12.5 12.4 14.4 10 14.4V14.5ZM10 10.1C9.6 9.7 10.7 7.9 10 7.9C8.8 7.9 7.8 8.9 7.8 10.1C7.8 11.3 8.8 12.3 10 12.3C11.2 12.3 12.2 11.3 12.2 10.1C12.2 9.6 10.3 10.5 10 10.1Z" fill="black"/>
+                        </svg>                                                                   
+                    </span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <nav class="tw-flex tw-items-center tw-justify-between tw-border-t tw-border-gray-200 tw-bg-white tw-py-3 tw-pt-8 tw-px-5" aria-label="Pagination">
+        <div class="tw-hidden sm:tw-block">
+        <p class="tw-text-sm tw-text-gray-700 !tw-m-0">
+            Affichage de
+            <span class="tw-font-medium">1</span>
+            à
+            <span class="tw-font-medium">20</span>
+            sur
+            <span class="tw-font-medium">200</span>
+            résultats
+        </p>
+        </div>
+        <div class="tw-flex tw-flex-1 tw-justify-between sm:tw-justify-end tw-gap-3">
+            <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Précédent</button>
+            <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Suivant</button>
+        </div>
+    </nav>
+</div>

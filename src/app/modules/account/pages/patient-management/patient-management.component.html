@@ -55,11 +55,11 @@
                 </tr>
                 </thead>
                 <tbody class="tw-pt-3 tw-divide-y-2 tw-divide-gray-300">
-                <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" class=" tw-border-gray-400">
+                <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" routerLink="/consultation/infos" class="tw-cursor-pointer tw-border-gray-400">
                     <td class="tw-whitespace-nowrap !tw-py-3 tw-pl-4 tw-pr-3 tw-max-w-fit tw-text-tertiary sm:tw-pl-0 tw-capitalize">Mohamed</td>
-                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">26/02/1983</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-5 tw-pl-8 tw-text-tertiary tw-capitalize">26/02/1983</td>
                     <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">04/05/2023</td>
-                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">16/09/1983</td>
+                    <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-pl-10 tw-text-tertiary tw-capitalize">16/09/1983</td>
                 </tr>
                 </tbody>
             </table>
@@ -83,7 +83,7 @@
         </div>
 
 
-        <!-- Patients table -->
+        <!-- Waiting list table -->
         <div *ngIf="currentPage === 'liste d\'attente'" class="tw-inline-block tw-min-w-full tw-pb-2 tw-align-middle">
             <table class="tw-min-w-full">
                 <thead>

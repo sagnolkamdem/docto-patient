@@ -12,7 +12,7 @@ import { DashboardTabs } from './interfaces/dashboard-tabs.interface';
             <option *ngFor="let tab of tabs" [value]="tab.link">{{tab.name}}</option>
           </select>
         </div>
-        <div class="tw-hidden sm:tw-flex tw-justify-between">
+        <div class="tw-hidden sm:tw-flex tw-justify-between tw-px-5 tw-pt-5">
           <div class="tw-border-b tw-border-gray-200">
             <nav class="-tw-mb-px tw-flex tw-space-x-8" aria-label="Tabs">
               <a *ngFor="let tab of tabs" [routerLink]="tab.link" routerLinkActive="active" class="tw-border-transparent tw-no-underline tw-text-tertiary hover:tw-border-gray-300 tw-whitespace-nowrap tw-px-1 tw-border-b-2 tw-font-semibold tw-text-lg">{{tab.name}}</a>

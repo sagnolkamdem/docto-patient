@@ -1,0 +1,151 @@
+<main class="main">
+    <app-header></app-header>
+  
+    <section class="page-content">
+      <div class="content-wrap !tw-p-0">
+
+        <div class="!tw-pt-14">
+
+            <div class="container my-5">
+              
+                <div class="row mt-4">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="img-profile">
+                          <img src="assets/user.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="d-flex flex-column">
+                          <span class="fw-bold">Dr Dan BOUDANA</span>
+                          <span>Médecin Généraliste</span>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <h6>Présentation</h6>
+                        <p>
+                          Le médecin généraliste accueille les enfants et les adultes pour tous types de soins médicaux généraux
+                          (consultation, contrôle annuel, vaccination, bilan de santé).
+                          Il assure également un suivi des patients dans le temps et les oriente vers des médecins spécialistes en cas de besoin.
+                          Je ne pratique pas la visioconférence dans mes consultations.
+                        </p>
+                      </div>
+                    </div>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="">
+                          <button class="btn btn-sm btn-primary rounded-5 mx-1">Lieu 1</button>
+                          <button class="btn btn-sm btn-outline-dark rounded-5 mx-1">Lieu 2</button>
+                        </div>
+                        <hr>
+                        <div class="d-flex flex-column">
+                          <span>Cabinet Puteaux</span>
+                          <span>11 Rue Rouget de Lisle, 92800 Puteaux</span>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <h6>Expertises et actes</h6>
+                        <div class="chips">
+                          <span class="chip">Médecine de l'enfant et de l'adolescent</span>
+                          <span class="chip">Radiographie</span>
+                          <span class="chip">Suivi en gynécologie</span>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <h6>
+                          <i class="mdi mdi-av-timer"></i>
+                          Horaires et contacts
+                        </h6>
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-flex flex-column">
+                              <span class="fw-bold">Horaires d'ouverture</span>
+                              <span>Lundi :08h30 - 19h30</span>
+                              <span>Mardi :08h30 - 19h30</span>
+                              <span>Mercredi :08h30 - 19h30</span>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-column">
+                              <span class="fw-bold">Contact d'urgence</span>
+                              <span>En cas d'urgence, contactez le 15 (Samu)</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-8">
+                    <div class="multiple-step">
+                      <div class="step">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="bottom-bar">Choisissez la date de consultation</h6>
+              
+                            <div class="choose-date">
+                              <span class="slide-left">
+                                <i class="mdi mdi-chevron-left"></i>
+                              </span>
+                              <span class="slide-right">
+                                <i class="mdi mdi-chevron-right"></i>
+                              </span>
+              
+                              <div class="content-scroll-x">
+                                <div class="item" *ngFor="let i of [1,2,3,4,5]">
+                                  <div class="item-head">
+                                    <span class="fw-bold">Samedi</span>
+                                    <span>{{ i }} Mars</span>
+                                  </div>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                  <span class="item-time">
+                                    12:00
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        
+        </div>
+
+      </div>
+    </section>
+  
+    <app-tabs></app-tabs>
+</main>
