@@ -390,6 +390,8 @@
   height: 100%;
   box-shadow: $box-shadow;
   margin: .25rem .5rem;
+  border-radius: 15px;
+  overflow: hidden;
 
   .side {
     flex: 1.2;
