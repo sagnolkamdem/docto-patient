@@ -11,6 +11,7 @@ import { PrescriptionComponent } from './pages/consultation-documents/prescripti
 import { CertificatComponent } from './pages/consultation-documents/certificat/certificat.component';
 import { VaccinComponent } from './pages/consultation-documents/vaccin/vaccin.component';
 import { OthersComponent } from './pages/consultation-documents/others/others.component';
+import { QuillModule } from 'ngx-quill';
 
 
 
@@ -28,6 +29,7 @@ import { OthersComponent } from './pages/consultation-documents/others/others.co
   imports: [
     CommonModule,
     SharedModule,
+    QuillModule,
     RouterModule.forChild(consultationroutes)
   ]
 })
