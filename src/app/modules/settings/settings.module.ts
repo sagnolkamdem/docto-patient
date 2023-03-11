@@ -10,7 +10,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { SecurityLogComponent } from './pages/security-log/security-log.component';
 import { SignatureComponent } from './pages/signature/signature.component';
 import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
-
+import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.compone
     AccountComponent,
     SecurityLogComponent,
     SignatureComponent,
-    UtilisateursComponent
+    UtilisateursComponent,
+    NewUtilisateurComponent
   ],
   imports: [
     CommonModule,
