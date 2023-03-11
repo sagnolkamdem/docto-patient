@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    MatExpansionModule
+    MatExpansionModule,
+    QuillModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
