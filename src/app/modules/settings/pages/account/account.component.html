@@ -1,0 +1,130 @@
+<app-account-layout title="Mon compte">
+
+    <!-- Creation form -->
+    <div class="tw-p-10 tw-mb-28 tw-space-y-5 tw-overflow-y-scroll">
+
+        <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
+
+            <div class="tw-flex">
+                <label for="sexe" class="tw-text-tertiary">Civilité</label>
+                <div class="tw-flex tw-items-center tw-ml-10">
+                    <input id="Sexe" name="sexe" type="radio" checked class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
+                    <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Féminin</label>
+                </div>
+                <div class="tw-flex tw-items-center tw-ml-10">
+                    <input id="Sexe" name="sexe" type="radio" class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
+                    <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Masculin</label>
+                </div>
+            </div>
+
+            <div class="tw-flex">
+                <label for="name" class="tw-sr-only">Nom de famille</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="name" id="name" placeholder="Nom de famille" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex">
+                <label for="surname" class="tw-sr-only">Prénom</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="surname" id="surname" placeholder="Prénom" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex">
+                <label for="dateNaiss" class="tw-sr-only">Date de naissance</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="date" name="dateNaiss" id="dateNaiss" placeholder="Prénom" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex tw-flex-col">
+                <label for="speciality" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Spécialité</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="specialiality" id="specialiality" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex">
+                <label for="email" class="tw-sr-only">Email</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="email" name="email" id="email" placeholder="Email" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+            <div class="tw-flex">
+                <label for="phone" class="tw-sr-only">Numéro de téléphone</label>
+                <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
+                    <input type="text" name="phone" id="phone" placeholder="Numéro de téléphone" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Mot de passe</h3>
+
+            <button type="button">Modifier mon mot de passe</button>
+
+        </div>
+
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+
+            <div class="tw-flex tw-flex-col tw-min-w-[400px] tw-max-w-[400px] tw-gap-2">
+                <h3 class="tw-text-base tw-font-semibold !tw-m-0">Double authentification</h3>
+                <p class="tw-text-sm tw-font-medium !tw-m-0 tw-pr-9">La double authentification garantit les autorisations d’accès, la confidentialité et l’intégrité de votre compte</p>
+            </div>
+
+            <div class="tw-flex tw-flex-col">
+                <p class="!tw-m-0">
+                    Par Email: <span class="tw-font-bold">Activée</span>
+                </p>
+                <p class="!tw-m-0">
+                    Par SMS: <span class="tw-font-bold">Activée</span>
+                </p>
+                <p class="!tw-m-0">
+                    Par application smartphone: <span class="tw-font-bold">Désactivée</span>
+                </p>
+                <p class="!tw-m-0">
+                    Configurer la double authentification
+                </p>
+            </div>
+
+        </div>
+
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Conditions générales</h3>
+
+            <div class="tw-flex tw-flex-col">
+                <button type="button" class="tw-text-left">Conditions d’abonnement</button>
+                <button type="button" class="tw-text-left">Conditions générales d’utilisation</button>
+            </div>
+
+        </div>
+
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Protection des données</h3>
+
+            <div class="tw-flex tw-flex-col tw-justify-start">
+                <button type="button" class="tw-text-left">Accord sur la publication des données</button>
+                <button type="button" class="tw-text-left">Accord sur la protection des données</button>
+            </div>
+
+        </div>
+
+        <!-- Validation of form -->
+        <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
+            <button type="submit" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
+                Annuler
+            </button>
+            <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">
+                Valider
+            </button>
+        </div>
+
+    </div>
+
+</app-account-layout>

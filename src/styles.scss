@@ -60,6 +60,7 @@ app-root {
   height: 5px;
   width: 10px;
 }
+<<<<<<< HEAD
 .user-avatar {
   height: 100px;
   width: 100%;
@@ -102,3 +103,19 @@ app-root {
     }
   }
 }
+=======
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #e8f7f2 !important;
+  background-color: #e8f7f2 !important;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ql-container.ql-snow {
+  border: 1px solid #e8f7f2 !important;
+  background-color: #e8f7f2 !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+>>>>>>> 428d0c23891f3acece2b2eb10404c215a82f9350

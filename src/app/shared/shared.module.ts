@@ -18,6 +18,8 @@ import { AlertErrorComponent } from './components/alert-error/alert-error.compon
 import { AlertConfirmComponent } from './components/alert-confirm/alert-confirm.component';
 import { SettingComponent } from './layouts/setting/setting.component';
 import { SettingHeaderComponent } from './components/header/setting-header/setting-header.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { AccountComponent } from './layouts/account/account.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { SettingHeaderComponent } from './components/header/setting-header/setti
     AlertErrorComponent,
     AlertConfirmComponent,
     SettingComponent,
-    SettingHeaderComponent
+    SettingHeaderComponent,
+    BadgeComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +58,9 @@ import { SettingHeaderComponent } from './components/header/setting-header/setti
     HeaderComponent,
     TabsComponent,
     ToggleComponent,
-    SettingComponent
+    SettingComponent,
+    BadgeComponent,
+    AccountComponent
   ]
 })
 export class SharedModule { }
