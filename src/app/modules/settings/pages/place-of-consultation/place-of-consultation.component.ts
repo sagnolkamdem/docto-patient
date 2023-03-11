@@ -45,4 +45,8 @@ export class PlaceOfConsultationComponent implements OnInit {
     this.open = value;
   }
 
+  toggleCreatePlaceForm() {
+    this.createPlaceForm = !this.createPlaceForm;
+  }
+
 }
