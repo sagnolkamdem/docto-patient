@@ -1,7 +1,7 @@
-<div class="tw-p-5 tw-space-y-10">
+<div class="tw-p-5 ">
 
     <!-- Validation of form -->
-    <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
+    <div class="tw-fixed tw-z-10 tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
         <button type="button" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
             Annuler
         </button>
@@ -10,17 +10,17 @@
         </button>
     </div>
 
-    <div class="tw-border-b tw-border-[#6F7781]">
+    <div class="tw-border-b tw-border-[#6F7781] tw-mb-10">
         <nav aria-label="breadcrumb">
             <ol class="tw-py-5 tw-flex tw-space-x-2.5 tw-pl-0 tw-mb-0">
               <li class="tw-text-base tw-flex tw-items-center tw-font-bold">
-                <a class="tw-no-underline" [routerLink]="'/consultation/infos'">Dossier patien</a>
+                <a class="tw-no-underline" [routerLink]="'/consultation/infos'">Dossier patient</a>
               </li>
               <li class="tw-text-base tw-flex tw-items-center tw-font-bold">
                 <svg class="tw-w-5 tw-h-5 tw-text-black" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.52092 5.25L11.4792 9L7.52091 12.75" stroke="#868AA5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <p class="tw-ml-2.5 !tw-m-0 tw-no-underline tw-capitalize">Mohamed</p>
+                <p class="tw-ml-2.5 !tw-m-0 tw-no-underline tw-capitalize">Mohamed Belaouier</p>
               </li>
             </ol>
         </nav>
@@ -334,9 +334,11 @@
     
                         <div class="tw-space-y-2">
                             <div class="tw-flex tw-gap-2.5 tw-items-center">
-                                <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
-                                </svg>      
+                                <button type="button" (click)="toggleCreatePrescriptionForm()">
+                                    <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
+                                    </svg>      
+                                </button>
                                 <h6 class="!tw-m-0 tw-text-sm tw-font-semibold">Ordonnance</h6>                          
                             </div>
                             <p class="!tw-m-0 tw-italic tw-font-light tw-text-sm tw-pl-5">ordonnance_jean_durand.pdf</p>
@@ -344,9 +346,11 @@
     
                         <div class="tw-space-y-2">
                             <div class="tw-flex tw-gap-2.5 tw-items-center">
-                                <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
-                                </svg>      
+                                <button type="button" (click)="toggleCreateCertificateForm()">
+                                    <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
+                                    </svg>      
+                                </button>
                                 <h6 class="!tw-m-0 tw-text-sm tw-font-semibold">Certificat</h6>                          
                             </div>
                             <p class="!tw-m-0 tw-italic tw-font-light tw-text-sm tw-pl-5">certificat_jean_durand.pdf</p>
@@ -354,9 +358,11 @@
     
                         <div class="tw-space-y-2">
                             <div class="tw-flex tw-gap-2.5 tw-items-center">
-                                <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
-                                </svg>      
+                                <button type="button" (click)="toggleCreateVaccinForm()">
+                                    <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
+                                    </svg>      
+                                </button>
                                 <h6 class="!tw-m-0 tw-text-sm tw-font-semibold">Vaccin</h6>                          
                             </div>
                             <p class="!tw-m-0 tw-italic tw-font-light tw-text-sm tw-pl-5">vaccin_jean_durand.pdf</p>
@@ -364,9 +370,11 @@
     
                         <div class="tw-space-y-2">
                             <div class="tw-flex tw-gap-2.5 tw-items-center">
-                                <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
-                                </svg>      
+                                <button type="button" (click)="toggleCreateOtherForm()">
+                                    <svg class="tw-w-5 tw-h-5 tw-fill-primary-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
+                                    </svg>      
+                                </button>
                                 <h6 class="!tw-m-0 tw-text-sm tw-font-semibold">Autres</h6>                          
                             </div>
                             <p class="!tw-m-0 tw-italic tw-font-light tw-text-sm tw-pl-5">report_jean_durand.pdf</p>
@@ -382,5 +390,250 @@
         </div>
 
     </div>
+
+    <!-- Create Prescription form -->
+    <app-modal [visible]="createPrescriptionForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-min-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreatePrescriptionForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#111111"/>
+                    </svg>   
+                </button>                 
+            </div>
+    
+            <h2 class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Ordonnance
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-top-0 tw-h-0 tw-w-full tw-bg-primary-500">Ordonnance</span>
+                </span>
+            </h2>
+    
+            <form action="" class="">
+    
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+
+                    <ul class="tw-flex tw-gap-2 tw-flex-col !tw-m-0 !tw-p-0">
+                        <li class="">
+                            <div class="tw-flex tw-items-center tw-gap-1 tw-mb-1.5">
+                                <span>
+                                    <svg class="tw-w-1 tw-h-1" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+                                    </svg>
+                                </span>
+                                <h3 class="tw-text-base md:tw-mt-6 tw-mt-4 tw-text-tertiary !tw-m-0">Paracétamol 1000</h3>
+                            </div>
+                            <p class="!tw-m-0 tw-text-sm tw-text-left tw-italic !tw-ml-4">2 matin - 2 midi - 2 soir</p>
+                        </li>
+                        <li class="">
+                            <div class="tw-flex tw-items-center tw-gap-1 tw-mb-1.5">
+                                <span>
+                                    <svg class="tw-w-1 tw-h-1" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+                                    </svg>
+                                </span>
+                                <h3 class="tw-text-base md:tw-mt-6 tw-mt-4 tw-text-tertiary !tw-m-0">Doliprane 1000</h3>
+                            </div>
+                            <p class="!tw-m-0 tw-text-sm tw-text-left tw-italic !tw-ml-4">200ml matin - 200ml soir</p>
+                        </li>
+                    </ul>
+        
+                    <div class="tw-py-1 tw-px-1 tw-text-left">
+                        <label for="medication" class="">Médicament</label>
+                        <input type="text" name="medication" id="medication" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-rounded-lg tw-text-tertiary tw-border-primary-100 sm:tw-text-sm">
+                    </div>
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left tw-rounded-lg">
+                        <label for="dosage" class="">Posologie</label>
+                        <textarea rows="4" name="dosage" id="dosage" class="focus:tw-border-transparent tw-rounded-lg focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-text-tertiary tw-border-primary-100 sm:tw-text-sm"></textarea>
+                    </div>
+        
+                </div>
+    
+                <div class="tw-bg-white tw-mt-3 tw-flex tw-items-center tw-gap-2.5 tw-justify-between">
+                    <button type="submit" class="tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-secondary px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-secondary focus:tw-ring-offset-2">
+                        Enrégistrer et ajouter
+                    </button>
+                    <button type="submit" class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Valider l'ordonnance
+                    </button>
+                </div>
+            </form>
+    
+        </div>
+    </app-modal>
+
+    <!-- Create Vaccin form -->
+    <app-modal [visible]="createVaccinForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-min-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreateVaccinForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#111111"/>
+                    </svg>   
+                </button>                 
+            </div>
+    
+            <h2 class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Vaccin
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-top-0 tw-h-0 tw-w-full tw-bg-primary-500">Vaccin</span>
+                </span>
+            </h2>
+    
+            <form action="" class="">
+    
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+
+                    <ul class="tw-flex tw-gap-2 tw-flex-col !tw-m-0 !tw-p-0">
+                        <li class="">
+                            <div class="tw-flex tw-items-center tw-gap-1 tw-mb-1.5">
+                                <span>
+                                    <svg class="tw-w-1 tw-h-1" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+                                    </svg>
+                                </span>
+                                <h3 class="tw-text-base md:tw-mt-6 tw-mt-4 tw-text-tertiary !tw-m-0">Covid</h3>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="tw-flex tw-items-center tw-gap-1 tw-mb-1.5">
+                                <span>
+                                    <svg class="tw-w-1 tw-h-1" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5" fill="black"/>
+                                    </svg>
+                                </span>
+                                <h3 class="tw-text-base md:tw-mt-6 tw-mt-4 tw-text-tertiary !tw-m-0">Fièvre jaune</h3>
+                            </div>
+                        </li>
+                    </ul>
+        
+                    <div class="tw-py-1 tw-px-1 tw-text-left">
+                        <label for="vaccin" class="">Vaccin</label>
+                        <input type="text" name="vaccin" id="vaccin" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-rounded-lg tw-text-tertiary tw-border-primary-100 sm:tw-text-sm">
+                    </div>
+        
+                </div>
+    
+                <div class="tw-bg-white tw-mt-3 tw-flex tw-items-center tw-gap-2.5 tw-justify-between">
+                    <button type="submit" class="tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-secondary px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-secondary focus:tw-ring-offset-2">
+                        Enrégistrer et ajouter
+                    </button>
+                    <button type="submit" class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Valider les vaccins
+                    </button>
+                </div>
+            </form>
+    
+        </div>
+    </app-modal>
+
+    <!-- Create Certificate form -->
+    <app-modal [visible]="createCertificateForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-min-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreateCertificateForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#111111"/>
+                    </svg>   
+                </button>                 
+            </div>
+    
+            <h2 class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Certificat
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-top-0 tw-h-0 tw-w-full tw-bg-primary-500">Certificat</span>
+                </span>
+            </h2>
+
+            <form action="" class="">
+    
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left">
+                        <label for="title" class="">Titre</label>
+                        <input type="text" name="title" id="title" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-rounded-lg tw-text-tertiary tw-border-primary-100 sm:tw-text-sm">
+                    </div>
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left tw-rounded-lg">
+                        <label for="description" class="">Description</label>
+                        <quill-editor
+                        class="content-editor w-100 bg-white"
+                        [placeholder]="'Écrire le message...'"
+                        [modules]="quillConfig"
+                        [styles]="{ 'min-height': '150px' }"
+                        >
+                        </quill-editor>
+
+                        <!-- <textarea rows="4" name="description" id="description" class="focus:tw-border-transparent tw-rounded-lg focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-text-tertiary tw-border-primary-100 sm:tw-text-sm"></textarea> -->
+                    </div>
+        
+                </div>
+    
+                <div class="tw-bg-white tw-mt-3 tw-flex tw-items-center tw-gap-2.5 tw-justify-end">
+                    <button type="submit" class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Enrégistrer
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </app-modal>
+
+    <!-- Create Other form -->
+    <app-modal [visible]="createOtherForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-min-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreateOtherForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#111111"/>
+                    </svg>   
+                </button>                 
+            </div>
+    
+            <h2 class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Autre
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                    <span class="tw-absolute tw-right-0 tw-z-0 tw-top-0 tw-h-0 tw-w-full tw-bg-primary-500">Autre</span>
+                </span>
+            </h2>
+
+            <form action="" class="">
+    
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left">
+                        <label for="title" class="">Titre</label>
+                        <input type="text" name="title" id="title" class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-rounded-lg tw-text-tertiary tw-border-primary-100 sm:tw-text-sm">
+                    </div>
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left tw-rounded-lg">
+                        <label for="description" class="">Description</label>
+                        <quill-editor
+                        class="content-editor w-100 bg-white"
+                        [placeholder]="'Écrire le message...'"
+                        [modules]="quillConfig"
+                        [styles]="{ 'min-height': '150px' }"
+                        >
+                        </quill-editor>
+
+                        <!-- <textarea rows="4" name="description" id="description" class="focus:tw-border-transparent tw-rounded-lg focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-text-tertiary tw-border-primary-100 sm:tw-text-sm"></textarea> -->
+                    </div>
+        
+                </div>
+    
+                <div class="tw-bg-white tw-mt-3 tw-flex tw-items-center tw-gap-2.5 tw-justify-end">
+                    <button type="submit" class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Enrégistrer
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </app-modal>
 
 </div>
