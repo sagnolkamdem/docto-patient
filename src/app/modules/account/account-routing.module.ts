@@ -6,6 +6,7 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NoteComponent } from './pages/note/note.component';
+import { DocumentsComponent } from './pages/documents/documents.component';
 
 const routes: Routes = [
   {
@@ -50,12 +51,20 @@ const routes: Routes = [
       title: 'Activités'
     }
   },
+  {
+    path: 'documents',
+    component: DocumentsComponent,
+    data: {
+      title: 'Mes documents'
+    }
+  },
 
   {
     path: '',
     redirectTo: 'agenda',
     pathMatch: 'full'
-  }
+  },
+
 ];
 
 @NgModule({
