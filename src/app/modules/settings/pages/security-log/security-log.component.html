@@ -1,0 +1,70 @@
+<app-account-layout title="Journal de sécurité">
+
+
+    <div class="tw-p-10 tw-space-y-5 tw-overflow-y-scroll">
+
+        <div class="tw-flex tw-mb-3 tw-bg-[#fde9d2] tw-gap-2.5 tw-text-tertiary tw-p-2.5">
+            <span class="tw-min-w-[20px] tw-min-h-[20px]">
+                <svg class="tw-w-5 tw-h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16667 14.1667H10.8333V9.16675H9.16667V14.1667ZM10 7.50008C10.2361 7.50008 10.4342 7.42008 10.5942 7.26008C10.7542 7.10008 10.8339 6.9023 10.8333 6.66675C10.8333 6.43064 10.7533 6.23258 10.5933 6.07258C10.4333 5.91258 10.2356 5.83286 10 5.83341C9.76389 5.83341 9.56583 5.91341 9.40583 6.07341C9.24583 6.23341 9.16611 6.43119 9.16667 6.66675C9.16667 6.90286 9.24667 7.10091 9.40667 7.26091C9.56667 7.42091 9.76444 7.50064 10 7.50008ZM10 18.3334C8.84722 18.3334 7.76389 18.1145 6.75 17.6767C5.73611 17.239 4.85417 16.6454 4.10417 15.8959C3.35417 15.1459 2.76056 14.264 2.32333 13.2501C1.88611 12.2362 1.66722 11.1529 1.66667 10.0001C1.66667 8.8473 1.88555 7.76397 2.32333 6.75008C2.76111 5.73619 3.35472 4.85425 4.10417 4.10425C4.85417 3.35425 5.73611 2.76064 6.75 2.32341C7.76389 1.88619 8.84722 1.6673 10 1.66675C11.1528 1.66675 12.2361 1.88564 13.25 2.32341C14.2639 2.76119 15.1458 3.3548 15.8958 4.10425C16.6458 4.85425 17.2397 5.73619 17.6775 6.75008C18.1153 7.76397 18.3339 8.8473 18.3333 10.0001C18.3333 11.1529 18.1144 12.2362 17.6767 13.2501C17.2389 14.264 16.6453 15.1459 15.8958 15.8959C15.1458 16.6459 14.2639 17.2398 13.25 17.6776C12.2361 18.1154 11.1528 18.334 10 18.3334ZM10 16.6667C11.8611 16.6667 13.4375 16.0209 14.7292 14.7292C16.0208 13.4376 16.6667 11.8612 16.6667 10.0001C16.6667 8.13897 16.0208 6.56258 14.7292 5.27091C13.4375 3.97925 11.8611 3.33341 10 3.33341C8.13889 3.33341 6.5625 3.97925 5.27083 5.27091C3.97917 6.56258 3.33333 8.13897 3.33333 10.0001C3.33333 11.8612 3.97917 13.4376 5.27083 14.7292C6.5625 16.0209 8.13889 16.6667 10 16.6667Z" fill="#111111"/>
+                </svg>
+            </span>
+            <p class="tw-text-sm tw-text-left tw-mb-0">Consulter les dernières activités de sécurité pour vous et votre organisation.</p>
+        </div>
+
+        <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
+
+            <div class="tw-py-1 tw-text-left tw-space-y-4 tw-px-1">
+                <label for="user" class="tw-sr-only">Utilisateurs</label>
+                <select id="user" name="user" class="tw-block tw-max-w-fit tw-border-primary-100 tw-w-full tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                    <option value="enfant">Mohamed Belaouier</option>
+                    <option selected>Choisir....</option>
+                </select>
+            </div>
+
+            <!-- Table -->
+            <div class="tw-inline-block tw-min-w-full tw-pb-2 tw-align-middle">
+                <table class="tw-min-w-full">
+                    <thead>
+                    <tr class="tw-bg-primary-500">
+                        <th scope="col" class="!tw-py-3.5 !tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-max-w-fit tw-text-white">Utilisateur</th>
+                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Action</th>
+                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Résultat</th>
+                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Lieu(adresse IP)</th>
+                        <th scope="col" class="tw-p-2.5 tw-border-none tw-text-left tw-font-semibold tw-text-white">Type d'appareil</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tw-pt-3 tw-bg-white tw-divide-y-2 tw-divide-gray-300">
+                    <tr *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" class=" tw-border-gray-400">
+                        <td class="tw-whitespace-nowrap !tw-py-3 tw-pl-2.5 tw-pr-3 tw-max-w-fit tw-text-tertiary tw-capitalize">Mohamed</td>
+                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Connexion</td>
+                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Connexion avec mot de passe</td>
+                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">France(127.0.0.1)</td>
+                        <td class="tw-whitespace-nowrap tw-pt-1.5 tw-pb-1 tw-px-3 tw-text-tertiary tw-capitalize">Mobile</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav class="tw-flex tw-items-center tw-justify-between tw-border-t tw-border-gray-200 tw-bg-white tw-py-3 tw-pt-8 tw-pl-2.5" aria-label="Pagination">
+                    <div class="tw-hidden sm:tw-block">
+                    <p class="tw-text-sm tw-text-gray-700 !tw-m-0">
+                        Affichage de
+                        <span class="tw-font-medium">1</span>
+                        à
+                        <span class="tw-font-medium">20</span>
+                        sur
+                        <span class="tw-font-medium">200</span>
+                        résultats
+                    </p>
+                    </div>
+                    <div class="tw-flex tw-flex-1 tw-justify-between sm:tw-justify-end tw-gap-3 tw-pr-4">
+                    <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Précédent</button>
+                    <button class="tw-relative tw-inline-flex tw-items-center tw-rounded-md tw-bg-white tw-px-3 tw-py-2 tw-text-sm tw-font-semibold tw-text-gray-900 tw-ring-1 tw-ring-inset tw-ring-gray-300 hover:tw-bg-gray-50 focus-visible:tw-outline-offset-0">Suivant</button>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+    </div>
+
+</app-account-layout>
