@@ -5,13 +5,15 @@ import { settingRoutes } from './routes/setting.routes';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { PlaceOfConsultationComponent } from './pages/place-of-consultation/place-of-consultation.component';
+import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
 
 
 
 @NgModule({
   declarations: [
     SettingsComponent,
-    PlaceOfConsultationComponent
+    PlaceOfConsultationComponent,
+    UtilisateursComponent
   ],
   imports: [
     CommonModule,
