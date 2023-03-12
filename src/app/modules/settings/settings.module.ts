@@ -13,6 +13,7 @@ import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.compone
 import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
 import { SubstitutesComponent } from './pages/substitutes/substitutes.component';
 import { NewSubstituteComponent } from './pages/substitutes/new-substitute/new-substitute.component';
+import { ReasonConsultationComponent } from './pages/reason-consultation/reason-consultation.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NewSubstituteComponent } from './pages/substitutes/new-substitute/new-s
     UtilisateursComponent,
     NewUtilisateurComponent,
     SubstitutesComponent,
-    NewSubstituteComponent
+    NewSubstituteComponent,
+    ReasonConsultationComponent
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,4 @@
+import { ReasonConsultationComponent } from './../pages/reason-consultation/reason-consultation.component';
 import { Routes } from "@angular/router";
 import { AccountComponent } from "../pages/account/account.component";
 import { AgendaComponent } from "../pages/agenda/agenda.component";
@@ -86,6 +87,13 @@ export const settingRoutes: Routes = [
     component: NewSubstituteComponent ,
     data: {
       title: "Nouveau  remplaçant"
+    }
+  },
+  {
+    path: 'reason-consultation',
+    component: ReasonConsultationComponent ,
+    data: {
+      title: "Motif de consultation"
     }
   }
 ]

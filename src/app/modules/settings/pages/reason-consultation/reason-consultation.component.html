@@ -1,0 +1,103 @@
+
+<app-setting title="Motif de consultation">
+  <div class="position-relative- h-100-">
+    <div class="h-100 m-4 mb-0">
+      <form class="row g-3 align-items-center mb-2">
+        <div class="col-auto">
+          <label for="specialty" class="form-label">Spécialité</label>
+        </div>
+        <div class="col-auto">
+          <select class="form-select bg-white" id="specialty">
+            <option value="">Médecin généraliste</option>
+            <option value="">Médecin spécialiste</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <label for="reason" class="form-label">Motif de consultation</label>
+        </div>
+        <div class="col-auto">
+          <select class="form-select bg-white" id="reason">
+            <option value="">Médecin généraliste</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="my-3 bg-white shadow rounded">
+        <table class="table table-lg">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th scope="col">Motif de consultation</th>
+              <th scope="col">Durée</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of [1,2,4]">
+              <td>Dépistage Paludisme</td>
+              <td>2H</td>
+              <td class="text-end">
+                <span class="pointer">
+                  <i class="mdi mdi-trash-can-outline text-danger"></i>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="d-flex- d-inline-block">
+                  <input type="text" class="form-control" value="Dépistage Paludisme" placeholder="Motif de consultation">
+                </div>
+              </td>
+              <td>
+                <div class="d-flex- d-inline-block">
+                  <select class="form-select">
+                    <option value="">Durée</option>
+                    <option value="">2H</option>
+                    <option value="">4H</option>
+                    <option value="">6H</option>
+                  </select>
+                </div>
+              </td>
+              <td class="text-end">
+                <span class="pointer">
+                  <i class="mdi mdi-trash-can-outline text-danger"></i>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="p-2">
+          <button class="btn btn-light bg-white text-danger">
+            <i class="mdi mdi-plus-circle me-2"></i>
+            Ajouter un motif
+          </button>
+        </div>
+
+        <nav class="p-2" aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="bg-white p-3 mx-4 mt-4 text-end">
+      <button class="btn btn-secondary">
+        Enregistrer
+      </button>
+    </div>
+  </div>
+  </app-setting>
