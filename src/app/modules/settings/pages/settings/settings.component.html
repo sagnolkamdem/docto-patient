@@ -13,7 +13,10 @@
             <div class="tw-rounded-full tw-mb-14 tw-bg-white tw-max-w-fit tw-mx-auto">
                 <div class="tw-flex tw-items-center tw-px-4 tw-py-1 tw-m-0">
                     <div class="tw-flex tw-py-1.5 tw-pr-1.5">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="tw-w-6 tw-h-6 tw-fill-gray-400"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path></svg>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="tw-w-6 tw-h-6 tw-fill-gray-400">
+                          <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+                          <path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path>
+                        </svg>
                     </div>
                     <input type="text" name="search" id="search" placeholder="Rechercher les paramètres" class="tw-p-0 tw-h-full tw-min-w-[300px] sm:tw-min-w-[420px] lg:tw-min-w-[620px] tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-sm tw-text-sm placeholder:tw-text-gray-400  tw-rounded-md tw-border-transparent focus:tw-border-white focus:tw-ring-white">
                 </div>
@@ -24,7 +27,7 @@
 
                 <li class="tw-p-2.5 tw-pb-10 tw-bg-white tw-shadow-md tw-space-y-2.5 tw-max-w-[364px] tw-relative tw-group hover:tw-shadow-xl">
 
-                    <a href="/settings/place-of-consultation" class="tw-absolute tw-inset-0"></a>
+                    <a routerLink="/settings/place-of-consultation" class="tw-absolute tw-inset-0"></a>
 
                     <div class="tw-flex tw-justify-between">
                         <div class="tw-flex tw-items-center tw-gap-2.5">
@@ -62,7 +65,7 @@
 
                 <li class="tw-p-2.5 tw-pb-10 tw-bg-white tw-shadow-md tw-space-y-2.5 tw-max-w-[364px] tw-relative tw-group hover:tw-shadow-xl">
 
-                    <a href="/settings/agenda" class="tw-absolute tw-inset-0"></a>
+                    <a routerLink="/settings/agenda" class="tw-absolute tw-inset-0"></a>
 
                     <div class="tw-flex tw-justify-between">
                         <div class="tw-flex tw-items-center tw-gap-3">
@@ -93,7 +96,7 @@
 
                 <li class="tw-p-2.5 tw-pb-10 tw-bg-white tw-shadow-md tw-space-y-2.5 tw-max-w-[364px] tw-relative tw-group hover:tw-shadow-xl">
 
-                    <a href="#" class="tw-absolute tw-inset-0"></a>
+                    <a routerLink="/settings/users" class="tw-absolute tw-inset-0"></a>
 
                     <div class="tw-flex tw-justify-between">
                         <div class="tw-flex tw-items-center tw-gap-3">
@@ -118,7 +121,7 @@
                     </div>
 
                     <p class="!tw-p-3 tw-text-sm !tw-m-0">
-                        Ajouter un nouvel utilisateur, donner les accès et définir les drois d’accès aux agendas.
+                        Ajouter un nouvel utilisateur, donner les accès et définir les droits d’accès aux agendas.
                     </p>
 
                 </li>
@@ -163,14 +166,14 @@
 
                 <li class="tw-p-2.5 tw-pb-10 tw-bg-white tw-shadow-md tw-space-y-2.5 tw-max-w-[364px] tw-relative tw-group hover:tw-shadow-xl">
 
-                    <a href="#" class="tw-absolute tw-inset-0"></a>
+                    <a routerLink="/settings/substitutes" class="tw-absolute tw-inset-0"></a>
 
                     <div class="tw-flex tw-justify-between">
                         <div class="tw-flex tw-items-center tw-gap-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="tw-w-6 tw-h-6 tw-fill-secondary">
                                 <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
                             </svg>
-                            <h2 class="tw-font-bold tw-text-xl !tw-mt-1 tw-text-secondary !tw-m-0">remplaçant</h2>
+                            <h2 class="tw-font-bold tw-text-xl !tw-mt-1 tw-text-secondary !tw-m-0">Remplaçant</h2>
                         </div>
                         <span>
                             <svg aria-hidden="true" class="tw-w-10 tw-h-10 tw-fill-gray-400 group-hover:tw-fill-secondary" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
