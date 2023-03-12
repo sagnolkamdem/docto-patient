@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SignatureComponent {
 
+  updateSignature: boolean = false;
+
+  toggleUpdateSignature() {
+    this.updateSignature = !this.updateSignature;
+  } 
+
 }
