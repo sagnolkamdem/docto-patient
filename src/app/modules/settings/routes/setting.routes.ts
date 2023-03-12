@@ -68,7 +68,7 @@ export const settingRoutes: Routes = [
   },
 
   {
-    path: 'user/new-user',
+    path: 'users/new-user',
     component: NewUtilisateurComponent,
     data: {
       title: "Nouveau utilisateur"
