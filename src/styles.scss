@@ -16,6 +16,9 @@
 @import "scss/general";
 @import "dropify/dist/css/dropify.min.css";
 
+@import '~bootstrap-icons/font/bootstrap-icons.css'; // needs additional webpack config!
+
+
 
 body {
   background-color: #F5F5F5;
