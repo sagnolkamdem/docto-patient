@@ -75,6 +75,12 @@
     margin-left: $pagination-margin-start;
   }
 
+  margin-right: .15rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
     &:first-child {
       .page-link {

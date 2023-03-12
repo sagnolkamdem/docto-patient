@@ -20,6 +20,7 @@ import { SettingComponent } from './layouts/setting/setting.component';
 import { SettingHeaderComponent } from './components/header/setting-header/setting-header.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { AccountComponent } from './layouts/account/account.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 
 @NgModule({
@@ -48,6 +49,9 @@ import { AccountComponent } from './layouts/account/account.component';
     ReactiveFormsModule,
     MaterialModule,
     SharedRoutingModule
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},
   ],
   exports: [
     BreadscrumbComponent,

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NoteComponent } from './pages/note/note.component';
@@ -37,6 +39,7 @@ import { NewDocumentComponent } from './pages/documents/new-document/new-documen
     SharedModule,
     AccountRoutingModule,
     QuillModule, // Add Quill Angular WYSIWYG Editor
+    FullCalendarModule, // register FullCalendar with your app
   ]
 })
 export class AccountModule { }

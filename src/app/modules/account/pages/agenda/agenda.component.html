@@ -1,11 +1,79 @@
-<!-- <bryntum-project-model
-    #project
-    [events]="events"
-    [resources]="resources"
-></bryntum-project-model>
 
-<bryntum-calendar
-    #calendar
-    [date]="calendarConfig.date"
-    [project]="project"
-></bryntum-calendar> -->
+<div class="m-2">
+  <div class="row g-3">
+    <div class="col-md-3">
+      <div class="card border-0">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </div>
+
+      <div class="card card-body border-0 mt-3 agenda">
+        <h5 class="fw-bold text-primary text-center">Agendas</h5>
+
+        <div class="">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="select-doctor" checked>
+            <label class="form-check-label" for="select-doctor">
+              Dr Mohamed
+            </label>
+          </div>
+
+          <div class="ps-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="select-doctor" checked>
+              <label class="form-check-label" for="select-doctor">
+                <span class="text-secondary">
+                  <i class="mdi mdi-square"></i>
+                </span>
+                Romain Scuotto
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="select-doctor" checked>
+              <label class="form-check-label" for="select-doctor">
+                <span class="text-primary">
+                  <i class="mdi mdi-square"></i>
+                </span>
+                Lakhdar Betta
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="select-doctor" checked>
+              <label class="form-check-label" for="select-doctor">
+                <span class="text-danger">
+                  <i class="mdi mdi-square"></i>
+                </span>
+                Yanis Sedrati
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <div class="input-search">
+            <input type="search" class="form-control">
+            <span class="left">
+              <i class="mdi mdi-magnify"></i>
+            </span>
+            <span class="right">
+              <i class="mdi mdi-chevron-right"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-body border-0 mt-3 agenda">
+        <div class="d-flex justify-content-between text-primary">
+          <h5 class="fw-bold">Ouvertures</h5>
+
+          <span class="box-icon pointer">
+            <i class="mdi mdi-plus-circle"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+  </div>
+</div>

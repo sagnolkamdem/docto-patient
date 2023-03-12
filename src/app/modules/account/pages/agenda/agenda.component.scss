@@ -1,0 +1,41 @@
+
+.agenda {
+
+  .form-check-input {
+    border: none;
+    // background-color: transparent;
+    height: 10px;
+    width: 10px;
+  }
+}
+
+
+.input-search {
+  position: relative;
+
+  .form-control {
+    background-color: #FFF;
+    border-radius: 20px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    i {
+      font-size: 22px;
+    }
+  }
+
+  .left {
+    left: .5rem;
+  }
+
+  .right {
+    right: .5rem;
+  }
+}
