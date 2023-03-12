@@ -11,6 +11,8 @@ import { SecurityLogComponent } from './pages/security-log/security-log.componen
 import { SignatureComponent } from './pages/signature/signature.component';
 import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
 import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
+import { SubstitutesComponent } from './pages/substitutes/substitutes.component';
+import { NewSubstituteComponent } from './pages/substitutes/new-substitute/new-substitute.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/ne
     SecurityLogComponent,
     SignatureComponent,
     UtilisateursComponent,
-    NewUtilisateurComponent
+    NewUtilisateurComponent,
+    SubstitutesComponent,
+    NewSubstituteComponent
   ],
   imports: [
     CommonModule,
