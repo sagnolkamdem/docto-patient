@@ -9,7 +9,11 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AccountComponent } from './pages/account/account.component';
 import { SecurityLogComponent } from './pages/security-log/security-log.component';
 import { SignatureComponent } from './pages/signature/signature.component';
-
+import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
+import { NewUtilisateurComponent } from './pages/utilisateurs/new-utilisateur/new-utilisateur.component';
+import { SubstitutesComponent } from './pages/substitutes/substitutes.component';
+import { NewSubstituteComponent } from './pages/substitutes/new-substitute/new-substitute.component';
+import { ReasonConsultationComponent } from './pages/reason-consultation/reason-consultation.component';
 
 
 @NgModule({
@@ -19,7 +23,12 @@ import { SignatureComponent } from './pages/signature/signature.component';
     AgendaComponent,
     AccountComponent,
     SecurityLogComponent,
-    SignatureComponent
+    SignatureComponent,
+    UtilisateursComponent,
+    NewUtilisateurComponent,
+    SubstitutesComponent,
+    NewSubstituteComponent,
+    ReasonConsultationComponent
   ],
   imports: [
     CommonModule,

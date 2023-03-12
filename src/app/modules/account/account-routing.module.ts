@@ -34,7 +34,7 @@ const routes: Routes = [
     path: 'mail',
     component: MailComponent,
     data: {
-      title: 'Email'
+      title: 'Messagerie'
     }
   },
   {
