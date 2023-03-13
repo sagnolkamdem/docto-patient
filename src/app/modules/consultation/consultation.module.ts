@@ -12,6 +12,7 @@ import { CertificatComponent } from './pages/consultation-documents/certificat/c
 import { VaccinComponent } from './pages/consultation-documents/vaccin/vaccin.component';
 import { OthersComponent } from './pages/consultation-documents/others/others.component';
 import { QuillModule } from 'ngx-quill';
+import { ReportComponent } from './pages/consultation-documents/report/report.component';
 
 
 
@@ -24,7 +25,8 @@ import { QuillModule } from 'ngx-quill';
     PrescriptionComponent,
     CertificatComponent,
     VaccinComponent,
-    OthersComponent
+    OthersComponent,
+    ReportComponent,
   ],
   imports: [
     CommonModule,
