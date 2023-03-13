@@ -1,4 +1,4 @@
-<main class="tw-h-full tw-w-full">
+<main class="tw-h-full tw-w-full xl:tw-flex">
 
   <!-- Sidebar -->
   <section class="xl:tw-flex tw-hidden tw-flex-col tw-bg-primary-100 tw-h-full">
@@ -74,7 +74,7 @@
 
   </div>
 
-  <div *ngIf="showResponsiveSideBar" #responsiveSideBar class="tw-fixed tw-transition tw-duration-300 tw-inset-0 tw-top-24 tw-overflow-hidden">
+  <div *ngIf="showResponsiveSideBar" #responsiveSideBar class="tw-fixed xl:tw-hidden tw-transition tw-duration-300 tw-inset-0 tw-top-24 tw-overflow-hidden">
     <div class="tw-fixed tw-inset-0 tw-top-24 tw-bg-gray-500 tw-bg-opacity-75 tw-transition-opacity"></div>
     <div class="tw-fixed tw-top-24 tw-inset-0 tw-z-10">
       <div [ngClass]="{'-tw-translate-x-full ': !showAnimationResponsiveSideBar}" class="tw-transition tw-duration-300 tw-bg-primary-100 tw-min-h-full tw-max-w-fit">

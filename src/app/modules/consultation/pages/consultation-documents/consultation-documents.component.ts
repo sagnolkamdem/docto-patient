@@ -22,6 +22,10 @@ export class ConsultationDocumentsComponent {
       link: '/consultation/documents/vaccin'
     },
     {
+      name: 'Compte rendu',
+      link: '/consultation/documents/report'
+    },
+    {
       name: 'Autre',
       link: '/consultation/documents/others'
     },
