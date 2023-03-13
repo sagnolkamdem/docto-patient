@@ -31,8 +31,12 @@ export class PlaceOfConsultationComponent implements OnInit {
       open: true
     },
     {
-      day: "vendredi",
+      day: "samedi",
       open: false
+    },
+    {
+      day: "Dimanche",
+      open: true
     },
   ]
 
