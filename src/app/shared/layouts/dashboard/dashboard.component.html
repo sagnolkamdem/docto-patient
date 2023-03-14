@@ -9,6 +9,18 @@
         </span> -->
         <span class="text">Agenda</span>
       </div>
+      <div class="side-item" [routerLink]="'/account/patient-management'" routerLinkActive="active">
+        <!-- <span class="icon">
+          <i class="mdi mdi-human-male-female-child"></i>
+        </span> -->
+        <span class="text">Gestion patients</span>
+      </div>
+      <div class="side-item" [routerLink]="'/account/documents'" routerLinkActive="active">
+        <!-- <span class="icon">
+          <i class="mdi mdi-security"></i>
+        </span> -->
+        <span class="text">Documents</span>
+      </div>
       <div class="side-item" [routerLink]="'/account/notes'" routerLinkActive="active">
         <!-- <span class="icon">
           <i class="mdi mdi-text-box-multiple"></i>
@@ -21,12 +33,7 @@
         </span> -->
         <span class="text">Team</span>
       </div>
-      <div class="side-item" [routerLink]="'/account/patient-management'" routerLinkActive="active">
-        <!-- <span class="icon">
-          <i class="mdi mdi-human-male-female-child"></i>
-        </span> -->
-        <span class="text">Gestion patients</span>
-      </div>
+
       <div class="side-item" [routerLink]="'/account/mail'" routerLinkActive="active">
         <!-- <span class="icon">
           <i class="mdi mdi-history"></i>
@@ -39,15 +46,10 @@
         </span> -->
         <span class="text">Activité</span>
       </div>
-      <div class="side-item" [routerLink]="'/account/documents'" routerLinkActive="active">
-        <!-- <span class="icon">
-          <i class="mdi mdi-security"></i>
-        </span> -->
-        <span class="text">Documents</span>
-      </div>
+
     </div>
 
-    <div class="content-wrap !tw-pl-0">
+    <div class="content-wrap">
       <div class="next-page">
         <router-outlet></router-outlet>
       </div>

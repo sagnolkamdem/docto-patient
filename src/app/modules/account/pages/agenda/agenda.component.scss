@@ -1,3 +1,4 @@
+@import "/src/scss/bootstrap/config";
 
 .agenda {
 
@@ -7,6 +8,12 @@
     height: 10px;
     width: 10px;
   }
+}
+
+// agenda color
+
+.th-agenda-primary {
+  background: #F42186 !important;
 }
 
 
@@ -20,7 +27,8 @@
     padding-right: 34px;
   }
 
-  .left, .right {
+  .left,
+  .right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
