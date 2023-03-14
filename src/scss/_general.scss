@@ -74,6 +74,13 @@ h2 {
 .fc-v-event .fc-event-main {
   color: #000;
 }
+.fc .fc-toolbar-title {
+  color: $primary !important;
+  text-transform: capitalize !important;
+}
+.fc-v-event .fc-event-title-container {
+  align-items: center;
+}
 
 @each $color, $value in $theme-colors {
   .th-#{$color} {
