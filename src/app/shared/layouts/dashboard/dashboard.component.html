@@ -1,7 +1,7 @@
 <main class="main">
   <app-header></app-header>
 
-  <section class="page-content">
+  <section class="page-content max-md:!tw-overflow-x-hidden">
     <div class="sidebar">
       <div class="side-item" [routerLink]="'/account/agenda'" routerLinkActive="active">
         <!-- <span class="icon">
@@ -47,12 +47,12 @@
       </div>
     </div>
 
-    <div class="content-wrap">
+    <div class="content-wrap !tw-pl-0">
       <div class="next-page">
         <router-outlet></router-outlet>
       </div>
     </div>
   </section>
 
-  <app-tabs></app-tabs>
+  <!-- <app-tabs></app-tabs> -->
 </main>
