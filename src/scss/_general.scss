@@ -1,3 +1,4 @@
+// @import "/src/scss/bootstrap/config";
 
 .bottom-bar {
   position: relative;
@@ -59,4 +60,50 @@ h2 {
 .text-line-3 {
   height: 3em;
   -webkit-line-clamp: 3;
+}
+
+.fc-theme-bootstrap5 a:not([href]) {
+  color: $primary !important;
+  text-transform: capitalize !important;
+  // font-weight: 600;
+}
+.fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion {
+  color: $primary !important;
+  font-weight: 500;
+}
+.fc-v-event .fc-event-main {
+  color: #000;
+}
+.fc .fc-toolbar-title {
+  color: $primary !important;
+  text-transform: capitalize !important;
+}
+.fc-v-event .fc-event-title-container {
+  align-items: center;
+}
+
+@each $color, $value in $theme-colors {
+  .th-#{$color} {
+    border: none !important;
+    background-color: $value !important;
+    padding: .125rem;
+
+    @if $color == "light" {
+      color: #000 !important;
+    } @else {
+      color: #FFF !important;
+    }
+  }
+
+  .tb-#{$color} {
+    border: none !important;
+    border-left: 8px solid $value !important;
+    background-color: $light !important;
+    color: #000 !important;
+    padding: .125rem;
+
+    & * {
+      color: #000 !important;
+    }
+  }
 }
