@@ -10,6 +10,12 @@
   }
 }
 
+// agenda color
+
+.th-agenda-primary {
+  background: #F42186 !important;
+}
+
 
 .input-search {
   position: relative;
@@ -21,7 +27,8 @@
     padding-right: 34px;
   }
 
-  .left, .right {
+  .left,
+  .right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

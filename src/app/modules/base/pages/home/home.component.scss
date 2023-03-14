@@ -1,27 +1,30 @@
 // .carousel-item{
 //     display:flex;
 // }
-#indicator
-{
+#indicator {
   height: 1rem;
-   width: 1rem;
+  width: 1rem;
 }
 
-.img-carousel{
+.ml-20 {
+  margin-left: -4rem;
+}
+
+.img-carousel {
   height: 300px;
 }
 
-.carousel-indicators
-{
-  top:365px;
+.carousel-indicators {
+  top: 365px;
 }
+
 @media (max-width: 575.98px) {
-  .carousel-indicators
-  {
-    display: none;
-  }
-  .img-carousel{
+  .carousel-indicators {
     display: none;
   }
 
- }
+  .img-carousel {
+    display: none;
+  }
+
+}

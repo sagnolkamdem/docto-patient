@@ -40,7 +40,7 @@ export class AgendaComponent implements OnInit {
       center: 'title',
       right: 'timeGridWeek,timeGridDay,dayGridMonth,listWeek'
     },
-    locales: [ arLocale, frLocale ],
+    locales: [arLocale, frLocale],
     locale: 'fr',
     themeSystem: 'bootstrap5'
   };
