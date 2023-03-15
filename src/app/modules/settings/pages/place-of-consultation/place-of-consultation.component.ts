@@ -15,6 +15,10 @@ export class PlaceOfConsultationComponent implements OnInit {
 
   openHours = [
     {
+      day: "Dimanche",
+      open: true
+    },
+    {
       day: "lundi",
       open: true
     },
@@ -34,10 +38,7 @@ export class PlaceOfConsultationComponent implements OnInit {
       day: "samedi",
       open: false
     },
-    {
-      day: "Dimanche",
-      open: true
-    },
+
   ]
 
   constructor() { }

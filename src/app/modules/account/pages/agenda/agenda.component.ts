@@ -15,9 +15,12 @@ import frLocale from '@fullcalendar/core/locales/fr';
   styleUrls: ['./agenda.component.scss']
 })
 export class AgendaComponent implements OnInit {
+  calendarPlugins = [timeGridPlugin];
   calendarOptions: CalendarOptions = {
     // initialView: 'timeGridWeek',
     initialView: 'timeGridFourDay',
+    slotMinTime: '08:00', // heure de début d'affichage
+    slotMaxTime: '20:00', // heure de fin d'affichage
 
     views: {
       timeGridFourDay: {
@@ -37,9 +40,7 @@ export class AgendaComponent implements OnInit {
 
       { title: 'Jean Durand', start: '2023-03-14 09:00', end: '2023-03-14 09:29', className: 'tb-primary' },
       { title: 'Jeanne Petit', start: '2023-03-14 09:30', end: '2023-03-14 09:59', className: 'tb-secondary' },
-      { title: 'Jean Durand', start: '2023-03-14 09:30', end: '2023-03-14 10:29', className: 'th-info' },
       { title: 'Jeanne Petit', start: '2023-03-14 10:30', end: '2023-03-14 10:49', className: 'th-secondary' },
-      { title: 'John Doe', start: '2023-03-14 11:00', end: '2023-03-14 11:29', className: 'tb-danger' },
       { title: 'Sarah James', start: '2023-03-14 11:30', end: '2023-03-14 12:49', className: 'tb-secondary' },
       { title: 'Jean Durand', start: '2023-03-14 12:45', end: '2023-03-14 13:14', className: 'tb-primary' },
       { title: 'Jeanne Petit', start: '2023-03-14 12:45', end: '2023-03-14 13:14', className: 'th-secondary' },
