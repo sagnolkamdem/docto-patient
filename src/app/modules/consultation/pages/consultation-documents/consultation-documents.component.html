@@ -1,4 +1,4 @@
-<div class="tw-p-5 tw-space-y-10">
+<div class="xl:tw-p-5 tw-pt-16 tw-px-5 tw-space-y-10">
 
   <div class="tw-border-b tw-border-[#6F7781]">
     <nav aria-label="breadcrumb">
@@ -20,7 +20,7 @@
   <div class="tw-bg-white tw-rounded-xl">
 
     <!-- Tabs -->
-    <app-dashboard-tabs [tabs]="tabs"></app-dashboard-tabs>
+    <app-dashboard-tabs [class]="'tw-max-w-full tw-overflow-x-auto max-sm:tw-pt-5 max-sm:tw-px-5 max-sm:pb-1'" [tabs]="tabs"></app-dashboard-tabs>
 
     <router-outlet></router-outlet>
 
