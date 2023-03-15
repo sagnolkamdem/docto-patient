@@ -11,18 +11,18 @@
             <div class="tw-flex tw-justify-between tw-gap-y-6 tw-flex-col sm:tw-flex-row">
                 <div class="sm:tw-hidden tw-w-full">
                     <label for="tabs" class="tw-sr-only">Select a tab</label>
-                    <select id="tabs" name="tabs" [(ngModel)]="currentPage" class="tw-capitalize tw-block tw-w-full tw-rounded-md tw-border-primary-500 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-500 focus:tw-outline-none focus:tw-ring-primary-500 sm:tw-text-sm">
-                      <option *ngFor="let tab of tabs" [value]="tab">{{tab}}</option>
+                    <select id="tabs" name="tabs" [(ngModel)]="currentPage" class="tw-block tw-w-full tw-rounded-md tw-border-primary-500 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-500 focus:tw-outline-none focus:tw-ring-primary-500 sm:tw-text-sm">
+                      <option *ngFor="let tab of tabs" [value]="tab.name">{{tab.shower}}</option>
                     </select>
                 </div>
                 <div class="sm:tw-flex tw-hidden tw-justify-between lg:tw-w-full">
                     <div class="tw-border-b tw-border-gray-200 max-sm:tw-w-full">
                         <nav class="-tw-mb-px sm:tw-flex tw-grid tw-grid-cols-2 tw-space-x-8 tw-cursor-pointer"
                             aria-label="Tabs">
-                            <p (click)="changePage(tab)" *ngFor="let tab of tabs"
-                                [ngClass]="{'!tw-border-[#50D6B6]': currentPage === tab}"
-                                class="tw-text-center tw-capitalize tw-mt-3 tw-border-transparent tw-m-0 tw-no-underline tw-text-tertiary hover:tw-border-gray-300 tw-whitespace-nowrap tw-px-1 tw-border-b-2 tw-font-semibold tw-text-lg ">
-                                {{tab}}</p>
+                            <p (click)="changePage(tab.name)" *ngFor="let tab of tabs"
+                                [ngClass]="{'!tw-border-[#50D6B6]': currentPage === tab.name}"
+                                class="tw-text-center tw-mt-3 tw-border-transparent tw-m-0 tw-no-underline tw-text-tertiary hover:tw-border-gray-300 tw-whitespace-nowrap tw-px-1 tw-border-b-2 tw-font-semibold tw-text-lg ">
+                                {{tab.shower}}</p>
                         </nav>
                     </div>
                 </div>
