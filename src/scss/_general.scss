@@ -117,9 +117,19 @@ h2 {
 .mat-calendar-table-header th {
   color: $primary;
 }
-.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical), .mat-calendar-body-selected {
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
   background-color: $primary;
   border-color: $primary;
+  color: #FFF;
+}
+.mat-calendar-body-cell:hover {
+  background-color: rgba($primary, .3);
+  border-color: rgba($primary, .3);
+  color: #FFF;
+}
+.mat-calendar-body-selected {
+  background-color: rgba($primary, .4);
+  border-color: rgba($primary, .4);
   color: #FFF;
 }
 .mat-calendar-body-cell-container {
