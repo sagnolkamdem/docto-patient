@@ -17,6 +17,7 @@ import { QuillModule } from 'ngx-quill';
 import { NewNoteComponent } from './pages/note/new-note/new-note.component';
 import { DocumentsComponent } from './pages/documents/documents.component';
 import { NewDocumentComponent } from './pages/documents/new-document/new-document.component';
+import { NewAgendaComponent } from './pages/agenda/new-agenda/new-agenda.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NewDocumentComponent } from './pages/documents/new-document/new-documen
     ActivitiesComponent,
     NewNoteComponent,
     DocumentsComponent,
-    NewDocumentComponent
+    NewDocumentComponent,
+    NewAgendaComponent
   ],
   imports: [
     CommonModule,
