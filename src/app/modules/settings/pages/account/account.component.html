@@ -1,17 +1,17 @@
 <app-account-layout title="Mon compte">
 
     <!-- Creation form -->
-    <div class="tw-p-10 tw-mb-28 tw-space-y-5 tw-overflow-y-scroll">
+    <div class="xl:tw-p-10 tw-p-7 tw-mb-32 tw-space-y-5 tw-overflow-y-scroll">
 
         <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
 
-            <div class="tw-flex">
+            <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-3">
                 <label for="sexe" class="tw-text-tertiary">Civilité</label>
-                <div class="tw-flex tw-items-center tw-ml-10">
+                <div class="tw-flex tw-items-center md:tw-ml-10">
                     <input id="Sexe" name="sexe" type="radio" checked class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
                     <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Féminin</label>
                 </div>
-                <div class="tw-flex tw-items-center tw-ml-10">
+                <div class="tw-flex tw-items-center md:tw-ml-10">
                     <input id="Sexe" name="sexe" type="radio" class="tw-h-5 tw-w-5 checked:tw-border-white tw-border-gray-600 tw-text-white checked:tw-bg-[#6750A4] checked:focus:tw-ring-[#6750A4]">
                     <label for="Sexe" class="tw-ml-3 tw-block tw-text-gray-700">Masculin</label>
                 </div>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="tw-flex tw-flex-col">
-                <label for="speciality" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[300px]">Spécialité</label>
+                <label for="speciality" class="tw-text-base tw-font-semibold !tw-m-0 md:tw-min-w-[300px]">Spécialité</label>
                 <div class="tw-px-2 tw-py-2.5 tw-border tw-border-[#E4E5E7] tw-bg-primary-100 tw-w-full tw-rounded-lg">
                     <input type="text" name="specialiality" id="specialiality" class="focus:tw-border-transparent tw-px-2 tw-py-1 tw-w-full focus:tw-ring-transparent tw-border-transparent tw-block tw-bg-transparent tw-outline-none placeholder:tw-text-[#E4E5E7] tw-text-tertiary sm:tw-text-sm">
                 </div>
@@ -61,19 +61,19 @@
 
         </div>
 
-        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex md:tw-items-center max-md:tw-flex-col tw-gap-3">
 
-            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Mot de passe</h3>
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 md:tw-min-w-[400px]">Mot de passe</h3>
 
-            <button type="button">Modifier mon mot de passe</button>
+            <button type="button" class="tw-max-w-fit">Modifier mon mot de passe</button>
 
         </div>
 
-        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex md:tw-items-center max-md:tw-flex-col tw-gap-3">
 
-            <div class="tw-flex tw-flex-col tw-min-w-[400px] tw-max-w-[400px] tw-gap-2">
+            <div class="tw-flex tw-flex-col md:tw-min-w-[400px] md:tw-max-w-[400px] tw-gap-2">
                 <h3 class="tw-text-base tw-font-semibold !tw-m-0">Double authentification</h3>
-                <p class="tw-text-sm tw-font-medium !tw-m-0 tw-pr-9">La double authentification garantit les autorisations d’accès, la confidentialité et l’intégrité de votre compte</p>
+                <p class="tw-text-sm tw-font-medium !tw-m-0 md:tw-pr-9">La double authentification garantit les autorisations d’accès, la confidentialité et l’intégrité de votre compte</p>
             </div>
 
             <div class="tw-flex tw-flex-col">
@@ -86,29 +86,29 @@
                 <p class="!tw-m-0">
                     Par application smartphone: <span class="tw-font-bold">Désactivée</span>
                 </p>
-                <p class="!tw-m-0">
+                <button class="!tw-m-0 !tw-mt-2 tw-max-w-fit">
                     Configurer la double authentification
-                </p>
+                </button>
             </div>
 
         </div>
 
-        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex md:tw-items-center max-md:tw-flex-col tw-gap-3">
 
-            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Conditions générales</h3>
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 md:tw-min-w-[400px]">Conditions générales</h3>
 
-            <div class="tw-flex tw-flex-col">
+            <div class="tw-flex tw-flex-col tw-gap-1">
                 <button type="button" class="tw-text-left">Conditions d’abonnement</button>
                 <button type="button" class="tw-text-left">Conditions générales d’utilisation</button>
             </div>
 
         </div>
 
-        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex tw-items-center">
+        <div class="tw-bg-white tw-p-5 tw-rounded-lg tw-flex md:tw-items-center max-md:tw-flex-col tw-gap-3">
 
-            <h3 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[400px]">Protection des données</h3>
+            <h3 class="tw-text-base tw-font-semibold !tw-m-0 md:tw-min-w-[400px]">Protection des données</h3>
 
-            <div class="tw-flex tw-flex-col tw-justify-start">
+            <div class="tw-flex tw-flex-col tw-justify-start tw-gap-1">
                 <button type="button" class="tw-text-left">Accord sur la publication des données</button>
                 <button type="button" class="tw-text-left">Accord sur la protection des données</button>
             </div>
@@ -116,7 +116,7 @@
         </div>
 
         <!-- Validation of form -->
-        <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 tw-left-[244px]">
+        <div class="tw-fixed tw-flex tw-gap-2.5 tw-bg-white tw-justify-end tw-p-2.5 tw-bottom-0 tw-inset-x-0 xl:tw-left-[244px]">
             <button type="submit" class="btn tw-uppercase !tw-inline-flex !tw-items-center">
                 Annuler
             </button>

@@ -1,7 +1,7 @@
 <app-account-layout title="Signature">
 
 
-    <div class="tw-p-10 tw-space-y-5 tw-overflow-y-scroll tw-mb-20">
+    <div class="md:tw-p-10 tw-px-5 tw-py-8 tw-space-y-5 tw-overflow-y-scroll tw-mb-20">
 
         <div class="tw-space-y-5 tw-bg-white tw-p-5 tw-rounded-lg">
 
@@ -9,7 +9,7 @@
 
             <p class="!tw-m-0">Cette signature est actuellement utilisée pour signer vos documents</p>
 
-            <div class="tw-flex tw-items-center tw-gap-10">
+            <div class="tw-flex md:tw-items-center max-md:tw-flex-col max-md:tw-gap-6 md:tw-gap-10">
 
                 <img class="tw-w-32 tw-h-16 tw-object-contain" src="assets/signature.png" alt="signature">
 
@@ -30,10 +30,10 @@
 
             <h2 class="tw-text-lg tw-font-medium !tw-m-0">Praticien(s) remplaçant(s)</h2>
 
-            <div class="tw-flex tw-gap-2 tw-flex-col">
+            <div class="tw-flex md:tw-gap-2 tw-gap-8 tw-flex-col">
 
-                <div class="tw-flex tw-gap-10">
-                    <h6 class="tw-text-lg tw-font-medium !tw-m-0 tw-w-[200px] tw-gap-10">Dr Ahmed Lieu</h6>
+                <div class="tw-flex max-md:tw-flex-col md:tw-items-center md:tw-gap-5 tw-gap-2">
+                    <h6 class="tw-text-lg tw-font-medium !tw-m-0 md:tw-w-[250px] tw-gap-10">Dr Ahmed Lieu</h6>
                     <button type="button" (click)="toggleUpdateSignature()" class="tw-inline-flex tw-gap-2 tw-text-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tw-w-5 tw-h-5 tw-fill-secondary">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -42,8 +42,8 @@
                     </button>
                 </div>
 
-                <div class="tw-flex tw-gap-10">
-                    <h6 class="tw-text-lg tw-font-medium !tw-m-0 tw-w-[200px] tw-gap-10">Dr Ahmed Lieu</h6>
+                <div class="tw-flex max-md:tw-flex-col md:tw-items-center md:tw-gap-5 tw-gap-2">
+                    <h6 class="tw-text-lg tw-font-medium !tw-m-0 md:tw-w-[250px] tw-gap-10">Dr Ahmed Lieu</h6>
                     <button type="button" (click)="toggleUpdateSignature()" class="tw-inline-flex tw-gap-2 tw-text-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tw-w-5 tw-h-5 tw-fill-secondary">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />

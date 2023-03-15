@@ -21,6 +21,7 @@ type Conversation = {
 export class TeamComponent implements OnInit {
 
   currentConversation!: Conversation;
+  showResponsiveDiscussion: boolean = false;
 
   conversations: Conversation[] = [
     {
@@ -163,6 +164,11 @@ export class TeamComponent implements OnInit {
 
   setConversation(conversation: Conversation) {
     this.currentConversation = conversation;
+    this.toggleShowResponsiveDiscussion();
+  }
+
+  toggleShowResponsiveDiscussion() {
+    this.showResponsiveDiscussion = !this.showResponsiveDiscussion
   }
 
 }
