@@ -1,0 +1,33 @@
+<h2 mat-dialog-title class="text-end border-bottom">
+  <button mat-dialog-close class="btn btn-sm btn-light rounded-circle">
+    <i class="mdi mdi-close"></i>
+  </button>
+</h2>
+
+<mat-dialog-content class="mat-typography- mt-2-">
+  <h4 class="fw-bold bottom-bar">Créer un rendez-vous</h4>
+
+  <form class="mt-3">
+    <div class="mb-3">
+      <label for="titre">Nom du patient</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Sélectionnez le patient concerné</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="date">Date et heure</label>
+      <input type="datetime-local" class="form-control" id="date">
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div class="d-flex justify-content-center w-100">
+    <div class="w-50 me-2">
+      <button class="btn btn-light w-100" mat-dialog-close>Annuler</button>
+    </div>
+    <div class="flex-fill">
+      <button mat-dialog-close class="btn w-100 btn-outline-primary">Créer maintenant</button>
+    </div>
+  </div>
+</mat-dialog-actions>

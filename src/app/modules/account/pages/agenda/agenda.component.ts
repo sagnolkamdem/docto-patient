@@ -1,3 +1,5 @@
+import { NewAgendaComponent } from './new-agenda/new-agenda.component';
+import { AlertService } from './../../../../services/alert.service';
 import { Component, OnInit } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -15,7 +17,6 @@ import frLocale from '@fullcalendar/core/locales/fr';
   styleUrls: ['./agenda.component.scss']
 })
 export class AgendaComponent implements OnInit {
-  calendarPlugins = [timeGridPlugin];
   calendarOptions: CalendarOptions = {
     // initialView: 'timeGridWeek',
     initialView: 'timeGridFourDay',
@@ -66,9 +67,15 @@ export class AgendaComponent implements OnInit {
 
   selected: Date | null;
 
-  constructor() { }
+  constructor(private alert: AlertService) { }
 
   ngOnInit(): void {
+  }
+
+  createAgenda() {
+    this.alert.openModal(NewAgendaComponent, (result: any) => {
+      // this.notes.push(result);
+    }, {}, 'md');
   }
 
   handleDateClick(arg) {
