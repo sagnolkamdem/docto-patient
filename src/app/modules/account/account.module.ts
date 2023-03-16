@@ -19,6 +19,7 @@ import { DocumentsComponent } from './pages/documents/documents.component';
 import { NewDocumentComponent } from './pages/documents/new-document/new-document.component';
 import { ChatComponent } from './pages/team/chat/chat.component';
 import { ComunityComponent } from './pages/team/comunity/comunity.component';
+import { NewAgendaComponent } from './pages/agenda/new-agenda/new-agenda.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ComunityComponent } from './pages/team/comunity/comunity.component';
     DocumentsComponent,
     NewDocumentComponent,
     ChatComponent,
-    ComunityComponent
+    ComunityComponent,
+    NewAgendaComponent
   ],
   imports: [
     CommonModule,
