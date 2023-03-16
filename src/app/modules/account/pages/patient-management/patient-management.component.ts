@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientManagementComponent implements OnInit {
 
-  tabs = ["patients", "liste d'attente"]
-  currentPage:  "patients" | "liste d'attente" = "patients";
+  tabs = [
+    {
+      name: "patients",
+      shower: 'Patients'
+    },
+    {
+      name: "liste d'attente",
+      shower: "Liste d'atente"
+    }
+  ]
+  currentPage: "patients" | "liste d'attente" = "patients";
   currentElement: string = "patients";
   createPatientForm: boolean = false;
   deletePatientForm: boolean = false;

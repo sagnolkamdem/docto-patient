@@ -7,51 +7,59 @@
 
             <!-- Action -->
             <div class="tw-p-2.5 tw-mb-3">
-                <button (click)="toggleCreatePlaceForm()" type="button" class="tw-text-secondary tw-font-semibold tw-text-sm !tw-inline-flex !tw-items-center tw-gap-1">
-                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-secondary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"/>
-                    </svg>                    
+                <button (click)="toggleCreatePlaceForm()" type="button"
+                    class="tw-text-secondary tw-font-semibold tw-text-sm !tw-inline-flex !tw-items-center tw-gap-1">
+                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-secondary" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17 13H13V17H11V13H7V11H11V7H13V11H17M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z" />
+                    </svg>
                     Ajouter un lieu
                 </button>
             </div>
-    
+
             <!-- Current places for consultation -->
             <div class="tw-flex tw-flex-col tw-divide-y-2 tw-divide-gray-300">
-    
+
                 <button type="button" class="tw-flex tw-items-center tw-gap-2.5 tw-bg-secondary tw-p-2.5">
-                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-white" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-white" viewBox="0 0 28 25" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_990_30824)">
-                            <path d="M14 5.8906L3.75638 14.9239C3.68045 14.9923 3.58342 15.0242 3.49998 15.0809V23.75C3.49998 23.9489 3.579 24.1397 3.71965 24.2803C3.8603 24.421 4.05107 24.5 4.24998 24.5H23.75C23.9489 24.5 24.1397 24.421 24.2803 24.2803C24.421 24.1397 24.5 23.9489 24.5 23.75V15.0828C24.4203 15.0284 24.3256 14.9975 24.2534 14.9328L14 5.8906ZM18.5 18.125C18.5 18.2244 18.4605 18.3198 18.3901 18.3901C18.3198 18.4605 18.2244 18.5 18.125 18.5H15.5V21.125C15.5 21.2244 15.4605 21.3198 15.3901 21.3901C15.3198 21.4605 15.2244 21.5 15.125 21.5H12.875C12.7755 21.5 12.6801 21.4605 12.6098 21.3901C12.5395 21.3198 12.5 21.2244 12.5 21.125V18.5H9.87498C9.77552 18.5 9.68014 18.4605 9.60981 18.3901C9.53949 18.3198 9.49998 18.2244 9.49998 18.125V15.875C9.49998 15.7755 9.53949 15.6801 9.60981 15.6098C9.68014 15.5395 9.77552 15.5 9.87498 15.5H12.5V12.875C12.5 12.7755 12.5395 12.6801 12.6098 12.6098C12.6801 12.5395 12.7755 12.5 12.875 12.5H15.125C15.2244 12.5 15.3198 12.5395 15.3901 12.6098C15.4605 12.6801 15.5 12.7755 15.5 12.875V15.5H18.125C18.2244 15.5 18.3198 15.5395 18.3901 15.6098C18.4605 15.6801 18.5 15.7755 18.5 15.875V18.125ZM27.2511 11.5756L15.2539 0.981853C14.9105 0.671401 14.4641 0.499512 14.0012 0.499512C13.5382 0.499512 13.0918 0.671401 12.7484 0.981853L0.748415 11.5756C0.675113 11.6414 0.615497 11.721 0.572973 11.8099C0.53045 11.8988 0.505852 11.9952 0.500584 12.0935C0.495317 12.1919 0.509484 12.2904 0.542276 12.3833C0.575067 12.4762 0.625841 12.5617 0.691697 12.635L1.69529 13.7515C1.76111 13.8248 1.84073 13.8845 1.9296 13.927C2.01847 13.9695 2.11485 13.9941 2.21323 13.9994C2.31161 14.0046 2.41006 13.9905 2.50296 13.9577C2.59586 13.9249 2.68139 13.8741 2.75467 13.8083L13.504 4.32638C13.6411 4.2055 13.8175 4.1388 14.0002 4.1388C14.1829 4.1388 14.3594 4.2055 14.4964 4.32638L25.2458 13.8078C25.319 13.8736 25.4046 13.9244 25.4975 13.9572C25.5904 13.99 25.6888 14.0042 25.7872 13.9989C25.8856 13.9936 25.982 13.969 26.0708 13.9265C26.1597 13.884 26.2393 13.8244 26.3051 13.7511L27.3083 12.6345C27.4411 12.4865 27.5096 12.2918 27.4989 12.0932C27.4882 11.8946 27.399 11.7085 27.2511 11.5756Z"/>
+                            <path
+                                d="M14 5.8906L3.75638 14.9239C3.68045 14.9923 3.58342 15.0242 3.49998 15.0809V23.75C3.49998 23.9489 3.579 24.1397 3.71965 24.2803C3.8603 24.421 4.05107 24.5 4.24998 24.5H23.75C23.9489 24.5 24.1397 24.421 24.2803 24.2803C24.421 24.1397 24.5 23.9489 24.5 23.75V15.0828C24.4203 15.0284 24.3256 14.9975 24.2534 14.9328L14 5.8906ZM18.5 18.125C18.5 18.2244 18.4605 18.3198 18.3901 18.3901C18.3198 18.4605 18.2244 18.5 18.125 18.5H15.5V21.125C15.5 21.2244 15.4605 21.3198 15.3901 21.3901C15.3198 21.4605 15.2244 21.5 15.125 21.5H12.875C12.7755 21.5 12.6801 21.4605 12.6098 21.3901C12.5395 21.3198 12.5 21.2244 12.5 21.125V18.5H9.87498C9.77552 18.5 9.68014 18.4605 9.60981 18.3901C9.53949 18.3198 9.49998 18.2244 9.49998 18.125V15.875C9.49998 15.7755 9.53949 15.6801 9.60981 15.6098C9.68014 15.5395 9.77552 15.5 9.87498 15.5H12.5V12.875C12.5 12.7755 12.5395 12.6801 12.6098 12.6098C12.6801 12.5395 12.7755 12.5 12.875 12.5H15.125C15.2244 12.5 15.3198 12.5395 15.3901 12.6098C15.4605 12.6801 15.5 12.7755 15.5 12.875V15.5H18.125C18.2244 15.5 18.3198 15.5395 18.3901 15.6098C18.4605 15.6801 18.5 15.7755 18.5 15.875V18.125ZM27.2511 11.5756L15.2539 0.981853C14.9105 0.671401 14.4641 0.499512 14.0012 0.499512C13.5382 0.499512 13.0918 0.671401 12.7484 0.981853L0.748415 11.5756C0.675113 11.6414 0.615497 11.721 0.572973 11.8099C0.53045 11.8988 0.505852 11.9952 0.500584 12.0935C0.495317 12.1919 0.509484 12.2904 0.542276 12.3833C0.575067 12.4762 0.625841 12.5617 0.691697 12.635L1.69529 13.7515C1.76111 13.8248 1.84073 13.8845 1.9296 13.927C2.01847 13.9695 2.11485 13.9941 2.21323 13.9994C2.31161 14.0046 2.41006 13.9905 2.50296 13.9577C2.59586 13.9249 2.68139 13.8741 2.75467 13.8083L13.504 4.32638C13.6411 4.2055 13.8175 4.1388 14.0002 4.1388C14.1829 4.1388 14.3594 4.2055 14.4964 4.32638L25.2458 13.8078C25.319 13.8736 25.4046 13.9244 25.4975 13.9572C25.5904 13.99 25.6888 14.0042 25.7872 13.9989C25.8856 13.9936 25.982 13.969 26.0708 13.9265C26.1597 13.884 26.2393 13.8244 26.3051 13.7511L27.3083 12.6345C27.4411 12.4865 27.5096 12.2918 27.4989 12.0932C27.4882 11.8946 27.399 11.7085 27.2511 11.5756Z" />
                         </g>
                         <defs>
                             <clipPath id="clip0_990_30824">
-                                <rect width="27" height="24" fill="white" transform="translate(0.5 0.5)"/>
+                                <rect width="27" height="24" fill="white" transform="translate(0.5 0.5)" />
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="!tw-m-0 tw-text-sm tw-text-white">Cabinet médical putaux</p>                 
+                    <p class="!tw-m-0 tw-text-sm tw-text-white">Cabinet médical putaux</p>
                 </button>
-    
+
                 <button type="button" class="tw-flex tw-items-center tw-gap-2.5 tw-p-2.5">
-                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-black" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-black" viewBox="0 0 28 25" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_990_30824)">
-                            <path d="M14 5.8906L3.75638 14.9239C3.68045 14.9923 3.58342 15.0242 3.49998 15.0809V23.75C3.49998 23.9489 3.579 24.1397 3.71965 24.2803C3.8603 24.421 4.05107 24.5 4.24998 24.5H23.75C23.9489 24.5 24.1397 24.421 24.2803 24.2803C24.421 24.1397 24.5 23.9489 24.5 23.75V15.0828C24.4203 15.0284 24.3256 14.9975 24.2534 14.9328L14 5.8906ZM18.5 18.125C18.5 18.2244 18.4605 18.3198 18.3901 18.3901C18.3198 18.4605 18.2244 18.5 18.125 18.5H15.5V21.125C15.5 21.2244 15.4605 21.3198 15.3901 21.3901C15.3198 21.4605 15.2244 21.5 15.125 21.5H12.875C12.7755 21.5 12.6801 21.4605 12.6098 21.3901C12.5395 21.3198 12.5 21.2244 12.5 21.125V18.5H9.87498C9.77552 18.5 9.68014 18.4605 9.60981 18.3901C9.53949 18.3198 9.49998 18.2244 9.49998 18.125V15.875C9.49998 15.7755 9.53949 15.6801 9.60981 15.6098C9.68014 15.5395 9.77552 15.5 9.87498 15.5H12.5V12.875C12.5 12.7755 12.5395 12.6801 12.6098 12.6098C12.6801 12.5395 12.7755 12.5 12.875 12.5H15.125C15.2244 12.5 15.3198 12.5395 15.3901 12.6098C15.4605 12.6801 15.5 12.7755 15.5 12.875V15.5H18.125C18.2244 15.5 18.3198 15.5395 18.3901 15.6098C18.4605 15.6801 18.5 15.7755 18.5 15.875V18.125ZM27.2511 11.5756L15.2539 0.981853C14.9105 0.671401 14.4641 0.499512 14.0012 0.499512C13.5382 0.499512 13.0918 0.671401 12.7484 0.981853L0.748415 11.5756C0.675113 11.6414 0.615497 11.721 0.572973 11.8099C0.53045 11.8988 0.505852 11.9952 0.500584 12.0935C0.495317 12.1919 0.509484 12.2904 0.542276 12.3833C0.575067 12.4762 0.625841 12.5617 0.691697 12.635L1.69529 13.7515C1.76111 13.8248 1.84073 13.8845 1.9296 13.927C2.01847 13.9695 2.11485 13.9941 2.21323 13.9994C2.31161 14.0046 2.41006 13.9905 2.50296 13.9577C2.59586 13.9249 2.68139 13.8741 2.75467 13.8083L13.504 4.32638C13.6411 4.2055 13.8175 4.1388 14.0002 4.1388C14.1829 4.1388 14.3594 4.2055 14.4964 4.32638L25.2458 13.8078C25.319 13.8736 25.4046 13.9244 25.4975 13.9572C25.5904 13.99 25.6888 14.0042 25.7872 13.9989C25.8856 13.9936 25.982 13.969 26.0708 13.9265C26.1597 13.884 26.2393 13.8244 26.3051 13.7511L27.3083 12.6345C27.4411 12.4865 27.5096 12.2918 27.4989 12.0932C27.4882 11.8946 27.399 11.7085 27.2511 11.5756Z"/>
+                            <path
+                                d="M14 5.8906L3.75638 14.9239C3.68045 14.9923 3.58342 15.0242 3.49998 15.0809V23.75C3.49998 23.9489 3.579 24.1397 3.71965 24.2803C3.8603 24.421 4.05107 24.5 4.24998 24.5H23.75C23.9489 24.5 24.1397 24.421 24.2803 24.2803C24.421 24.1397 24.5 23.9489 24.5 23.75V15.0828C24.4203 15.0284 24.3256 14.9975 24.2534 14.9328L14 5.8906ZM18.5 18.125C18.5 18.2244 18.4605 18.3198 18.3901 18.3901C18.3198 18.4605 18.2244 18.5 18.125 18.5H15.5V21.125C15.5 21.2244 15.4605 21.3198 15.3901 21.3901C15.3198 21.4605 15.2244 21.5 15.125 21.5H12.875C12.7755 21.5 12.6801 21.4605 12.6098 21.3901C12.5395 21.3198 12.5 21.2244 12.5 21.125V18.5H9.87498C9.77552 18.5 9.68014 18.4605 9.60981 18.3901C9.53949 18.3198 9.49998 18.2244 9.49998 18.125V15.875C9.49998 15.7755 9.53949 15.6801 9.60981 15.6098C9.68014 15.5395 9.77552 15.5 9.87498 15.5H12.5V12.875C12.5 12.7755 12.5395 12.6801 12.6098 12.6098C12.6801 12.5395 12.7755 12.5 12.875 12.5H15.125C15.2244 12.5 15.3198 12.5395 15.3901 12.6098C15.4605 12.6801 15.5 12.7755 15.5 12.875V15.5H18.125C18.2244 15.5 18.3198 15.5395 18.3901 15.6098C18.4605 15.6801 18.5 15.7755 18.5 15.875V18.125ZM27.2511 11.5756L15.2539 0.981853C14.9105 0.671401 14.4641 0.499512 14.0012 0.499512C13.5382 0.499512 13.0918 0.671401 12.7484 0.981853L0.748415 11.5756C0.675113 11.6414 0.615497 11.721 0.572973 11.8099C0.53045 11.8988 0.505852 11.9952 0.500584 12.0935C0.495317 12.1919 0.509484 12.2904 0.542276 12.3833C0.575067 12.4762 0.625841 12.5617 0.691697 12.635L1.69529 13.7515C1.76111 13.8248 1.84073 13.8845 1.9296 13.927C2.01847 13.9695 2.11485 13.9941 2.21323 13.9994C2.31161 14.0046 2.41006 13.9905 2.50296 13.9577C2.59586 13.9249 2.68139 13.8741 2.75467 13.8083L13.504 4.32638C13.6411 4.2055 13.8175 4.1388 14.0002 4.1388C14.1829 4.1388 14.3594 4.2055 14.4964 4.32638L25.2458 13.8078C25.319 13.8736 25.4046 13.9244 25.4975 13.9572C25.5904 13.99 25.6888 14.0042 25.7872 13.9989C25.8856 13.9936 25.982 13.969 26.0708 13.9265C26.1597 13.884 26.2393 13.8244 26.3051 13.7511L27.3083 12.6345C27.4411 12.4865 27.5096 12.2918 27.4989 12.0932C27.4882 11.8946 27.399 11.7085 27.2511 11.5756Z" />
                         </g>
                         <defs>
                             <clipPath id="clip0_990_30824">
-                                <rect width="27" height="24" fill="white" transform="translate(0.5 0.5)"/>
+                                <rect width="27" height="24" fill="white" transform="translate(0.5 0.5)" />
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="!tw-m-0 tw-text-sm tw-text-tertiary">Cabinet médical putaux</p>                 
+                    <p class="!tw-m-0 tw-text-sm tw-text-tertiary">Cabinet médical putaux</p>
                 </button>
-    
+
             </div>
-    
+
         </div>
 
         <!-- Show Place -->
-        <div *ngIf="!createPlaceForm" class="tw-flex-1 tw-px-10 tw-space-y-8 tw-py-8 tw-mb-32 tw-bg-white tw-rounded-3xl">
+        <div *ngIf="!createPlaceForm"
+            class="tw-flex-1 tw-px-10 tw-space-y-8 tw-py-8 tw-mb-32 tw-bg-white tw-rounded-3xl">
 
             <!-- Place -->
             <div class="">
@@ -71,14 +79,15 @@
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Affiliation établissement</h5>
+                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Affiliation établissement
+                        </h5>
                         <p class="!tw-m-0 tw-text-sm">Centre hospitalier d'Alger</p>
                     </div>
 
                 </div>
 
             </div>
-            
+
             <!-- Public pratical information form -->
             <div class="">
 
@@ -146,36 +155,45 @@
 
                             <h5 class="tw-text-base tw-font-bold tw-min-w-[130px] !tw-m-0">{{item.day}}</h5>
 
-                            <app-toggle [toggled]="item.open" (result)="getToggleResult($event)" backgroundClass="!tw-bg-secondary"></app-toggle>
+                            <app-toggle [toggled]="item.open" (result)="getToggleResult($event)"
+                                backgroundClass="!tw-bg-secondary"></app-toggle>
 
                             <div class="tw-space-y-3">
 
                                 <div class="tw-flex">
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">De</label>
-                                        <select id="emergencyContactType" disabled name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">De</label>
+                                        <select id="emergencyContactType" disabled name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">A</label>
-                                        <select id="emergencyContactType" disabled name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">A</label>
+                                        <select id="emergencyContactType" disabled name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="tw-flex">
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">De</label>
-                                        <select id="emergencyContactType" disabled name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">De</label>
+                                        <select id="emergencyContactType" disabled name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">A</label>
-                                        <select id="emergencyContactType" disabled name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">A</label>
+                                        <select id="emergencyContactType" disabled name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 disabled:tw-bg-gray-400 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -183,15 +201,16 @@
                                 <!-- <button class="tw-text-lg">Ajouter une plage horaire</button> -->
 
                             </div>
-                        
+
                         </div>
 
-                    </div>                    
+                    </div>
 
                     <div class="tw-flex">
-                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Aperçu des horaires 
+                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Aperçu des horaires
                             <br>
-                        d'ouverture</h5>
+                            d'ouverture
+                        </h5>
                         <div class="">
                             <p class="!tw-m-0 tw-text-base tw-font-bold">Horaire d'ouverture</p>
                             <p class="!tw-m-0 tw-text-sm">Lundi: 08h30 - 19h30</p>
@@ -212,8 +231,10 @@
                 <div class="tw-space-y-7">
 
                     <div class="tw-flex tw-pr-10">
-                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Type</label>
-                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                        <label for="emergencyContactType"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Type</label>
+                        <select id="emergencyContactType" name="emergencyContactType"
+                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
                             <option value="samu">SAMU</option>
                             <option value="sapeur-pompier">Sapeur-pompier</option>
                         </select>
@@ -236,7 +257,8 @@
         </div>
 
         <!-- Show Place Form -->
-        <div *ngIf="createPlaceForm" class="tw-flex-1 tw-px-10 tw-space-y-8 tw-py-8 tw-mb-32 tw-bg-white tw-rounded-3xl">
+        <div *ngIf="createPlaceForm"
+            class="tw-flex-1 tw-px-10 tw-space-y-8 tw-py-8 tw-mb-32 tw-bg-white tw-rounded-3xl">
 
             <!-- Place form -->
             <div class="">
@@ -245,25 +267,32 @@
 
                 <div class="tw-space-y-7">
                     <div class="tw-flex tw-items-center">
-                        <label for="address" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Adresse</label>
-                        <input type="text" name="address" id="address" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="address"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Adresse</label>
+                        <input type="text" name="address" id="address" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
 
                     <div class="tw-flex tw-items-center">
-                        <label for="name" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Nom de l'établissement</label>
-                        <input type="text" name="name" id="name" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="name" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Nom de
+                            l'établissement</label>
+                        <input type="text" name="name" id="name" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <label for="afiliation" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Affiliation établissement</label>
-                        <input type="text" name="affiliation" id="affiliation" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="afiliation"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Affiliation
+                            établissement</label>
+                        <input type="text" name="affiliation" id="affiliation"
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                 </div>
 
             </div>
-            
+
             <!-- Public pratical information form -->
             <div class="">
 
@@ -272,18 +301,23 @@
                 <div class="tw-space-y-7">
 
                     <div class="tw-flex tw-items-center">
-                        <label for="details" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Coordonnées</label>
-                        <input type="text" name="details" id="details" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="details"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Coordonnées</label>
+                        <input type="text" name="details" id="details" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                     <div class="tw-flex tw-items-center">
                         <label for="fax" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Fax</label>
-                        <input type="text" name="fax" id="fax" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <input type="text" name="fax" id="fax" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <label for="accessibility" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Accessibilité</label>
-                        <input type="text" name="accessibility" id="accessibility" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="accessibility"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Accessibilité</label>
+                        <input type="text" name="accessibility" id="accessibility" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                 </div>
@@ -298,21 +332,27 @@
                 <div class="tw-space-y-7">
 
                     <div class="tw-flex">
-                        <label for="interphone" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Interphone</label>
-                        <select id="interphone" name="interphone" class="tw-block tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                        <label for="interphone"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Interphone</label>
+                        <select id="interphone" name="interphone"
+                            class="tw-block tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
                             <option value="non">Non</option>
                             <option value="oui">Oui</option>
                         </select>
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <label for="digicode" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Digicode</label>
-                        <input type="text" name="digicode" id="digicode" placeholder="code" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="digicode"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Digicode</label>
+                        <input type="text" name="digicode" id="digicode" placeholder="code"
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <label for="digicode1" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Digicode</label>
-                        <input type="text" name="digicode1" id="digicode1" placeholder="code" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="digicode1"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Digicode</label>
+                        <input type="text" name="digicode1" id="digicode1" placeholder="code"
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                 </div>
@@ -332,36 +372,45 @@
 
                             <h5 class="tw-text-base tw-font-bold tw-min-w-[130px] !tw-m-0">{{item.day}}</h5>
 
-                            <app-toggle [toggled]="item.open" (result)="getToggleResult($event)" backgroundClass="!tw-bg-secondary"></app-toggle>
+                            <app-toggle [toggled]="item.open" (result)="getToggleResult($event)"
+                                backgroundClass="!tw-bg-secondary"></app-toggle>
 
                             <div class="tw-space-y-3">
 
                                 <div class="tw-flex">
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">De</label>
-                                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">De</label>
+                                        <select id="emergencyContactType" name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">A</label>
-                                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">A</label>
+                                        <select id="emergencyContactType" name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="tw-flex">
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">De</label>
-                                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">De</label>
+                                        <select id="emergencyContactType" name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                     <div class="tw-flex tw-items-center tw-gap-2 tw-pr-10">
-                                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0">A</label>
-                                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
-                                            <option *ngFor="let hour of plage" >{{hour}}</option>
+                                        <label for="emergencyContactType"
+                                            class="tw-text-base tw-font-semibold !tw-m-0">A</label>
+                                        <select id="emergencyContactType" name="emergencyContactType"
+                                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                                            <option *ngFor="let hour of plage">{{hour}}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -371,26 +420,29 @@
                             </div>
 
                             <span>
-                                <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-black" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.4 19.5L5 18.1L10.6 12.5L5 6.9L6.4 5.5L12 11.1L17.6 5.5L19 6.9L13.4 12.5L19 18.1L17.6 19.5L12 13.9L6.4 19.5Z" fill="#111111"/>
-                                </svg>                                    
+                                <svg aria-hidden="true" class="tw-w-5 tw-h-5 tw-fill-black" viewBox="0 0 24 25"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.4 19.5L5 18.1L10.6 12.5L5 6.9L6.4 5.5L12 11.1L17.6 5.5L19 6.9L13.4 12.5L19 18.1L17.6 19.5L12 13.9L6.4 19.5Z"
+                                        fill="#111111" />
+                                </svg>
                             </span>
-                        
+
                         </div>
 
-                    </div>                    
+                    </div>
 
                     <div class="tw-flex">
-                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Aperçu des horaires 
+                        <h5 class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Aperçu des horaires
                             <br>
-                        d'ouverture</h5>
+                            d'ouverture
+                        </h5>
                         <div class="">
-                            <p class="!tw-m-0 tw-text-base tw-font-bold">Horaire d'ouverture</p>
+                            <p class="!tw-m-0 tw-text-base tw-font-bold">Horaires d'ouverture</p>
                             <p class="!tw-m-0 tw-text-sm">Lundi: 08h30 - 19h30</p>
                             <p class="!tw-m-0 tw-text-sm">Mardi: 08h30 - 19h30</p>
                             <p class="!tw-m-0 tw-text-sm">Mercredi: 08h30 - 19h30</p>
                             <p class="!tw-m-0 tw-text-sm">Jeudi: 08h30 - 19h30</p>
-                            <p class="!tw-m-0 tw-text-sm">Vendredi: 08h30 - 19h30</p>
                         </div>
                     </div>
 
@@ -406,16 +458,20 @@
                 <div class="tw-space-y-7">
 
                     <div class="tw-flex tw-pr-10">
-                        <label for="emergencyContactType" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Type</label>
-                        <select id="emergencyContactType" name="emergencyContactType" class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
+                        <label for="emergencyContactType"
+                            class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Type</label>
+                        <select id="emergencyContactType" name="emergencyContactType"
+                            class="tw-block tw-w-full tw-border-primary-100 tw-rounded-md tw-bg-primary-100 tw-py-2 tw-pl-3 tw-pr-10 tw-text-base focus:tw-border-primary-100 focus:tw-outline-none focus:tw-ring-primary-100 sm:tw-text-sm">
                             <option value="samu">SAMU</option>
                             <option value="sapeur-pompier">Sapeur-pompier</option>
                         </select>
                     </div>
 
                     <div class="tw-flex tw-items-center">
-                        <label for="phone" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Numéro de téléphone</label>
-                        <input type="number" name="phone" id="phone" placeholder="" class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
+                        <label for="phone" class="tw-text-base tw-font-semibold !tw-m-0 tw-min-w-[250px]">Numéro de
+                            téléphone</label>
+                        <input type="number" name="phone" id="phone" placeholder=""
+                            class="focus:tw-border-primary-500 tw-px-2 tw-py-1 tw-max-w-[300px] focus:tw-ring-primary-500 tw-block tw-bg-transparent tw-w-full tw-outline-none tw-text-tertiary tw-border-[#E4E5E7] sm:tw-text-sm">
                     </div>
 
                 </div>

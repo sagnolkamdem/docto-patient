@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {MatAccordion} from '@angular/material/expansion';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-consultation-infos',
@@ -28,6 +28,7 @@ export class ConsultationInfosComponent {
   createVaccinForm: boolean = false;
   createCertificateForm: boolean = false;
   createOtherForm: boolean = false;
+  createTransfereForm: boolean = false;
 
   toggleCreatePrescriptionForm() {
     this.createPrescriptionForm = !this.createPrescriptionForm;
@@ -43,6 +44,10 @@ export class ConsultationInfosComponent {
 
   toggleCreateOtherForm() {
     this.createOtherForm = !this.createOtherForm;
+  }
+
+  toggleCreateTransfereForm() {
+    this.createTransfereForm = !this.createTransfereForm;
   }
 
 }
