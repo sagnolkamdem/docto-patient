@@ -1,5 +1,5 @@
 <div
-  class="tw-fixed tw-inset-0 md:!tw-pl-[275px] max-md:tw-pl-3 tw-pt-20 tw-space-y-6 tw-pr-5 tw-pb-8"
+  class="tw-fixed tw-inset-0 md:!tw-pl-[275px] max-xl:tw-pl-3 tw-pt-20 tw-space-y-6 tw-pr-5 tw-pb-8"
 >
   <!-- Title -->
   <h1 class="tw-sr-only">Messagerie d'équipe</h1>
@@ -7,7 +7,7 @@
   <div class="tw-flex tw-h-full">
 
     <!-- Left list: Teammate && SearchBar -->
-    <div class="md:tw-flex tw-hidden tw-flex-col tw-gap-1 tw-w-[350px]">
+    <div class="xl:tw-flex tw-hidden tw-flex-col tw-gap-1 tw-w-[350px]">
       <!-- Search -->
       <div
         class="tw-border-2 tw-flex tw-border-primary-500 tw-rounded-full tw-bg-white"
@@ -34,7 +34,7 @@
             type="text"
             name="search"
             id="search"
-            class="tw-p-0 tw-h-full tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-base placeholder:tw-text-gray-400 tw-text-base tw-rounded-md tw-border-transparent focus:tw-border-white focus:tw-ring-white"
+            class="tw-p-0 tw-h-full tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-base placeholder:tw-text-gray-400 tw-text-base tw-rounded-xl tw-border-transparent focus:tw-border-white focus:tw-ring-white"
           />
         </div>
       </div>
@@ -85,12 +85,12 @@
     </div>
 
     <!-- Responsive Left list: Teammate && SearchBar -->
-    <div *ngIf="!showResponsiveDiscussion" class="tw-flex md:tw-hidden tw-flex-col tw-gap-1 tw-w-full">
+    <div *ngIf="!showResponsiveDiscussion" class="tw-flex xl:tw-hidden tw-flex-col tw-gap-1 tw-w-full">
       <!-- Search -->
       <div
         class="tw-border-2 tw-flex tw-border-primary-500 tw-rounded-full tw-bg-white"
       >
-        <div class="tw-flex tw-items-center tw-px-3 tw-py-1 tw-m-0 tw-mb-2">
+        <div class="tw-flex tw-items-center tw-px-3 tw-py-1 tw-m-0 tw-w-full">
           <div class="tw-flex tw-py-1 tw-pr-1.5">
             <svg
               aria-hidden="true"
@@ -112,7 +112,7 @@
             type="text"
             name="search"
             id="search"
-            class="tw-p-0 tw-h-full tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-base placeholder:tw-text-gray-400 tw-text-base tw-rounded-md tw-border-transparent focus:tw-border-white focus:tw-ring-white"
+            class="tw-p-0 tw-h-full tw-block tw-w-full tw-text-slate-700 placeholder:tw-text-base placeholder:tw-text-gray-400 tw-text-base tw-rounded-xl tw-border-transparent focus:tw-border-white focus:tw-ring-white"
           />
         </div>
       </div>
@@ -165,7 +165,7 @@
     <!-- Discussion -->
     <div
       *ngIf="currentConversation"
-      class="tw-flex-1 tw-p-4 tw-shadow-md md:tw-flex tw-hidden tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
+      class="tw-flex-1 tw-p-4 tw-shadow-xl xl:tw-flex tw-hidden tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
     >
       <!-- User informations -->
       <div class="tw-pb-4">
@@ -291,7 +291,7 @@
     <!-- Responsive Discussion -->
     <div
       *ngIf="showResponsiveDiscussion"
-      class="tw-flex-1 tw-p-4 tw-shadow-md tw-flex md:tw-hidden tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
+      class="tw-flex-1 tw-p-4 tw-shadow-xl tw-flex xl:tw-hidden tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
     >
       <!-- User informations -->
       <div class="tw-pb-4">
@@ -427,7 +427,7 @@
     <!-- Empty discussion -->
     <div
       *ngIf="!currentConversation"
-      class="tw-flex-1 tw-justify-center max-md:tw-hidden tw-items-center tw-p-4 tw-shadow-md tw-flex tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
+      class="tw-flex-1 tw-justify-center max-xl:tw-hidden tw-items-center tw-p-4 tw-shadow-xl tw-flex tw-flex-col tw-bg-background tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-bl-3xl"
     >
       <div class="tw-flex tw-flex-col tw-gap-8">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="tw-w-80 tw-h-80 tw-mx-auto">

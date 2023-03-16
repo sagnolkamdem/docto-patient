@@ -6,7 +6,11 @@
             Annuler
         </button>
         <button type="button" class="btn btn-secondary tw-uppercase !tw-inline-flex !tw-items-center">
-            Sauvegarder
+            Terminer la Consultation
+        </button>
+        <button type="button" (click)="toggleCreateTransfereForm()"
+            class="btn btn-rose tw-uppercase !tw-inline-flex !tw-items-center">
+            Transférer a un confrère
         </button>
     </div>
 
@@ -227,47 +231,7 @@
                     <label for="allergie" class="tw-pl-5 tw-font-semibold">Allergie(s)</label>
 
                     <div class="tw-w-full tw-flex tw-flex-col tw-gap-2.5 tw-px-5 tw-pb-6">
-<<<<<<< HEAD
                         <div class="tw-flex tw-gap-1 overflow-scroll tw-max-w-full tw-overflow-scroll">
-=======
-                        <div class="tw-flex tw-gap-1 overflow-scroll tw-max-w-[300px] tw-overflow-scroll">
-                            <app-badge [bgClass]="'tw-bg-secondary tw-text-white tw-gap-1'">
-                                Pollen
-                                <svg class="tw-w-4 tw-h-4 tw-text-white" viewBox="0 0 18 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                        fill="white" />
-                                </svg>
-                            </app-badge>
-                            <app-badge [bgClass]="'tw-bg-secondary tw-text-white tw-gap-1'">
-                                Pollen
-                                <svg class="tw-w-4 tw-h-4 tw-text-white" viewBox="0 0 18 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                        fill="white" />
-                                </svg>
-                            </app-badge>
-                            <app-badge [bgClass]="'tw-bg-secondary tw-text-white tw-gap-1'">
-                                Pollen
-                                <svg class="tw-w-4 tw-h-4 tw-text-white" viewBox="0 0 18 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                        fill="white" />
-                                </svg>
-                            </app-badge>
-                            <app-badge [bgClass]="'tw-bg-secondary tw-text-white tw-gap-1'">
-                                Pollen
-                                <svg class="tw-w-4 tw-h-4 tw-text-white" viewBox="0 0 18 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                        fill="white" />
-                                </svg>
-                            </app-badge>
->>>>>>> develop
                             <app-badge [bgClass]="'tw-bg-secondary tw-text-white tw-gap-1'">
                                 Pollen
                                 <svg class="tw-w-4 tw-h-4 tw-text-white" viewBox="0 0 18 18" fill="none"
@@ -632,6 +596,57 @@
                     <button type="submit"
                         class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
                         Enrégistrer
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </app-modal>
+
+
+    <!-- Create Transfere form -->
+    <app-modal [visible]="createTransfereForm" position="fixed" class="tw-my-auto">
+        <div class="tw-p-6 sm:tw-p-8 tw-bg-white tw-rounded-3xl md:tw-min-w-[500px]">
+            <div class="tw-flex tw-justify-end tw-px-3.5 tw-mb-3">
+                <button (click)="toggleCreateTransfereForm()">
+                    <svg aria-hidden="true" class="tw-w-6 tw-h-6" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                            fill="#111111" />
+                    </svg>
+                </button>
+            </div>
+
+            <h2
+                class="tw-font-bold tw-mb-4 lg:tw-text-2xl tw-whitespace-nowrap tw-text-lg tw-text-tertiary tw-flex tw-flex-col tw-max-w-fit">
+                <span class="tw-relative">
+                    Transférer dossier patient
+                    <span
+                        class="tw-absolute tw-right-0 tw-z-0 tw-bottom-0 lg:tw-h-2 tw-h-1 tw-w-full tw-bg-primary-500"></span>
+                </span>
+            </h2>
+
+            <form action="" class="">
+
+                <div class="tw-space-y-4 tw-max-h-72 tw-overflow-y-auto">
+
+                    <div class="tw-py-1 tw-px-1 tw-text-left">
+                        <label for="medication" class="">Nom du praticien</label>
+                        <input type="text" name="medication" id="medication"
+                            class="focus:tw-border-transparent focus:tw-ring-transparent tw-block tw-bg-primary-100 tw-w-full tw-outline-none tw-rounded-lg tw-text-tertiary tw-border-primary-100 sm:tw-text-sm">
+                    </div>
+
+                </div>
+
+                <div class="tw-bg-white tw-mt-3 tw-flex tw-items-center tw-gap-2.5 tw-justify-between">
+                    <button type="submit"
+                        class="tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-secondary px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-secondary focus:tw-ring-offset-2">
+                        Annuler
+                    </button>
+                    <button type="submit"
+                        class="hover:tw-bg-[#89dfc9] tw-max-w-fit tw-justify-center tw-uppercase tw-inline-flex tw-items-center tw-rounded-md border tw-border-transparent tw-bg-primary-500 px-4 tw-py-2 tw-font-bold tw-text-white tw-shadow-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-primary-500 focus:tw-ring-offset-2">
+                        Transférer
                     </button>
                 </div>
             </form>

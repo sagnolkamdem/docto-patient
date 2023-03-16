@@ -25,14 +25,14 @@ body {
   font-family: Montserrat, sans-serif;
   // font-family: Roboto, sans-serif;
   font-size: 14px;
-  margin         : 0;
-  display        : flex;
-  flex-direction : column;
-  height         : 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 app-root {
-  flex : 1 1 100%;
+  flex: 1 1 100%;
 }
 
 .pointer {
@@ -43,6 +43,8 @@ app-root {
   display: none;
 }
 
+
+
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -52,12 +54,15 @@ app-root {
   height: 3px;
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgb(204, 204, 204);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(97, 96, 96);
   height: 5px;
@@ -79,6 +84,7 @@ app-root {
   border-bottom-right-radius: 8px;
   overflow: hidden;
 }
+
 .user-avatar {
   height: 100px;
   width: 100%;
