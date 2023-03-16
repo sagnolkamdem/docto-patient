@@ -1,7 +1,20 @@
-
 <div class="m-2">
   <div class="row g-3">
     <div class="col-md-3">
+      <div class="card card-body border-0 mb-2 agenda">
+        <button class="btn btn-primary" (click)="createAgenda()">
+          <i class="mdi mdi-plus-circle"></i>
+          Créer un rendez-vous
+        </button>
+
+        <!-- <div class="d-flex justify-content-between text-primary">
+          <h5 class="fw-bold">Ouvertures</h5>
+
+          <span class="box-icon pointer">
+            <i class="mdi mdi-plus-circle"></i>
+          </span>
+        </div> -->
+      </div>
       <div class="card border-0">
         <mat-calendar class="my-calendar" [(selected)]="selected"></mat-calendar>
       </div>
@@ -61,20 +74,7 @@
         </div>
       </div>
 
-      <div class="card card-body border-0 mt-2 agenda">
-        <button class="btn btn-primary" (click)="createAgenda()">
-          <i class="mdi mdi-plus-circle"></i>
-          Créer un rendez-vous
-        </button>
 
-        <!-- <div class="d-flex justify-content-between text-primary">
-          <h5 class="fw-bold">Ouvertures</h5>
-
-          <span class="box-icon pointer">
-            <i class="mdi mdi-plus-circle"></i>
-          </span>
-        </div> -->
-      </div>
     </div>
 
     <div class="col-md-9">

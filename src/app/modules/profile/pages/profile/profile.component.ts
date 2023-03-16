@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
   expertise!: string;
 
   personnalInfos = {
-    name: 'Mohamed Belaouier',
+    name: 'Mohamed Belaiouer',
     speciality: 'Médecin généraliste',
     photo: 'assets/user.png',
   }
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
   updateDisponibility: boolean = false;
 
   ngOnInit(): void {
-    this.currentPlace =  this.placeOfConsultation[0];
+    this.currentPlace = this.placeOfConsultation[0];
   }
 
   toggleUpdatePresentation() {
