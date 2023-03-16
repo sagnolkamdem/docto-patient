@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardTabs } from 'src/app/shared/components/tabs/dashboard-tabs/interfaces/dashboard-tabs.interface';
 
 type Message = {
   text: string,
@@ -15,27 +14,11 @@ type Conversation = {
 }
 
 @Component({
-  selector: 'app-team',
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss'],
-  styles: [
-    `.active{
-      border-color: #50D6B6 !important,
-    }`
-  ]
+  selector: 'app-comunity',
+  templateUrl: './comunity.component.html',
+  styleUrls: ['./comunity.component.scss']
 })
-export class TeamComponent implements OnInit {
-
-  tabs: DashboardTabs[] = [
-    {
-      name: "Chats",
-      link: "/account/team/chats"
-    },
-    {
-      name: "Communautés",
-      link: "/account/team/communities"
-    }
-  ]
+export class ComunityComponent implements OnInit {
 
   currentConversation!: Conversation;
   showResponsiveDiscussion: boolean = false;
@@ -43,7 +26,7 @@ export class TeamComponent implements OnInit {
   conversations: Conversation[] = [
     {
       id: 1,
-      interlocutor: "Mohamed",
+      interlocutor: "Pédiatrie",
       messages: [
         {
           text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
@@ -87,7 +70,7 @@ export class TeamComponent implements OnInit {
     },
     {
       id: 2,
-      interlocutor: "Mohamed",
+      interlocutor: "Gynécologie",
       messages: [
         {
           text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
@@ -114,7 +97,7 @@ export class TeamComponent implements OnInit {
     },
     {
       id: 3,
-      interlocutor: "Mohamed",
+      interlocutor: "Psychiatrie",
       messages: [
         {
           text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
@@ -125,7 +108,7 @@ export class TeamComponent implements OnInit {
     },
     {
       id: 4,
-      interlocutor: "Mohamed",
+      interlocutor: "Dermatologie",
       messages: [
         {
           text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
@@ -139,42 +122,10 @@ export class TeamComponent implements OnInit {
           text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
           status: "send",
         },
-      ],
-      status: "old",
-    },
-    {
-      id: 5,
-      interlocutor: "Mohamed",
-      messages: [
-        {
-          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
-          status: "received",
-        },
-        {
-          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
-          status: "received",
-        },
-        {
-          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
-          status: "send",
-        },
-      ],
-      status: "old",
-    },
-    {
-      id: 6,
-      interlocutor: "Mohamed",
-      messages: [
-        {
-          text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel inventore eius expedita explicabo minima nobis sit sint temporibus atque ut.",
-          status: "received",
-        }
       ],
       status: "old",
     },
   ];
-
-  constructor() { }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardTabs } from 'src/app/shared/components/tabs/dashboard-tabs/interfaces/dashboard-tabs.interface';
 
 type Message = {
   text: string,
@@ -15,27 +14,11 @@ type Conversation = {
 }
 
 @Component({
-  selector: 'app-team',
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss'],
-  styles: [
-    `.active{
-      border-color: #50D6B6 !important,
-    }`
-  ]
+  selector: 'app-chat',
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.scss']
 })
-export class TeamComponent implements OnInit {
-
-  tabs: DashboardTabs[] = [
-    {
-      name: "Chats",
-      link: "/account/team/chats"
-    },
-    {
-      name: "Communautés",
-      link: "/account/team/communities"
-    }
-  ]
+export class ChatComponent implements OnInit {
 
   currentConversation!: Conversation;
   showResponsiveDiscussion: boolean = false;
@@ -174,9 +157,9 @@ export class TeamComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   setConversation(conversation: Conversation) {
@@ -187,5 +170,6 @@ export class TeamComponent implements OnInit {
   toggleShowResponsiveDiscussion() {
     this.showResponsiveDiscussion = !this.showResponsiveDiscussion
   }
+
 
 }
