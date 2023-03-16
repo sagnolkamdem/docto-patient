@@ -5,12 +5,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { profileRoutes } from './routes/profile.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewDisponibilityComponent } from './pages/profile/new-disponibility/new-disponibility.component';
 
 
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
+    NewDisponibilityComponent
   ],
   imports: [
     CommonModule,

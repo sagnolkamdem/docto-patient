@@ -1,4 +1,6 @@
+import { NewDisponibilityComponent } from './new-disponibility/new-disponibility.component';
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from 'src/app/services/alert.service';
 
 type Place = {
   id: number;
@@ -17,7 +19,7 @@ export class ProfileComponent implements OnInit {
   expertise!: string;
 
   personnalInfos = {
-    name: 'Mohamed Belaouier',
+    name: 'Mohamed Belaiouer',
     speciality: 'Médecin généraliste',
     photo: 'assets/user.png',
   }
@@ -45,8 +47,10 @@ export class ProfileComponent implements OnInit {
   updatePersonnalInfos: boolean = false;
   updateDisponibility: boolean = false;
 
+  constructor(private alert: AlertService) { }
+
   ngOnInit(): void {
-    this.currentPlace =  this.placeOfConsultation[0];
+    this.currentPlace = this.placeOfConsultation[0];
   }
 
   toggleUpdatePresentation() {
@@ -63,6 +67,12 @@ export class ProfileComponent implements OnInit {
 
   toggleUpdateDisponibility() {
     this.updateDisponibility = !this.updateDisponibility;
+  }
+
+  addDisponibility() {
+    this.alert.openModal(NewDisponibilityComponent, (result: any) => {
+
+    }, {}, 'md');
   }
 
 

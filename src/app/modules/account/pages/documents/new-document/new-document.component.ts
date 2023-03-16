@@ -2,16 +2,12 @@ import { Component, OnInit,Inject, AfterViewInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 declare var $: any;
-
 @Component({
   selector: 'app-new-document',
   templateUrl: './new-document.component.html',
   styleUrls: ['./new-document.component.scss']
 })
 export class NewDocumentComponent implements OnInit {
-
-
-  
 
   constructor(public dialogRef: MatDialogRef<NewDocumentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
@@ -26,7 +22,7 @@ export class NewDocumentComponent implements OnInit {
       }
   });
   }
-  
+
 
   store() {
     this.dialogRef.close('1');

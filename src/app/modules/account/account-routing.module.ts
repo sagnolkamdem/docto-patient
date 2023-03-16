@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NoteComponent } from './pages/note/note.component';
 import { DocumentsComponent } from './pages/documents/documents.component';
+import { ChatComponent } from './pages/team/chat/chat.component';
+import { ComunityComponent } from './pages/team/comunity/comunity.component';
 
 const routes: Routes = [
   {
@@ -26,9 +28,27 @@ const routes: Routes = [
   {
     path: 'team',
     component: TeamComponent,
-    data: {
-      title: 'Team'
-    }
+    children: [
+      {
+        path: 'chats',
+        component: ChatComponent,
+        data: {
+          title: 'Discussions'
+        }
+      },
+      {
+        path: 'communities',
+        component: ComunityComponent,
+        data: {
+          title: 'Communautés'
+        }
+      },
+      {
+        path: '',
+        redirectTo: '/account/team/chats',
+        pathMatch: 'full'
+      }
+    ]
   },
   {
     path: 'mail',
